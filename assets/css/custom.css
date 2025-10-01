@@ -426,13 +426,10 @@ p.text-center a:hover::before {
 }
 
 .avatar-container img {
-  width: 280px;            /* Change width */
-  height: auto;            /* Maintain aspect ratio */
-  border-radius: 0;        /* Make it square */
-  object-fit: cover;
-  ...
-}
-
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
   transition: transform 0.4s ease-out, box-shadow 0.4s ease-in-out, filter 0.4s ease-out;
   transform-style: preserve-3d;
   will-change: transform;
@@ -1012,26 +1009,4 @@ small[id="attribution"] {
 
 .carousel-indicators .active {
     background-color: #29d6cd !important; /* Cyan color for active dot */
-}
-
-/* Profile Image Glow + Floating Effect */
-#profile {
-  width: 300px;  /* make image bigger */
-  height: 300px;
-  border-radius: 50%;
-  box-shadow: 0 0 25px #00f7ff, 0 0 50px #00f7ff; /* blue glow */
-  animation: floatImage 4s ease-in-out infinite;
-}
-
-/* Floating animation keyframes */
-@keyframes floatImage {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
