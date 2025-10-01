@@ -445,8 +445,9 @@ p.text-center a:hover::before {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(3, 161, 224, 0.4), rgba(0, 255, 221, 0.3));
-  filter: blur(30px);
+  background: radial-gradient(circle, rgba(3, 161, 224, 0.2), rgba(0, 255, 221, 0.15));
+  filter: blur(20px);
+}
   z-index: 1;
   opacity: 1;
   transition: opacity 0.4s ease-in-out;
@@ -477,24 +478,24 @@ p.text-center a:hover::before {
 
 @keyframes gradientGlow {
   0% {
-    box-shadow: 0 0 10px rgba(3, 161, 224, 0.2),
-                0 0 15px rgba(0, 255, 221, 0.15);
+    box-shadow: 0 0 6px rgba(3, 161, 224, 0.15),
+                0 0 10px rgba(0, 255, 221, 0.1);
   }
   50% {
-    box-shadow: 0 0 15px rgba(0, 255, 221, 0.25),
-                0 0 20px rgba(3, 161, 224, 0.2);
+    box-shadow: 0 0 12px rgba(0, 255, 221, 0.15),
+                0 0 16px rgba(3, 161, 224, 0.12);
   }
   100% {
-    box-shadow: 0 0 10px rgba(3, 161, 224, 0.2),
-                0 0 15px rgba(0, 255, 221, 0.15);
+    box-shadow: 0 0 6px rgba(3, 161, 224, 0.15),
+                0 0 10px rgba(0, 255, 221, 0.1);
   }
 }
 
 .avatar-container img:hover {
-  box-shadow: 0 0 20px rgba(3, 161, 224, 0.4),
-              0 0 30px rgba(0, 255, 221, 0.25);
-  transform: scale(1.03);
-  filter: brightness(1.05);
+  box-shadow: 0 0 10px rgba(3, 161, 224, 0.25),
+              0 0 15px rgba(0, 255, 221, 0.15);
+  transform: scale(1.02);
+  filter: brightness(1.03);
 }
 
 @keyframes float {
