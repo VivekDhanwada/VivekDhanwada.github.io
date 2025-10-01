@@ -436,7 +436,8 @@ p.text-center a:hover::before {
   position: relative;
   z-index: 2;
   animation: gradientGlow 4s infinite alternate;
-  box-shadow: 0 0 18px rgba(0, 255, 255, 0.15);
+  box-shadow:  0 0 30px rgba(0, 255, 221, 0.4), 
+               0 0 60px rgba(3, 161, 224, 0.25);
 }
 
 .avatar-container::before {
@@ -453,8 +454,9 @@ p.text-center a:hover::before {
   transition: opacity 0.4s ease-in-out;
 }
 
-.avatar-container:hover::before {
-  animation: backgroundPulse 3s infinite alternate;
+.avatar-container::before {
+  background: radial-gradient(circle, rgba(3, 161, 224, 0.5), rgba(0, 255, 221, 0.4));
+  filter: blur(40px);
 }
 
 /* Keyframes for Avatar Effects */
@@ -478,16 +480,19 @@ p.text-center a:hover::before {
 
 @keyframes gradientGlow {
   0% {
-    box-shadow: 0 0 6px rgba(3, 161, 224, 0.15),
-                0 0 10px rgba(0, 255, 221, 0.1);
+    box-shadow: 
+      0 0 20px rgba(0, 255, 221, 0.25),
+      0 0 40px rgba(3, 161, 224, 0.2);
   }
   50% {
-    box-shadow: 0 0 12px rgba(0, 255, 221, 0.15),
-                0 0 16px rgba(3, 161, 224, 0.12);
+    box-shadow: 
+      0 0 30px rgba(0, 255, 221, 0.4),
+      0 0 60px rgba(3, 161, 224, 0.3);
   }
   100% {
-    box-shadow: 0 0 6px rgba(3, 161, 224, 0.15),
-                0 0 10px rgba(0, 255, 221, 0.1);
+    box-shadow: 
+      0 0 20px rgba(0, 255, 221, 0.25),
+      0 0 40px rgba(3, 161, 224, 0.2);
   }
 }
 
