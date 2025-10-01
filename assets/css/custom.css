@@ -419,7 +419,7 @@ p.text-center a:hover::before {
   align-items: center;
   perspective: 1200px;
   width: 100%;
-  max-width: 280px;
+  max-width: 220px;
   height: auto;
   position: relative;
   animation: fadeInZoom 1.2s ease-out, float 5s infinite ease-in-out;
