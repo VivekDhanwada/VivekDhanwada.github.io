@@ -418,8 +418,8 @@ p.text-center a:hover::before {
   justify-content: center;
   align-items: center;
   perspective: 1200px;
-  width: 200px;
-  max-width: 200px;
+  width: 100%;
+  max-width: 350px;
   height: auto;
   position: relative;
   animation: fadeInZoom 1.2s ease-out, float 5s infinite ease-in-out;
@@ -435,7 +435,7 @@ p.text-center a:hover::before {
   will-change: transform;
   position: relative;
   z-index: 2;
-  animation: gradientGlow 4s infinite alternate;
+  animation: gradientGlow 3s infinite alternate;
   box-shadow: 0px 10px 30px rgba(3, 161, 224, 0.3),
               0px 10px 30px rgba(0, 255, 221, 0.3);
 }
@@ -446,7 +446,7 @@ p.text-center a:hover::before {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(3, 161, 224, 0.2), rgba(0, 255, 221, 0.15));
+  background: radial-gradient(circle, rgba(3, 161, 224, 0.4), rgba(0, 255, 221, 0.3));
   filter: blur(30px);
   z-index: 1;
   opacity: 1;
