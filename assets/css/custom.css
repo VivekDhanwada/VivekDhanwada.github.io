@@ -426,11 +426,10 @@ p.text-center a:hover::before {
 }
 
 .avatar-container img {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 50%;
-  object-fit: cover;
-
   transition: transform 0.4s ease-out, box-shadow 0.4s ease-in-out, filter 0.4s ease-out;
   transform-style: preserve-3d;
   will-change: transform;
@@ -1010,4 +1009,9 @@ small[id="attribution"] {
 
 .carousel-indicators .active {
     background-color: #29d6cd !important; /* Cyan color for active dot */
+}
+
+/* Light mode background */
+[data-theme="light"] body {
+  background-color: #FAFAFA;
 }

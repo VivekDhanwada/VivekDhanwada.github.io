@@ -1,10 +1,10 @@
 ### Site Settings ###
-title               : Vishnu Mandala
+title               : Vivek Chinmay Dhanwada
 description         : >-
-                      Systems Integration Engineer at OTTO by Rockwell Automation | 
-                      Robotics and AI/ML Enthusiast
+                      Business Analytics and Development at Green The Chain |
+                      Leveraging Data Analytics & Visualization for Strategic Insights
 baseurl             : ""            
-repository          : vishnumandala/vishnumandala.github.io     
+repository          : VivekDhanwada/vivekdhanwada.github.io     
 remote_theme        : yousinix/portfolYOU
 open_new_tab        : true                    
 
@@ -24,17 +24,17 @@ nav_exclude:                                            # The following paths ar
 
 ### Author Info ###
 author:
-  name              : Vishnu Mandala
+  name              : Vivek Chinmay Dhanwada
   image             : profile.jpg
   # behance           : your_username
 # dribbble          : your_username
-  email             : vishnum@terpmail.umd.edu
+  email             : vivekchinmay@gmail.com
   # facebook          : your_username
-  github            : vishnumandala
+  github            : VivekDhanwada
 # gitlab            : your_username
 # instagram         : your_username
 # kaggle            : your_username
-  linkedin          : vishnumandala
+  linkedin          : vivekchinmaydhanwada
   # medium            : your_username
 # soundcloud        : your_username
 # spotify           : your_username
