@@ -1010,3 +1010,8 @@ small[id="attribution"] {
 .carousel-indicators .active {
     background-color: #29d6cd !important; /* Cyan color for active dot */
 }
+
+/* Light mode background */
+[data-theme="light"] body {
+  background-color: #FAFAFA;
+}
