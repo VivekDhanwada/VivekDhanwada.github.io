@@ -1,0 +1,30 @@
+# Work Experience
+- title: Systems Integration Engineer
+  from: August 2025
+  to: Present
+  description: "<strong>OTTO by Rockwell Automation</strong><br><strong>Location:</strong> Fort Wayne, Indiana<br><br>Systems integration and automation solutions for industrial robotics and autonomous mobile robots"
+
+- title: Robotics Intern
+  from: March 2025
+  to: August 2025
+  description: "<strong>RoBuildX Inc. (Remote)</strong><br><br>Developed parametric URDF/XACRO models for the Roofie wall-panel placer, integrated MoveIt2 pipelines, and achieved sub-10 mm placement accuracy in Gazebo simulations<br><br>Ported Gazebo sensor and actuator plugins to ROS2 and built automated test frameworks to validate trajectories, safety interlocks, and refine control parameters — cutting commissioning time by 30%<br><br>Designed an upper-rail–mounted gripper control and payload attachment kit for a purchased 500,kg AMR; integrated CANbus I/O, e-stop circuitry, and HIL tests, then fused LiDAR + IMU + AprilTag data with Nav2 planners for reliable dynamic navigation<br><br>Liaised with clients, project managers, and AMR vendors to scope deployments, customize platforms, and author quick-start and troubleshooting guides for Tier-3 support"
+
+- title: Graduate Teaching Assistant
+  from: August 2023
+  to: December 2024
+  description: "<strong>Department of Mechanical Engineering, University of Maryland</strong><br><br>Delivered hands-on instruction in SolidWorks and Autodesk Inventor to over 600 students, improving design accuracy by 25% through advanced CAD lectures, targeted feedback, and collaboration with faculty on grading and assessments"
+
+- title: Assistant Operations Manager
+  from: June 2023
+  to: December 2024
+  description: "<strong>Conferences and Visitor Services, University of Maryland</strong><br><br>Directed linen operations across 120+ programs, implementing a custom database to maintain 100% inventory tracking accuracy, achieve a 50% cost reduction, boost efficiency by 30%, and supervise a team of 25 members"
+
+- title: Master of Engineering in Robotics
+  from: January 2023
+  to: December 2024
+  description: "<strong>University of Maryland, College Park, MD</strong><br><strong>GPA:</strong> 3.91/4.0<br><br><strong>Coursework:</strong> Perception and Planning for Autonomous Robots, Robot Modeling and Controls, AI and Deep Learning, Reinforcement Learning, Manufacturing Robotic Systems, Rehabilitation Robotics"
+
+- title: Bachelor of Technology in Mechatronics
+  from: July 2018
+  to: July 2022
+  description: "<strong>Mahatma Gandhi Institute of Technology, India</strong><br><strong>GPA:</strong> 7.84/10<br><br><strong>Coursework:</strong> Kinematics and Dynamics of Machinery, Robotics and Automation, CAD/CAM, Finite Element Methods, Motion Control Design, Switching Theory and Logic Design, Microprocessors and Microcontrollers, Fundamentals of IoT, MEMS, Material Science, Automotive and Manufacturing Processes, Automobile Engineering, Operations Research"

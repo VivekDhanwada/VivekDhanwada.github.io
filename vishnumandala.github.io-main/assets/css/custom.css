@@ -1,0 +1,1012 @@
+/* ==========================================================================
+   Global & Utility Styles
+   ========================================================================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hidden / Visible Sections */
+.hidden-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  pointer-events: none;
+}
+
+.visible-section {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Scroll Down Arrow */
+.scroll-down {
+  position: relative;
+  margin-top: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.scroll-down.hidden {
+  opacity: 0;
+  transform: translateY(20px) translateX(-50%);
+  pointer-events: none;
+}
+
+
+/* ==========================================================================
+   Timeline Component Styles
+   ========================================================================== */
+
+/* Link / Navigation & Active Indicators */
+.link-after,
+.nav-link::after,
+.navbar-brand::after,
+.nav-item.active::after {
+  background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221)) !important;
+}
+
+/* Timeline Backgrounds & Borders */
+.timeline-body::after {
+  background-color: #29d6cd !important;
+}
+
+.timeline-body .timeline-item:after {
+  border: 4px solid #29d6cd !important; /* Keeps the cyan border */
+}
+
+/* Light Mode - Timeline Content */
+.timeline-body .timeline-item .content {
+  background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221))
+      left bottom no-repeat;
+  border-bottom: 0px solid #29d6cd !important;
+  background-size: 100% 2px;
+}
+
+/* Dark Mode - Timeline Backgrounds */
+[data-theme="dark"] .timeline-body {
+  background-color: #242526 !important;
+}
+
+[data-theme="dark"] .timeline-body .timeline-item .content {
+  background-color: #242526 !important;
+}
+
+[data-theme="dark"] .timeline-body .timeline-item:after {
+  background-color: #242526 !important;
+}
+
+
+/* ==========================================================================
+   Badge Component Styles
+   ========================================================================== */
+
+.badge {
+  position: relative;
+  display: inline-block;
+  border: 2px solid transparent; /* Ensure border is visible */
+  border-color: rgb(3, 161, 224)!important; /* Cyan border */
+  transition: all 0.3s ease-in-out;
+  color: rgb(3, 161, 224)!important;
+  overflow: hidden; /* Prevent content overflow */
+  z-index: 1;
+  vertical-align: middle; /* Ensure proper alignment */
+}
+
+[data-theme="dark"] .badge {
+  color: #29d6cd !important;
+  border-color: #29d6cd !important;
+}
+
+.badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off-screen */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221));
+  transition: left 0.4s ease-in-out; /* Animate the left movement */
+  z-index: -1;
+  display: block; /* Prevent any inline displacement */
+}
+
+.badge:hover::before {
+  left: 0; /* Move the gradient from left to right */
+}
+
+.badge:hover {
+  color: white !important; /* Ensure text contrast */
+  border: none; /* Remove default border */
+}
+
+
+/* ==========================================================================
+   Markdown Body Elements
+   ========================================================================== */
+
+/* Blockquotes */
+.markdown-body blockquote {
+  border-left-color: #29d6cd !important;
+}
+
+/* Table Headers */
+.markdown-body table th {
+  background-color: #29d6cd !important;
+  color: inherit !important; /* Keeps default text color */
+}
+
+/* Horizontal Rules */
+.markdown-body hr {
+  background: #29d6cd !important;
+}
+
+
+/* ==========================================================================
+   Button Styles
+   ========================================================================== */
+
+/* Primary Buttons */
+.markdown-body .btn-primary {
+  background-color: #29d6cd !important;
+  border-color: #29d6cd !important;
+  color: white !important; /* Ensures button text remains readable */
+}
+
+.markdown-body .btn-primary:hover {
+  background-color: #24b8b1 !important;
+  border-color: #24b8b1 !important;
+}
+
+.markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline)::after {
+  background: #29d6cd !important;
+}
+
+/* Default Transparent Button Style */
+.markdown-body .btn,
+p.text-center a {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid #29d6cd; /* Default border */
+  background-color: transparent;
+  color: #29d6cd;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Gradient Fill Animation Effect */
+.markdown-body .btn::before,
+p.text-center a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #29d6cd, #24b8b1);
+  z-index: -1;
+  transition: transform 0.4s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Hover Effects for Buttons */
+.markdown-body .btn:hover,
+p.text-center a:hover {
+  color: white !important; /* Ensures text stays readable */
+  border-color: #29d6cd !important; /* Matches the fill color */
+  background-color: transparent !important; /* Prevents flickering */
+  transform: translateY(-3px); /* Adds slight lift */
+  box-shadow: 0 10px 20px rgba(41, 214, 205, 0.3);
+}
+
+.markdown-body .btn:hover::before,
+p.text-center a:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* ==========================================================================
+   Back Button Text Color
+   ========================================================================== */
+
+.back-button {
+  color: #343a40 !important; /* Equivalent to $text-white */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+[data-theme="dark"] .back-button {
+  color: rgba(255, 255, 255, 0.6) !important; /* Equivalent to $text-black */
+}
+
+
+/* ==========================================================================
+   Dark Mode Specific Overrides (Non-responsive)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* Resume Button */
+  .btn-outline-dark.resume {
+    border-color: #B20000 !important;
+    color: #B20000 !important;
+  }
+  .btn-outline-dark.resume i {
+    color: #B20000 !important;
+  }
+  .btn-outline-dark.resume:hover {
+    background-color: #FF0000 !important;
+    color: white !important;
+    border-color: transparent !important;
+  }
+  .btn-outline-dark.resume:hover i {
+    color: white !important;
+  }
+
+  /* GitHub Button */
+  .btn-outline-dark.github {
+    border-color: #888888 !important;
+    color: #888888 !important;
+  }
+  .btn-outline-dark.github i {
+    color: #888888 !important;
+  }
+  .btn-outline-dark.github:hover {
+    background-color: #333333 !important;
+    color: white !important;
+    border-color: transparent !important;
+  }
+  .btn-outline-dark.github:hover i {
+    color: white !important;
+  }
+
+  /* LinkedIn Button */
+  .btn-outline-dark.linkedin {
+    border-color: #0077B5 !important;
+    color: #0077B5 !important;
+  }
+  .btn-outline-dark.linkedin i {
+    color: #0077B5 !important;
+  }
+  .btn-outline-dark.linkedin:hover {
+    background-color: #0077B5 !important;
+    color: white !important;
+    border-color: transparent !important;
+  }
+  .btn-outline-dark.linkedin:hover i {
+    color: white !important;
+  }
+}
+
+
+/* ==========================================================================
+   Responsive Styles for Outline Buttons
+   ========================================================================== */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .d-flex.justify-content-center {
+    gap: 0.5rem !important;
+  }
+  .btn-outline-dark {
+    width: 60px !important;
+    height: 60px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    font-size: 0 !important;
+  }
+  .btn-outline-dark i + * {
+    display: none !important;
+  }
+  .btn-outline-dark i {
+    font-size: 1.8rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .btn-outline-dark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px !important;
+    padding: 8px 16px !important;
+  }
+}
+
+
+/* ==========================================================================
+   Gradient Fill Hover Effects for Outline Buttons
+   ========================================================================== */
+
+.btn-outline-dark.resume,
+.btn-outline-dark.github,
+.btn-outline-dark.linkedin {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-outline-dark.resume::before,
+.btn-outline-dark.github::before,
+.btn-outline-dark.linkedin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Resume Gradient */
+.btn-outline-dark.resume::before {
+  background: linear-gradient(to right, #b20000, #ff0000);
+}
+
+.btn-outline-dark.resume:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(41, 214, 205, 0.3);
+}
+
+.btn-outline-dark.resume:hover::before {
+  transform: scaleX(1);
+}
+
+/* GitHub Gradient */
+.btn-outline-dark.github::before {
+  background: linear-gradient(to right, #888, #333);
+}
+
+.btn-outline-dark.github:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(136, 136, 136, 0.3);
+}
+
+.btn-outline-dark.github:hover::before {
+  transform: scaleX(1);
+}
+
+/* LinkedIn Gradient */
+.btn-outline-dark.linkedin::before {
+  background: linear-gradient(to right, #005582, #0077B5, #00A8FF);
+}
+
+.btn-outline-dark.linkedin:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
+}
+
+.btn-outline-dark.linkedin:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* ==========================================================================
+   Avatar & Effects
+   ========================================================================== */
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  position: relative;
+  animation: fadeInZoom 1.2s ease-out, float 5s infinite ease-in-out;
+}
+
+.avatar-container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-in-out, filter 0.4s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  z-index: 2;
+  animation: gradientGlow 3s infinite alternate;
+  box-shadow: 0px 10px 30px rgba(3, 161, 224, 0.3),
+              0px 10px 30px rgba(0, 255, 221, 0.3);
+}
+
+.avatar-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(3, 161, 224, 0.4), rgba(0, 255, 221, 0.3));
+  filter: blur(30px);
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.avatar-container:hover::before {
+  animation: backgroundPulse 3s infinite alternate;
+}
+
+/* Keyframes for Avatar Effects */
+@keyframes backgroundPulse {
+  0% {
+    opacity: 0.6;
+    filter: blur(40px);
+    background: radial-gradient(circle, rgba(3, 161, 224, 0.6), rgba(0, 255, 221, 0.5));
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(50px);
+    background: radial-gradient(circle, rgba(0, 255, 221, 0.6), rgba(3, 161, 224, 0.6));
+  }
+  100% {
+    opacity: 0.6;
+    filter: blur(40px);
+    background: radial-gradient(circle, rgba(3, 161, 224, 0.6), rgba(0, 255, 221, 0.5));
+  }
+}
+
+@keyframes gradientGlow {
+  0% {
+    box-shadow: 0px 0px 30px rgba(3, 161, 224, 0.5),
+                0px 0px 40px rgba(0, 255, 221, 0.3);
+  }
+  50% {
+    box-shadow: 0px 0px 40px rgba(0, 255, 221, 0.5),
+                0px 0px 50px rgba(3, 161, 224, 0.4);
+  }
+  100% {
+    box-shadow: 0px 0px 30px rgba(3, 161, 224, 0.5),
+                0px 0px 40px rgba(0, 255, 221, 0.3);
+  }
+}
+
+.avatar-container img:hover {
+  box-shadow: 0px 15px 60px rgba(3, 161, 224, 0.6),
+              0px 0px 80px rgba(0, 255, 221, 0.5);
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes shadowTrail {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+    filter: blur(30px);
+  }
+}
+
+.shadow-trail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(3, 161, 224, 0.3), rgba(0, 255, 221, 0.3));
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+
+/* ==========================================================================
+   Bootstrap Container Overrides
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container { max-width: 540px; }
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+}
+
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+}
+
+
+/* ==========================================================================
+   Navbar Styles
+   ========================================================================== */
+
+/* Basic Navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+  margin-top: -0.5rem;
+}
+
+/* Navbar Brand */
+.navbar.navbar-themed .navbar-brand {
+  margin-right: 1rem;
+  opacity: 1 !important;
+  transition: none !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .navbar-brand {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme="light"] .navbar.navbar-themed .navbar-brand {
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.navbar.navbar-themed .navbar-brand:hover {
+  opacity: 1 !important;
+  background-color: transparent !important;
+}
+
+/* Navigation Links */
+.navbar.navbar-themed .navbar-nav .nav-item.nav-link,
+.navbar.navbar-themed .nav-link {
+  padding: 0.425rem 1rem;
+  transition: none !important;
+  opacity: 1 !important;
+  position: relative;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .nav-link {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="light"] .navbar.navbar-themed .nav-link {
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar.navbar-themed .navbar-nav .nav-item.nav-link:hover,
+.navbar.navbar-themed .nav-link:hover {
+  opacity: 1 !important;
+  background-color: transparent !important;
+}
+
+/* Active Link */
+.navbar.navbar-themed .nav-item.nav-link.active {
+  font-weight: 700 !important;
+  box-sizing: content-box !important;
+  padding: 0.425rem 0 !important;
+  margin: 0 1rem !important;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .nav-item.nav-link.active {
+  color: #fff !important;
+}
+
+[data-theme="light"] .navbar.navbar-themed .nav-item.nav-link.active {
+  color: #000 !important;
+}
+
+.navbar.navbar-themed .nav-item.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: #007bff !important;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .nav-item.nav-link.active::after,
+[data-theme="light"] .navbar.navbar-themed .nav-item.nav-link.active::after {
+  background-color: #007bff !important;
+}
+
+/* Icon Styling */
+.navbar.navbar-themed .nav-link i {
+  font-size: 1rem;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Social & Theme Toggle Links */
+.navbar.navbar-themed .navbar-nav > div.navbar-nav .nav-link {
+  text-decoration: none !important;
+  border: none !important;
+  background: none !important;
+  position: static !important;
+}
+
+.navbar.navbar-themed .navbar-nav > div.navbar-nav .nav-link::after,
+.navbar.navbar-themed .navbar-nav > div.navbar-nav .nav-link::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* LinkedIn Icon */
+.navbar.navbar-themed .nav-link .fa-linkedin {
+  transition: color 0.3s ease;
+}
+
+.navbar.navbar-themed .nav-link:hover .fa-linkedin {
+  color: #0077b5 !important;
+}
+
+/* GitHub Icon */
+.navbar.navbar-themed .nav-link .fa-github {
+  transition: color 0.3s ease;
+}
+
+[data-theme="light"] .navbar.navbar-themed .nav-link:hover .fa-github {
+  color: #333333 !important;
+}
+
+[data-theme="dark"] .navbar.navbar-themed .nav-link:hover .fa-github {
+  color: #ffffff !important;
+}
+
+/* Theme Toggle */
+.navbar.navbar-themed #theme-toggle {
+  opacity: 1 !important;
+  text-decoration: none !important;
+  border: none !important;
+  background: none !important;
+  position: static !important;
+}
+
+.navbar.navbar-themed #theme-toggle::after,
+.navbar.navbar-themed #theme-toggle::before {
+  display: none !important;
+  content: none !important;
+}
+
+[data-theme="light"] #theme-icon {
+  color: #999999;
+}
+
+[data-theme="light"] .navbar.navbar-themed #theme-toggle:hover #theme-icon {
+  color: #333333;
+}
+
+[data-theme="dark"] #theme-icon {
+  color: #666666;
+}
+
+[data-theme="dark"] .navbar.navbar-themed #theme-toggle:hover #theme-icon {
+  color: #ffd700;
+}
+
+/* Project Page GitHub Icon */
+[data-theme="dark"] a[style*="background-color: #f5f5f5"] {
+  background-color: #242424 !important;
+}
+
+[data-theme="dark"] a[style*="background-color: #f5f5f5"]:hover {
+  background-color: #4b4b4b !important;
+}
+
+[data-theme="dark"] a[style*="background-color: #f5f5f5"] i,
+[data-theme="dark"] footer a i.fa-github {
+  color: rgb(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="dark"] footer a:hover i.fa-github {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] a:hover i.fa-github {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] footer a:hover,
+footer a:hover,
+.md-content footer a:hover,
+.md-content .footer a:hover {
+  background-color: transparent !important;
+}
+
+
+/* ==========================================================================
+   Hide Theme Attribution & Related Elements
+   ========================================================================== */
+
+.github-button,
+a[href*="yousinix/portfolYOU"],
+a[href*="portfolYOU"],
+#attribution,
+small[id="attribution"] {
+  display: none !important;
+}
+
+
+/* ==========================================================================
+   Tech Section & Icons
+   ========================================================================== */
+
+/* Tech Section Layout */
+.tech-section {
+  margin: 3rem 0;
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.tech-category {
+  text-align: center;
+}
+
+.tech-category h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: inherit;
+  font-weight: 600;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.tech-description {
+  color: inherit;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tech-category h2,
+  .tech-name,
+  .tech-description {
+    color: inherit;
+  }
+}
+
+/* Tech Section Grid (Desktop) */
+@media (min-width: 768px) {
+  .tech-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-category:nth-child(2),
+  .tech-category:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+/* Adjustments for Specific Tech Icons in Dark Mode */
+@media (prefers-color-scheme: dark) {
+  img[alt="ROS/ROS2"],
+  img[alt="Photoshop"],
+  img[alt="Pandas"],
+  img[alt="Bash"],
+  img[alt="ANSYS"] {
+    filter: brightness(1.8) contrast(1.2); /* Adjust brightness & contrast */
+  }
+}
+
+/* Tech Item Styles */
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  justify-content: center;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.tech-item img {
+  width: 50px;
+  height: auto;
+  max-height: 50px; /* Ensures non-circular icons keep their shape */
+  opacity: 0.9;
+  transition: transform 0.5s ease-out, filter 0.5s ease-out, box-shadow 0.5s ease-out;
+}
+
+/* 3D Floating Hover Effect */
+.tech-item:hover img {
+  transform: translateY(-3px) rotateY(2deg) scale(1.05);
+  opacity: 1;
+  filter: drop-shadow(0px 0px 5px rgba(103, 203, 236, 0.3))
+          drop-shadow(0px 0px 5px rgba(97, 153, 226, 0.3));
+}
+
+/* Special size for ROS/ROS2 icon */
+.tech-item img[alt="ROS/ROS2"] {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Glow Effect on Tech Icons */
+.tech-item::before {
+  content: "";
+  position: absolute;
+  width: 70px; /* Ensures proper coverage for all icons */
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(115, 210, 241, 0.25), rgba(110, 161, 228, 0.2));
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Prevents accidental interactions */
+}
+
+.tech-item:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Tooltip for Tech Icons */
+.tech-name {
+  position: absolute;
+  top: 110%; /* Moves text below icon to avoid overlap */
+  display: block;
+  font-size: 0.85rem;
+  color: inherit;
+  font-family: inherit;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  text-align: center;
+  max-width: 80px; /* Prevents text from stretching too much */
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+.tech-item:hover .tech-name {
+  opacity: 1;
+  transform: translateY(4px);
+}
+
+
+/* ==========================================================================
+   Project Card Styles
+   ========================================================================== */
+
+.project.card {
+  border-radius: 15px;
+  text-decoration: none !important;
+  margin: 10px auto;
+  display: block;
+  transition: transform 400ms;
+}
+
+.project.card .card-img-top {
+  border-radius: 15px 15px 0 0;
+}
+
+.project.card:hover:not(.post) {
+  transform: translateY(-8px);
+  box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
+}
+
+/* Markdown Link Styles */
+
+.md-link {
+  color: rgb(3, 161, 224)!important; /* Dark theme default text color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.md-link:hover {
+  text-decoration: underline; /* Optional: Keep a subtle hover effect */
+  background: none !important;
+}
+
+/*-------------------------------------------
+  Carousel Controls Base Styles
+-------------------------------------------*/
+.carousel-control-prev,
+.carousel-control-next {
+    background: none !important; /* Removes dark overlay */
+    width: auto; /* Prevents extra padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/*-------------------------------------------
+  Carousel Arrow Icon Styles
+-------------------------------------------*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.7)); /* Default shadow */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/*-------------------------------------------
+  Hover Effects for Carousel Controls
+  (Removed parent's scale to prevent double scaling)
+-------------------------------------------*/
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    animation: bounce 0.5s ease-in-out;
+    background: none !important;
+    /* Removed transform: scale(1.5) to avoid double scaling */
+}
+
+/*-------------------------------------------
+  Hover Effects for Carousel Arrow Icons
+-------------------------------------------*/
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: drop-shadow(0px 0px 8px #29d6cd) drop-shadow(0px 0px 2px #008d88); /* Cyan glow plus darker outline */
+    transform: scale(1.8); /* Enlarges arrow icon */
+}
+
+/*-------------------------------------------
+  Bounce Animation
+-------------------------------------------*/
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/*-------------------------------------------
+  Carousel Indicators Styling
+-------------------------------------------*/
+.carousel-indicators li {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker dots for visibility */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-indicators .active {
+    background-color: #29d6cd !important; /* Cyan color for active dot */
+}
