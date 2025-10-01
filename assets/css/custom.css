@@ -426,10 +426,12 @@ p.text-center a:hover::before {
 }
 
 .avatar-container img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 280px;            /* Change width */
+  height: auto;            /* Maintain aspect ratio */
+  border-radius: 0;        /* Make it square */
   object-fit: cover;
+  ...
+}
 
   transition: transform 0.4s ease-out, box-shadow 0.4s ease-in-out, filter 0.4s ease-out;
   transform-style: preserve-3d;
