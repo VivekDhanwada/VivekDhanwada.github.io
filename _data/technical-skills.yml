@@ -1,5 +1,5 @@
   - name: Python
-    percentage: 95
+    percentage: 90
     color: success
   - name: Jupyter Notebook
     percentage: 80
