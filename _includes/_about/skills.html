@@ -1,37 +1,24 @@
 <div class="row">
   <div class="col-md-6">
-    {% assign half = include.source | size | divided_by: 2 %}
-    {% for skill in include.source limit:half %}
-      <div class="mb-2">
-        <strong>{{ skill.name }}</strong>
+    {% for skill in site.data.technical-skills limit: 8 %}
+      <div class="mb-3">
+        <span>{{ skill.name }}</span>
         <div class="progress">
-          <div
-            class="progress-bar bg-{{ skill.color }}"
-            role="progressbar"
-            style="width: {{ skill.percentage }}%"
-            aria-valuenow="{{ skill.percentage }}"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
+          <div class="progress-bar bg-{{ skill.color }}" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100">
+            {{ skill.percentage }}%
+          </div>
         </div>
       </div>
     {% endfor %}
   </div>
-
   <div class="col-md-6">
-    {% assign half = include.source | size | divided_by: 2 %}
-    {% for skill in include.source offset:half %}
-      <div class="mb-2">
-        <strong>{{ skill.name }}</strong>
+    {% for skill in site.data.technical-skills offset:8 %}
+      <div class="mb-3">
+        <span>{{ skill.name }}</span>
         <div class="progress">
-          <div
-            class="progress-bar bg-{{ skill.color }}"
-            role="progressbar"
-            style="width: {{ skill.percentage }}%"
-            aria-valuenow="{{ skill.percentage }}"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          ></div>
+          <div class="progress-bar bg-{{ skill.color }}" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100">
+            {{ skill.percentage }}%
+          </div>
         </div>
       </div>
     {% endfor %}
