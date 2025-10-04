@@ -1,0 +1,23 @@
+<div class="row">
+  {% assign half = source.size | divided_by: 2 %}
+  <div class="col-md-6">
+    {% for skill in source limit: half %}
+      <div class="skill">
+        <strong>{{ skill.name }}</strong>
+        <div class="progress">
+          <div class="progress-bar" style="width:{{ skill.percentage }}%"></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="col-md-6">
+    {% for skill in source offset:half %}
+      <div class="skill">
+        <strong>{{ skill.name }}</strong>
+        <div class="progress">
+          <div class="progress-bar" style="width:{{ skill.percentage }}%"></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
