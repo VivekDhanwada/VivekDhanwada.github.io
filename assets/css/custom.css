@@ -1018,3 +1018,18 @@ small[id="attribution"] {
 [data-theme="light"] body {
   background-color: #FAFAFA;
 }
+.skill-bar-fill {
+  transition: width 1.4s ease-in-out;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: right;
+  padding-right: 6px;
+  color: #fff;
+}
+
+.progress {
+  height: 20px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
