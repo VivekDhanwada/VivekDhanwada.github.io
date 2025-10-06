@@ -2,22 +2,53 @@
   <div class="col-md-6">
     {% for skill in site.data.technical-skills limit: 8 %}
       <div class="mb-3">
-        <span>{{ skill.name }}</span>
+        <div class="d-flex justify-content-between mb-1">
+          <span><strong>{{ skill.name }}</strong></span>
+          <span>{{ skill.percentage }}%</span>
+        </div>
         <div class="progress">
-          <div class="progress-bar bg-{{ skill.color }}" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100">
-            {{ skill.percentage }}%
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="
+              width: {{ skill.percentage }}%;
+              background-color:
+                {% if skill.percentage >= 85 %}#4caf50
+                {% elsif skill.percentage >= 70 %}#2196f3
+                {% elsif skill.percentage >= 50 %}#ff9800
+                {% else %}#f44336
+                {% endif %};"
+            aria-valuenow="{{ skill.percentage }}"
+            aria-valuemin="0"
+            aria-valuemax="100">
           </div>
         </div>
       </div>
     {% endfor %}
   </div>
+
   <div class="col-md-6">
     {% for skill in site.data.technical-skills offset:8 %}
       <div class="mb-3">
-        <span>{{ skill.name }}</span>
+        <div class="d-flex justify-content-between mb-1">
+          <span><strong>{{ skill.name }}</strong></span>
+          <span>{{ skill.percentage }}%</span>
+        </div>
         <div class="progress">
-          <div class="progress-bar bg-{{ skill.color }}" role="progressbar" style="width: {{ skill.percentage }}%" aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100">
-            {{ skill.percentage }}%
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="
+              width: {{ skill.percentage }}%;
+              background-color:
+                {% if skill.percentage >= 85 %}#4caf50
+                {% elsif skill.percentage >= 70 %}#2196f3
+                {% elsif skill.percentage >= 50 %}#ff9800
+                {% else %}#f44336
+                {% endif %};"
+            aria-valuenow="{{ skill.percentage }}"
+            aria-valuemin="0"
+            aria-valuemax="100">
           </div>
         </div>
       </div>
