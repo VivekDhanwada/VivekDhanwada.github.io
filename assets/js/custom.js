@@ -127,49 +127,57 @@ function initAvatarHoverEffects(avatar) {
 }
 
 /**
- * Animate skill bars when they enter the viewport.
+ * Animate skill bars smoothly when page loads.
  */
 function animateSkillBars() {
-  const skillSections = document.querySelectorAll('.col-md-6');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const bars = entry.target.querySelectorAll('.progress-bar');
-        bars.forEach(bar => {
-          const value = bar.getAttribute('aria-valuenow');
-          bar.style.width = value + '%';
-        });
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.4
+  const bars = document.querySelectorAll('.progress-bar');
+  bars.forEach((bar) => {
+    // get target percentage
+    const width = bar.getAttribute('aria-valuenow');
+    // start from 0
+    bar.style.width = '0%';
+    // animate to the target after a small delay
+    setTimeout(() => {
+      bar.style.transition = 'width 1.5s ease-in-out';
+      bar.style.width = width + '%';
+    }, 300);
   });
-  skillSections.forEach(section => observer.observe(section));
 }
 
 /**
  * Main entry point for DOMContentLoaded.
  */
 document.addEventListener("DOMContentLoaded", function () {
+  // Grab references
   const aboutSection    = document.getElementById("about");
   const scrollArrow     = document.getElementById("scrollArrow");
   const descriptionText = document.querySelector(".text-muted");
   const avatar          = document.querySelector(".avatar-container img");
   const themeToggle     = document.getElementById("theme-toggle");
 
+  // Theme initialization
   initTheme();
 
+  // Attach the toggle event listener to the theme toggle anchor
   if (themeToggle) {
     themeToggle.addEventListener("click", function (e) {
-      e.preventDefault();
+      e.preventDefault(); 
       toggleTheme();
     });
   }
 
+  // About section scroll animation
   initAboutSectionScrollAnimation(aboutSection);
+
+  // Intersection Observer for scroll arrow
   initScrollArrowIntersection(aboutSection, scrollArrow);
+
+  // Set scroll arrow color
   setScrollArrowColor(descriptionText, scrollArrow);
+
+  // Avatar hover effects
   initAvatarHoverEffects(avatar);
+
+  // ✅ Animate skill bars
   animateSkillBars();
 });
