@@ -6,49 +6,49 @@
   percentage: 95
   color: info
 
-- name: SQL
-  percentage: 80
-  color: warning
-
-- name: Google Suite
-  percentage: 90
-  color: success
-
 - name: Tableau
   percentage: 80
   color: info
 
-- name: Jupyter Notebook
-  percentage: 80
-  color: primary
-
-- name: Power BI
+- name: SQL
   percentage: 80
   color: warning
-
-- name: R
-  percentage: 80
-  color: success
-
-- name: Google Analytics (GA4)
-  percentage: 75
-  color: info
 
 - name: GitHub
   percentage: 75
   color: primary
 
-- name: Canva
+- name: Jupyter Notebook
   percentage: 80
-  color: warning
+  color: primary
+
+- name: MongoDB / PyMongo
+  percentage: 50
+  color: danger
+
+ - name: Google Suite
+  percentage: 90
+  color: success
 
 - name: HubSpot
   percentage: 70
   color: info
 
-- name: MongoDB / PyMongo
-  percentage: 50
-  color: danger
+- name: Canva
+  percentage: 80
+  color: warning
+
+  - name: R
+  percentage: 80
+  color: success
+
+  - name: Google Analytics (GA4)
+  percentage: 75
+  color: info
+
+ - name: Power BI
+  percentage: 80
+  color: warning
 
 - name: Studio 3T
   percentage: 50
