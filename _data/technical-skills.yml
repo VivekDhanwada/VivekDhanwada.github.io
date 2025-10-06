@@ -8,7 +8,7 @@
 
 - name: Tableau
   percentage: 80
-  color: primary
+  color: info
 
 - name: SQL
   percentage: 70
@@ -16,7 +16,7 @@
 
 - name: GitHub
   percentage: 60
-  color: success
+  color: danger
 
 - name: Jupyter Notebook
   percentage: 80
@@ -32,11 +32,11 @@
 
 - name: HubSpot
   percentage: 60
-  color: info
+  color: danger
 
 - name: Canva
   percentage: 80
-  color: danger
+  color: info
 
 - name: R
   percentage: 80
@@ -44,7 +44,7 @@
 
 - name: Google Analytics (GA4)
   percentage: 75
-  color: primary
+  color: info
 
 - name: Power BI
   percentage: 80
@@ -56,7 +56,7 @@
 
 - name: Gretl
   percentage: 60
-  color: warning
+  color: danger
 
 - name: MS Office
   percentage: 90
