@@ -1033,3 +1033,7 @@ small[id="attribution"] {
   border-radius: 4px;
   overflow: hidden;
 }
+
+.progress-bar {
+  transition: width 1.2s ease-in-out;
+}
