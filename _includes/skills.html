@@ -6,7 +6,7 @@
         <span class="skill-name">{{ skill.name }}</span>
         <span class="skill-percentage">{{ skill.percentage }}%</span>
       </div>
-      <div class="progress" style="height: 10px;">
+      <div class="progress" style="height: 8px;">
         <div class="progress-bar bg-{{ skill.color | default: 'primary' }} skill-bar-fill"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
@@ -26,7 +26,7 @@
         <span class="skill-name">{{ skill.name }}</span>
         <span class="skill-percentage">{{ skill.percentage }}%</span>
       </div>
-      <div class="progress" style="height: 10px;">
+      <div class="progress" style="height: 8px;">
         <div class="progress-bar skill-bar-fill bg-{{ skill.color | default: 'primary' }}"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
