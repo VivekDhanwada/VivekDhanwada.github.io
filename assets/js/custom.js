@@ -178,6 +178,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Avatar hover effects
   initAvatarHoverEffects(avatar);
 
-  // ✅ Animate skill bars
-  animateSkillBars();
+  // ✅ Animate skill bars from data-percentage attribute
+  const skillBars = document.querySelectorAll('.skill-bar-fill');
+
+  skillBars.forEach(bar => {
+    const target = bar.getAttribute('data-percentage');
+    bar.style.width = '0%'; // start at 0%
+    setTimeout(() => {
+      bar.style.transition = 'width 1.5s ease-in-out';
+      bar.style.width = target + '%';
+    }, 200); // slight delay
+  });
 });
