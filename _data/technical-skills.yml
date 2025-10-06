@@ -45,3 +45,15 @@
 
 - name: MS Office
   percentage: 90
+
+- name: Google Tag Manager
+  percentage: 40
+
+- name: Google Apps Script
+  percentage: 35
+
+- name: Trello
+  percentage: 30
+
+- name: Looker Studio
+  percentage: 40
