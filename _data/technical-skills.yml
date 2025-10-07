@@ -2,7 +2,7 @@
   percentage: 90
   color: success
 
-- name: Excel/Google Sheets
+- name: Excel / Google Sheets
   percentage: 95
   color: primary
 
@@ -11,16 +11,16 @@
   color: info
 
 - name: SQL
-  percentage: 70
+  percentage: 75
   color: success
 
 - name: GitHub
-  percentage: 60
-  color: danger
+  percentage: 65
+  color: warning
 
 - name: Jupyter Notebook
   percentage: 80
-  color: success
+  color: info
 
 - name: MongoDB / PyMongo
   percentage: 50
@@ -28,26 +28,26 @@
 
 - name: Google Suite
   percentage: 90
-  color: info
+  color: success
 
 - name: HubSpot
   percentage: 60
-  color: danger
-
-- name: Canva
-  percentage: 80
   color: info
 
+- name: Canva
+  percentage: 75
+  color: warning
+
 - name: R
-  percentage: 80
+  percentage: 70
   color: success
 
 - name: Google Analytics (GA4)
-  percentage: 75
+  percentage: 70
   color: info
 
 - name: Power BI
-  percentage: 80
+  percentage: 60
   color: primary
 
 - name: Studio 3T
@@ -55,23 +55,23 @@
   color: warning
 
 - name: Gretl
-  percentage: 60
+  percentage: 50
   color: danger
 
 - name: MS Office
   percentage: 90
-  color: info
+  color: primary
 
 - name: Google Tag Manager
   percentage: 40
   color: danger
 
 - name: Google Apps Script
-  percentage: 45
-  color: success
+  percentage: 35
+  color: warning
 
 - name: Trello
-  percentage: 50
+  percentage: 40
   color: info
 
 - name: Looker Studio
