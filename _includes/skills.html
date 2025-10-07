@@ -1,19 +1,43 @@
+<style>
+  .skill-name {
+    color: #e0e0e0;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .skill-percentage {
+    color: #bbbbbb;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .skill-bar-fill {
+    transition: width 1s ease-in-out;
+  }
+
+  .progress {
+    width: 95%;
+    height: 4px;
+    background-color: #2c2c2c;
+  }
+</style>
+
 <div class="row">
   <div class="col-md-6">
     {% for skill in site.data.technical-skills limit: 10 %}
-    <div class="mb-5"> <!-- changed from mb-4 to mb-5 -->
-      <div class="d-flex justify-content-between align-items-center mb-1">
+    <div class="mb-4">
+      <div class="d-flex justify-content-between">
         <span class="skill-name">{{ skill.name }}</span>
-        <span class="skill-percentage" style="color: #bbb;">{{ skill.percentage }}%</span>
+        <span class="skill-percentage">{{ skill.percentage }}%</span>
       </div>
-      <div class="progress" style="height: 10px; background-color: #2c2c2c; border-radius: 8px;">
+      <div class="progress">
         <div class="progress-bar bg-{{ skill.color | default: 'primary' }} skill-bar-fill"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
+             style="width: 0%"
              aria-valuenow="0"
              aria-valuemin="0"
-             aria-valuemax="100"
-             style="border-radius: 8px;">
+             aria-valuemax="100">
         </div>
       </div>
     </div>
@@ -22,16 +46,16 @@
 
   <div class="col-md-6">
     {% for skill in site.data.technical-skills offset:10 %}
-    <div class="mb-5"> <!-- changed from mb-4 to mb-5 -->
-      <div class="d-flex justify-content-between align-items-center mb-1">
+    <div class="mb-4">
+      <div class="d-flex justify-content-between">
         <span class="skill-name">{{ skill.name }}</span>
-        <span class="skill-percentage" style="color: #bbb;">{{ skill.percentage }}%</span>
+        <span class="skill-percentage">{{ skill.percentage }}%</span>
       </div>
-      <div class="progress" style="height: 10px; background-color: #2c2c2c; border-radius: 8px;">
-        <div class="progress-bar skill-bar-fill bg-{{ skill.color | default: 'primary' }}"
+      <div class="progress">
+        <div class="progress-bar bg-{{ skill.color | default: 'primary' }} skill-bar-fill"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
-             style="width: 0%; border-radius: 8px;"
+             style="width: 0%"
              aria-valuenow="0"
              aria-valuemin="0"
              aria-valuemax="100">
