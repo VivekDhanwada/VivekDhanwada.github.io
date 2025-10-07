@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-md-6">
     {% for skill in site.data.technical-skills limit: 10 %}
-    <div class="mb-3 ">
+    <div class="mb-6">
       <div class="d-flex justify-content-between">
         <span class="skill-name">{{ skill.name }}</span>
         <span class="skill-percentage">{{ skill.percentage }}%</span>
       </div>
-      <div class="progress" style="height: 8px;">
+      <div class="progress" style="height: 6px;">
         <div class="progress-bar bg-{{ skill.color | default: 'primary' }} skill-bar-fill"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
@@ -21,12 +21,12 @@
 
   <div class="col-md-6">
     {% for skill in site.data.technical-skills offset:10 %}
-    <div class="mb-3">
+    <div class="mb-6">
       <div class="d-flex justify-content-between">
         <span class="skill-name">{{ skill.name }}</span>
         <span class="skill-percentage">{{ skill.percentage }}%</span>
       </div>
-      <div class="progress" style="height: 8px;">
+      <div class="progress" style="height: 6px;">
         <div class="progress-bar skill-bar-fill bg-{{ skill.color | default: 'primary' }}"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
