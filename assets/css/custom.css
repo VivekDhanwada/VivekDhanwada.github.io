@@ -7,6 +7,18 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --background-color: var(--background-color);
+  --text-color: var(--text-color);
+  --accent-color: var(--accent-color);
+}
+
+[data-theme="dark"] {
+  --background-color: var(--text-color);
+  --text-color: #f1f1f1;
+  --accent-color: var(--accent-color);
+}
+
 /* Hidden / Visible Sections */
 .hidden-section {
   opacity: 0;
@@ -53,19 +65,25 @@ html {
 
 /* Timeline Backgrounds & Borders */
 .timeline-body::after {
-  background-color: #29d6cd !important;
+  background-color: var(--accent-color) !important;
 }
 
 .timeline-body .timeline-item:after {
-  border: 4px solid #29d6cd !important; /* Keeps the cyan border */
+  border: 4px solid var(--accent-color) !important; /* Keeps the cyan border */
 }
 
 /* Light Mode - Timeline Content */
 .timeline-body .timeline-item .content {
   background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221))
       left bottom no-repeat;
-  border-bottom: 0px solid #29d6cd !important;
+  border-bottom: 0px solid var(--accent-color) !important;
   background-size: 100% 2px;
+}
+
+[data-theme="light"] .timeline-body,
+[data-theme="light"] .timeline-body .timeline-item .content,
+[data-theme="light"] .timeline-body .timeline-item:after {
+  background-color: var(--background-color) !important;
 }
 
 /* Dark Mode - Timeline Backgrounds */
@@ -99,8 +117,8 @@ html {
 }
 
 [data-theme="dark"] .badge {
-  color: #29d6cd !important;
-  border-color: #29d6cd !important;
+  color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
 }
 
 .badge::before {
@@ -132,18 +150,18 @@ html {
 
 /* Blockquotes */
 .markdown-body blockquote {
-  border-left-color: #29d6cd !important;
+  border-left-color: var(--accent-color) !important;
 }
 
 /* Table Headers */
 .markdown-body table th {
-  background-color: #29d6cd !important;
+  background-color: var(--accent-color) !important;
   color: inherit !important; /* Keeps default text color */
 }
 
 /* Horizontal Rules */
 .markdown-body hr {
-  background: #29d6cd !important;
+  background: var(--accent-color) !important;
 }
 
 
@@ -153,8 +171,8 @@ html {
 
 /* Primary Buttons */
 .markdown-body .btn-primary {
-  background-color: #29d6cd !important;
-  border-color: #29d6cd !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
   color: white !important; /* Ensures button text remains readable */
 }
 
@@ -164,7 +182,7 @@ html {
 }
 
 .markdown-body a:not(.btn):not([class^="carousel-"]):not([class^="list-"]):not(.no-underline)::after {
-  background: #29d6cd !important;
+  background: var(--accent-color) !important;
 }
 
 /* Default Transparent Button Style */
@@ -175,9 +193,9 @@ p.text-center a {
   font-size: 16px;
   font-weight: 600;
   border-radius: 8px;
-  border: 2px solid #29d6cd; /* Default border */
+  border: 2px solid var(--accent-color); /* Default border */
   background-color: transparent;
-  color: #29d6cd;
+  color: var(--accent-color);
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -193,7 +211,7 @@ p.text-center a::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #29d6cd, #24b8b1);
+  background: linear-gradient(to right, var(--accent-color), #24b8b1);
   z-index: -1;
   transition: transform 0.4s ease-in-out;
   transform: scaleX(0);
@@ -204,7 +222,7 @@ p.text-center a::before {
 .markdown-body .btn:hover,
 p.text-center a:hover {
   color: white !important; /* Ensures text stays readable */
-  border-color: #29d6cd !important; /* Matches the fill color */
+  border-color: var(--accent-color) !important; /* Matches the fill color */
   background-color: transparent !important; /* Prevents flickering */
   transform: translateY(-3px); /* Adds slight lift */
   box-shadow: 0 10px 20px rgba(41, 214, 205, 0.3);
@@ -986,7 +1004,7 @@ small[id="attribution"] {
 -------------------------------------------*/
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
-    filter: drop-shadow(0px 0px 8px #29d6cd) drop-shadow(0px 0px 2px #008d88); /* Cyan glow plus darker outline */
+    filter: drop-shadow(0px 0px 8px var(--accent-color)) drop-shadow(0px 0px 2px #008d88); /* Cyan glow plus darker outline */
     transform: scale(1.8); /* Enlarges arrow icon */
 }
 
@@ -1011,13 +1029,9 @@ small[id="attribution"] {
 }
 
 .carousel-indicators .active {
-    background-color: #29d6cd !important; /* Cyan color for active dot */
+    background-color: var(--accent-color) !important; /* Cyan color for active dot */
 }
 
-/* Light mode background */
-[data-theme="light"] body {
-  background-color: #FAFAFA;
-}
 .skill-bar-fill {
   transition: width 1.4s ease-in-out;
   font-size: 0.75rem;
