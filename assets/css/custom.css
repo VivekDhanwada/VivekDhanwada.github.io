@@ -1055,19 +1055,21 @@ small[id="attribution"] {
 
 /* LIGHT THEME (default) */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  --background-color: #FAFAFA;
+  --text-color: #1a1a1a;
+  --accent-color: #29d6cd;
 }
 
 /* DARK THEME */
 [data-theme="dark"] {
-  --bg-color: #121212;
+  --background-color: #121212;
   --text-color: #f1f1f1;
+  --accent-color: #29d6cd;
 }
 
 /* Apply to body and base text */
 body {
-  background-color: var(--bg-color);
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
