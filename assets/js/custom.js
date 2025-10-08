@@ -148,17 +148,16 @@ function animateSkillBars() {
  * Main entry point for DOMContentLoaded.
  */
 document.addEventListener("DOMContentLoaded", function () {
-  // Grab references
   const aboutSection    = document.getElementById("about");
   const scrollArrow     = document.getElementById("scrollArrow");
   const descriptionText = document.querySelector(".text-muted");
   const avatar          = document.querySelector(".avatar-container img");
   const themeToggle     = document.getElementById("theme-toggle");
 
-  // Theme initialization
+  // ✅ Initialise theme on load
   initTheme();
 
-  // Attach the toggle event listener to the theme toggle anchor
+  // ✅ Toggle theme on click
   if (themeToggle) {
     themeToggle.addEventListener("click", function (e) {
       e.preventDefault(); 
@@ -166,27 +165,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // About section scroll animation
+  // Scroll and animation logic
   initAboutSectionScrollAnimation(aboutSection);
-
-  // Intersection Observer for scroll arrow
   initScrollArrowIntersection(aboutSection, scrollArrow);
-
-  // Set scroll arrow color
   setScrollArrowColor(descriptionText, scrollArrow);
-
-  // Avatar hover effects
   initAvatarHoverEffects(avatar);
 
-  // ✅ Animate skill bars from data-percentage attribute
   const skillBars = document.querySelectorAll('.skill-bar-fill');
-
   skillBars.forEach(bar => {
     const target = bar.getAttribute('data-percentage');
-    bar.style.width = '0%'; // start at 0%
+    bar.style.width = '0%';
     setTimeout(() => {
       bar.style.transition = 'width 1.5s ease-in-out';
       bar.style.width = target + '%';
-    }, 200); // slight delay
+    }, 200);
   });
 });
