@@ -1038,3 +1038,25 @@ small[id="attribution"] {
   width: 0;
   transition: width 1.2s ease-in-out;
 }
+
+/* LIGHT THEME (default) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+}
+
+/* Apply to body and base text */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+}
