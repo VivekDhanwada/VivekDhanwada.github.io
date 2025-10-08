@@ -16,42 +16,33 @@ function scrollToAbout() {
    * Toggle theme between dark and light.
    */
   function toggleTheme() {
-    const themeIcon = document.getElementById("theme-icon");
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-  
-    if (currentTheme === "dark") {
-      // Switch to light theme
-      document.documentElement.setAttribute("data-theme", "light");
-      themeIcon.classList.remove("fa-sun");
-      themeIcon.classList.add("fa-moon");
-      localStorage.setItem("theme", "light");
-    } else {
-      // Switch to dark theme
-      document.documentElement.setAttribute("data-theme", "dark");
-      themeIcon.classList.remove("fa-moon");
-      themeIcon.classList.add("fa-sun");
-      localStorage.setItem("theme", "dark");
-    }
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+
+  const themeIcon = document.getElementById("theme-icon");
+  if (themeIcon) {
+    themeIcon.classList.remove("fa-sun", "fa-moon");
+    themeIcon.classList.add(newTheme === "dark" ? "fa-sun" : "fa-moon");
   }
-  
+
+  console.log(`🔁 Theme toggled to ${newTheme}`);
+}
   /**
    * Initialize the theme on page load based on localStorage.
    */
   function initTheme() {
-    const themeIcon = document.getElementById("theme-icon");
-    const savedTheme = localStorage.getItem("theme");
-  
-    if (savedTheme === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-      themeIcon.classList.remove("fa-moon");
-      themeIcon.classList.add("fa-sun");
-    } else {
-      // Default to light
-      document.documentElement.setAttribute("data-theme", "light");
-      themeIcon.classList.remove("fa-sun");
-      themeIcon.classList.add("fa-moon");
-    }
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+
+  const themeIcon = document.getElementById("theme-icon");
+  if (themeIcon) {
+    themeIcon.classList.remove("fa-sun", "fa-moon");
+    themeIcon.classList.add(savedTheme === "dark" ? "fa-sun" : "fa-moon");
   }
+}
+
   
   /**
    * Set up the about section scroll animation
@@ -176,7 +167,20 @@ function scrollToAbout() {
     // Set scroll arrow color
     setScrollArrowColor(descriptionText, scrollArrow);
   
-    // Avatar hover effects
+   // Avatar hover effects
     initAvatarHoverEffects(avatar);
-  });
+
+    // ✅ Animate skill bars from data-percentage attribute
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+
+    skillBars.forEach(bar => {
+      const target = bar.getAttribute('data-percentage');
+      bar.style.width = '0%'; // Start at 0
+    
+      setTimeout(() => {
+        bar.style.transition = 'width 1.5s ease-in-out';
+        bar.style.width = target + '%'; // Animate to target
+      }, 200); // Small delay to make it look smoother
+    });
+    });
   
