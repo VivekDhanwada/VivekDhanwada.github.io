@@ -1,3 +1,4 @@
+console.log("✅ custom-2.js is loading");
 /**
  * Smoothly scroll to the About section.
  */
