@@ -1076,3 +1076,14 @@ body {
 a {
   color: var(--text-color);
 }
+
+/* Responsive theme-aware text color for skill labels */
+[data-theme='light'] .skill-name,
+[data-theme='light'] .skill-percentage {
+  color: #333333; /* or #222 for stronger contrast in light mode */
+}
+
+[data-theme='dark'] .skill-name,
+[data-theme='dark'] .skill-percentage {
+  color: #e0e0e0;
+}
