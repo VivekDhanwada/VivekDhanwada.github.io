@@ -1149,9 +1149,17 @@ a {
   .tech-item img {
     width: 40px;
     height: 40px;
-    filter: none;
     object-fit: contain;
     transition: transform 0.2s ease;
+    filter: var(--icon-filter);
+  }
+  
+  :root {
+    --icon-filter: none;
+  }
+  
+  [data-theme="dark"] {
+    --icon-filter: brightness(0) invert(1);
   }
   
   html[data-theme="dark"] .tech-item img {
