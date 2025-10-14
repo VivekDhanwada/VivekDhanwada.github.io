@@ -1169,3 +1169,17 @@ a {
     filter: brightness(0); /* Keep icons dark in light mode */
   }
 }
+
+/* Force body and tech-stack sections into dark mode */
+body,
+.tech-stack,
+.tech-category {
+  background-color: #121212 !important;
+  color: #fff !important;
+}
+
+/* Remove forced inversion of icons — keep original branding */
+.tech-item img,
+img {
+  filter: none !important;
+}
