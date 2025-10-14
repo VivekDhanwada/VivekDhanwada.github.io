@@ -1087,3 +1087,64 @@ a {
 [data-theme='dark'] .skill-percentage {
   color: #e0e0e0;
 }
+
+/* TECH STACK GRID - DARK MODE FRIENDLY */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.tech-category {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.tech-category h2 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.category-desc {
+  color: #bbbbbb;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.tech-item img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1); /* Makes icons white for dark mode */
+  transition: transform 0.2s ease;
+}
+
+.tech-item span {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #dddddd;
+}
+
+.tech-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1) invert(0.5);
+}
