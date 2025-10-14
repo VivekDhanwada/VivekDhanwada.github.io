@@ -1149,3 +1149,23 @@ a {
     filter: invert(0);
   }
 }
+
+/* Default: Dark Mode */
+:root {
+  --card-bg: #1e1e1e;
+  --text-primary: #fff;
+  --text-secondary: #ccc;
+}
+
+/* Light Mode Overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    --card-bg: #f4f4f4;
+    --text-primary: #000;
+    --text-secondary: #444;
+  }
+
+  .tech-item img {
+    filter: brightness(0); /* Keep icons dark in light mode */
+  }
+}
