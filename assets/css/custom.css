@@ -780,150 +780,74 @@ small[id="attribution"] {
   display: none !important;
 }
 
-
-/* ==========================================================================
+/* ------------------------------
    Tech Section & Icons
-   ========================================================================== */
+------------------------------ */
 
-/* Tech Section Layout */
 .tech-section {
   margin: 3rem 0;
   display: grid;
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
 }
 
 .tech-category {
+  background-color: transparent;
   text-align: center;
+  padding: 1rem;
+  border-radius: 12px;
 }
 
 .tech-category h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: inherit;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
   font-weight: 600;
+  color: inherit;
 }
 
 .tech-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
+  gap: 1.5rem;
   max-width: 800px;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
-.tech-description {
-  color: inherit;
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-@media (prefers-color-scheme: dark) {
-  .tech-category h2,
-  .tech-name,
-  .tech-description {
-    color: inherit;
-  }
-}
-
-/* Tech Section Grid (Desktop) */
-@media (min-width: 768px) {
-  .tech-section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .tech-category:nth-child(2),
-  .tech-category:nth-child(5) {
-    grid-column: span 1;
-  }
-}
-
-/* Adjustments for Specific Tech Icons in Dark Mode */
-@media (prefers-color-scheme: dark) {
-  img[alt="ROS/ROS2"],
-  img[alt="Photoshop"],
-  img[alt="Pandas"],
-  img[alt="Bash"],
-  img[alt="ANSYS"] {
-    filter: brightness(1.8) contrast(1.2); /* Adjust brightness & contrast */
-  }
-}
-
-/* Tech Item Styles */
 .tech-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   position: relative;
-  justify-content: center;
-  transition: transform 0.5s ease, filter 0.5s ease;
+  width: 80px;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .tech-item img {
-  width: 50px;
+  width: 48px;
   height: auto;
-  max-height: 50px; /* Ensures non-circular icons keep their shape */
-  opacity: 0.9;
-  transition: transform 0.5s ease-out, filter 0.5s ease-out, box-shadow 0.5s ease-out;
+  max-height: 48px;
+  opacity: 0.95;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* 3D Floating Hover Effect */
 .tech-item:hover img {
-  transform: translateY(-3px) rotateY(2deg) scale(1.05);
+  transform: scale(1.05);
   opacity: 1;
-  filter: drop-shadow(0px 0px 5px rgba(103, 203, 236, 0.3))
-          drop-shadow(0px 0px 5px rgba(97, 153, 226, 0.3));
+  filter: drop-shadow(0 0 6px rgba(120, 200, 255, 0.3));
 }
 
-/* Special size for ROS/ROS2 icon */
-.tech-item img[alt="ROS/ROS2"] {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-/* Glow Effect on Tech Icons */
-.tech-item::before {
-  content: "";
-  position: absolute;
-  width: 70px; /* Ensures proper coverage for all icons */
-  height: 70px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(115, 210, 241, 0.25), rgba(110, 161, 228, 0.2));
-  filter: blur(10px);
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none; /* Prevents accidental interactions */
-}
-
-.tech-item:hover::before {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.2);
-}
-
-/* Tooltip for Tech Icons */
 .tech-name {
   position: absolute;
-  top: 110%; /* Moves text below icon to avoid overlap */
-  display: block;
+  top: 110%;
   font-size: 0.85rem;
   color: inherit;
-  font-family: inherit;
-  transition: opacity 0.5s ease, transform 0.5s ease;
   opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   text-align: center;
-  max-width: 80px; /* Prevents text from stretching too much */
-  word-wrap: break-word;
-  line-height: 1.2;
+  max-width: 80px;
 }
 
 .tech-item:hover .tech-name {
@@ -931,93 +855,27 @@ small[id="attribution"] {
   transform: translateY(4px);
 }
 
+/* ------------------------------
+   Dark Mode Specific Overrides
+------------------------------ */
 
-/* ==========================================================================
-   Project Card Styles
-   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  body,
+  .tech-section,
+  .tech-category {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+  }
 
-.project.card {
-  border-radius: 15px;
-  text-decoration: none !important;
-  margin: 10px auto;
-  display: block;
-  transition: transform 400ms;
-}
+  .tech-name,
+  .tech-category h2 {
+    color: #ffffff !important;
+  }
 
-.project.card .card-img-top {
-  border-radius: 15px 15px 0 0;
-}
-
-.project.card:hover:not(.post) {
-  transform: translateY(-8px);
-  box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
-}
-
-/* Markdown Link Styles */
-
-.md-link {
-  color: rgb(3, 161, 224)!important; /* Dark theme default text color */
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.md-link:hover {
-  text-decoration: underline; /* Optional: Keep a subtle hover effect */
-  background: none !important;
-}
-
-/*-------------------------------------------
-  Carousel Controls Base Styles
--------------------------------------------*/
-.carousel-control-prev,
-.carousel-control-next {
-    background: none !important; /* Removes dark overlay */
-    width: auto; /* Prevents extra padding */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-/*-------------------------------------------
-  Carousel Arrow Icon Styles
--------------------------------------------*/
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.7)); /* Default shadow */
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-/*-------------------------------------------
-  Hover Effects for Carousel Controls
-  (Removed parent's scale to prevent double scaling)
--------------------------------------------*/
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    animation: bounce 0.5s ease-in-out;
-    background: none !important;
-    /* Removed transform: scale(1.5) to avoid double scaling */
-}
-
-/*-------------------------------------------
-  Hover Effects for Carousel Arrow Icons
--------------------------------------------*/
-.carousel-control-prev:hover .carousel-control-prev-icon,
-.carousel-control-next:hover .carousel-control-next-icon {
-    filter: drop-shadow(0px 0px 8px var(--accent-color)) drop-shadow(0px 0px 2px #008d88); /* Cyan glow plus darker outline */
-    transform: scale(1.8); /* Enlarges arrow icon */
-}
-
-/*-------------------------------------------
-  Bounce Animation
--------------------------------------------*/
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
+  .tech-item img,
+  img {
+    filter: none !important;
+  }
 }
 
 /*-------------------------------------------
