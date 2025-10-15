@@ -1032,6 +1032,9 @@ small[id="attribution"] {
     background-color: var(--accent-color) !important; /* Cyan color for active dot */
 }
 
+/*-------------------------------------------
+  Tech Stack Progress Bar Animation
+-------------------------------------------*/
 .skill-bar-fill {
   transition: width 1.4s ease-in-out;
   font-size: 0.75rem;
