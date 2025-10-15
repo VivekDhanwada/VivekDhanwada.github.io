@@ -1055,38 +1055,3 @@ small[id="attribution"] {
   width: 0;
   transition: width 1.2s ease-in-out;
 }
-
-/* LIGHT THEME (default) */
-:root {
-  --background-color: #FAFAFA;
-  --text-color: #1a1a1a;
-  --accent-color: #29d6cd;
-}
-
-/* DARK THEME */
-[data-theme="dark"] {
-  --background-color: #121212;
-  --text-color: #f1f1f1;
-  --accent-color: #29d6cd;
-}
-
-/* Apply to body and base text */
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-a {
-  color: var(--text-color);
-}
-
-/* Responsive theme-aware text color for skill labels */
-[data-theme='light'] .skill-name,
-[data-theme='light'] .skill-percentage {
-  color: #333333; /* or #222 for stronger contrast in light mode */
-}
-
-[data-theme='dark'] .skill-name,
-[data-theme='dark'] .skill-percentage {
-  color: #e0e0e0;
-}
