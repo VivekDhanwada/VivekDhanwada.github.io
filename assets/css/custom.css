@@ -858,97 +858,6 @@ small[id="attribution"] {
   display: none !important;
 }
 
-/* ------------------------------
-   Tech Section & Icons
------------------------------- */
-
-.tech-section {
-  margin: 3rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-}
-
-.tech-category {
-  background-color: transparent;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 12px;
-}
-
-.tech-category h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  color: inherit;
-}
-
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
-  padding-bottom: 30px;
-}
-
-.tech-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-  position: relative;
-  width: 80px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.tech-item img {
-  width: 48px;
-  height: auto;
-  max-height: 48px;
-  opacity: 0.95;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.tech-item:hover img {
-  transform: scale(1.05);
-  opacity: 1;
-  filter: drop-shadow(0 0 6px rgba(120, 200, 255, 0.3));
-}
-
-.tech-name {
-  position: absolute;
-  top: 110%;
-  font-size: 0.85rem;
-  color: inherit;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  text-align: center;
-  max-width: 80px;
-}
-
-.tech-item:hover .tech-name {
-  opacity: 1;
-  transform: translateY(4px);
-}
-
-/* ------------------------------
-   Dark Mode Specific Overrides
------------------------------- */
-
-[data-theme="dark"] body,
-[data-theme="dark"] .tech-section,
-[data-theme="dark"] .tech-category {
-  background-color: #121212 !important;
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] .tech-name,
-[data-theme="dark"] .tech-category h2 {
-  color: #ffffff !important;
-}
-
 /*-------------------------------------------
   Carousel Indicators Styling
 -------------------------------------------*/
@@ -961,26 +870,96 @@ small[id="attribution"] {
     background-color: var(--accent-color) !important; /* Cyan color for active dot */
 }
 
-/*-------------------------------------------
-  Tech Stack Progress Bar Animation
--------------------------------------------*/
-.skill-bar-fill {
-  transition: width 1.4s ease-in-out;
-  font-size: 0.75rem;
-  font-weight: 500;
-  text-align: right;
-  padding-right: 6px;
-  color: #fff;
-}
+/* ==========================================================================
+   Tech Section & Icons
+   ========================================================================== */
 
-.progress {
-  height: 8px;
-  background-color: #e9ecef;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  width: 0;
-  transition: width 1.2s ease-in-out;
-}
+   .tech-section {
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--tech-text-color, #111); /* will override in dark mode */
+  }
+  
+  .tech-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Icon Grid */
+  .tech-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .tech-item {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tech-item img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+  }
+  
+  .tech-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ==========================================================================
+     Tech Stack Progress Bar Animation
+     ========================================================================== */
+  
+  .tech-bar {
+    margin: 1.2rem auto;
+    max-width: 600px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+  }
+  
+  .tech-bar-fill {
+    background-color: var(--progress-fill-color, #0077b5); /* LinkedIn blue default */
+    height: 100%;
+    width: 0;
+    transition: width 1s ease-in-out;
+  }
+  
+  .tech-bar-label {
+    position: absolute;
+    top: -28px;
+    left: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--progress-label-color, #111);
+  }
+  
+  /* ==========================================================================
+     Dark Mode Overrides
+     ========================================================================== */
+  @media (prefers-color-scheme: dark) {
+    .tech-section {
+      --tech-text-color: #f0f0f0;
+    }
+  
+    .tech-bar {
+      background-color: #444;
+    }
+  
+    .tech-bar-fill {
+      --progress-fill-color: #00bcd4; /* cyan for contrast */
+    }
+  
+    .tech-bar-label {
+      --progress-label-color: #f0f0f0;
+    }
+  }
