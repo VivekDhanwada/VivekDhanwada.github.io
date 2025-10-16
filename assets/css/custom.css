@@ -39,7 +39,7 @@ html {
   margin-top: 20px;
   font-size: 32px;
   cursor: pointer;
-  animation: bounce 1.5s infinite;
+  animation: bounce 3s ease-in-out infinite;
   z-index: 1000;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
