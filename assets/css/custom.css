@@ -65,7 +65,7 @@ html {
 
 /* Timeline Backgrounds & Borders */
 .timeline-body::after {
-  background-color: var(--accent-color) !important;
+  background-color: #29d6cd !important;
 }
 
 .timeline-body .timeline-item:after {
