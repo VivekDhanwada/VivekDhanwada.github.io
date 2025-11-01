@@ -31,11 +31,11 @@
         <span class="skill-percentage">{{ skill.percentage }}%</span>
       </div>
       <div class="progress">
-        <div class="progress-bar bg-{{ skill.color | default: 'primary' }} skill-bar-fill"
+        <div class="progress-bar skill-bar-fill"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
-             style="width: 0%"
-             aria-valuenow="0"
+             style="width: 0%; background-color: {{ skill.color | default: '#3498db' }}"
+             aria-valuenow="{{ skill.percentage }}"
              aria-valuemin="0"
              aria-valuemax="100">
         </div>
@@ -52,11 +52,11 @@
         <span class="skill-percentage">{{ skill.percentage }}%</span>
       </div>
       <div class="progress">
-        <div class="progress-bar bg-{{ skill.color | default: 'primary' }} skill-bar-fill"
+        <div class="progress-bar skill-bar-fill"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
-             style="width: 0%"
-             aria-valuenow="0"
+             style="width: 0%; background-color: {{ skill.color | default: '#3498db' }}"
+             aria-valuenow="{{ skill.percentage }}"
              aria-valuemin="0"
              aria-valuemax="100">
         </div>
