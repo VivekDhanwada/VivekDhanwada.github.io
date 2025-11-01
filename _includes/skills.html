@@ -2,12 +2,16 @@
   :root {
     --skill-text: #333333;
     --skill-percentage: #555555;
+    --progress-bg: #2c2c2c;
+    --progress-fill: #3498db;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
       --skill-text: #e0e0e0;
       --skill-percentage: #bbbbbb;
+      --progress-bg: #888888;
+      --progress-fill: #4da3ff;
     }
   }
 
@@ -30,7 +34,12 @@
   .progress {
     width: 95%;
     height: 4px;
-    background-color: #2c2c2c;
+    background-color: var(--progress-bg);
+  }
+
+  .progress-bar {
+    width: 0; /* set via JS to avoid CSS linter errors with Liquid */
+    background-color: var(--progress-fill);
   }
 </style>
 
@@ -46,7 +55,7 @@
         <div class="progress-bar skill-bar-fill"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
-             style="width: 0%; background-color: {{ skill.color | default: '#3498db' }}"
+             data-color="{{ skill.color | default: '' }}"
              aria-valuenow="{{ skill.percentage }}"
              aria-valuemin="0"
              aria-valuemax="100">
@@ -67,7 +76,7 @@
         <div class="progress-bar skill-bar-fill"
              role="progressbar"
              data-percentage="{{ skill.percentage }}"
-             style="width: 0%; background-color: {{ skill.color | default: '#3498db' }}"
+             data-color="{{ skill.color | default: '' }}"
              aria-valuenow="{{ skill.percentage }}"
              aria-valuemin="0"
              aria-valuemax="100">
@@ -77,3 +86,17 @@
     {% endfor %}
   </div>
 </div>
+
+<script>
+  (function () {
+    var bars = document.querySelectorAll('.progress-bar.skill-bar-fill');
+    bars.forEach(function (bar) {
+      var pct = parseFloat(bar.getAttribute('data-percentage')) || 0;
+      var color = bar.getAttribute('data-color');
+      bar.style.width = pct + '%';
+      if (color) {
+        bar.style.backgroundColor = color;
+      }
+    });
+  })();
+</script>

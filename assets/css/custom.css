@@ -868,35 +868,44 @@ footer a:hover,
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-  /* ==========================================================================
-     Tech Stack Progress Bar Animation
-     ========================================================================== */
-  
-  .tech-bar {
-    margin: 1.2rem auto;
-    max-width: 600px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    height: 20px;
-  }
-  
-  .tech-bar-fill {
-    background-color: var(--progress-fill-color, #0077b5); /* LinkedIn blue default */
-    height: 100%;
-    width: 0;
-    transition: width 1s ease-in-out;
-  }
-  
-  .tech-bar-label {
-    position: absolute;
-    top: -28px;
-    left: 0;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--progress-label-color, #111);
-  }
+/* ==========================================================================
+   Tech Stack Progress Bar Animation
+   ========================================================================== */
+
+.tech-bar {
+  margin: 1.2rem auto;
+  max-width: 600px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 20px;
+}
+
+.tech-bar-fill {
+  background-color: #333; /* dark grey for visibility in dark mode */
+  height: 100%;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.tech-bar-label {
+  position: absolute;
+  top: -28px;
+  left: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111;
+}
+
+.animate-fill {
+  animation: fillBar 1.2s ease-in-out forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--fill-width); }
+}
   
   /* ==========================================================================
      Dark Mode Overrides
