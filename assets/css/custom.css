@@ -635,34 +635,6 @@ p.text-center a:hover::before {
     pointer-events: none;
   }
 
-/* ==========================================================================
-   Bootstrap Container Overrides
-   ========================================================================== */
-
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  .container { max-width: 540px; }
-}
-
-@media (min-width: 768px) {
-  .container { max-width: 720px; }
-}
-
-@media (min-width: 992px) {
-  .container { max-width: 960px; }
-}
-
-@media (min-width: 1200px) {
-  .container { max-width: 1140px; }
-}
-
 
 /* ==========================================================================
    Navbar Styles
@@ -854,30 +826,6 @@ footer a:hover,
 
 
 /* ==========================================================================
-   Hide Theme Attribution & Related Elements
-   ========================================================================== */
-
-.github-button,
-a[href*="yousinix/portfolYOU"],
-a[href*="portfolYOU"],
-#attribution,
-small[id="attribution"] {
-  display: none !important;
-}
-
-/*-------------------------------------------
-  Carousel Indicators Styling
--------------------------------------------*/
-.carousel-indicators li {
-    background-color: rgba(0, 0, 0, 0.6); /* Darker dots for visibility */
-    transition: background-color 0.3s ease-in-out;
-}
-
-.carousel-indicators .active {
-    background-color: var(--accent-color) !important; /* Cyan color for active dot */
-}
-
-/* ==========================================================================
    Tech Section & Icons
    ========================================================================== */
 
@@ -970,3 +918,102 @@ small[id="attribution"] {
       --progress-label-color: #f0f0f0;
     }
   }
+  /* ==========================================================================
+   Project Card Styles
+   ========================================================================== */
+
+.project.card {
+  border-radius: 15px;
+  text-decoration: none !important;
+  margin: 10px auto;
+  display: block;
+  transition: transform 400ms;
+}
+
+.project.card .card-img-top {
+  border-radius: 15px 15px 0 0;
+}
+
+.project.card:hover:not(.post) {
+  transform: translateY(-8px);
+  box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
+}
+
+/* Markdown Link Styles */
+
+.md-link {
+  color: rgb(3, 161, 224)!important; /* Dark theme default text color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.md-link:hover {
+  text-decoration: underline; /* Optional: Keep a subtle hover effect */
+  background: none !important;
+}
+
+/*-------------------------------------------
+  Carousel Controls Base Styles
+-------------------------------------------*/
+.carousel-control-prev,
+.carousel-control-next {
+    background: none !important; /* Removes dark overlay */
+    width: auto; /* Prevents extra padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/*-------------------------------------------
+  Carousel Arrow Icon Styles
+-------------------------------------------*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.7)); /* Default shadow */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/*-------------------------------------------
+  Hover Effects for Carousel Controls
+  (Removed parent's scale to prevent double scaling)
+-------------------------------------------*/
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    animation: bounce 0.5s ease-in-out;
+    background: none !important;
+    /* Removed transform: scale(1.5) to avoid double scaling */
+}
+
+/*-------------------------------------------
+  Hover Effects for Carousel Arrow Icons
+-------------------------------------------*/
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    filter: drop-shadow(0px 0px 8px #29d6cd) drop-shadow(0px 0px 2px #008d88); /* Cyan glow plus darker outline */
+    transform: scale(1.8); /* Enlarges arrow icon */
+}
+
+/*-------------------------------------------
+  Bounce Animation
+-------------------------------------------*/
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/*-------------------------------------------
+  Carousel Indicators Styling
+-------------------------------------------*/
+.carousel-indicators li {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker dots for visibility */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-indicators .active {
+    background-color: #29d6cd !important; /* Cyan color for active dot */
+}
