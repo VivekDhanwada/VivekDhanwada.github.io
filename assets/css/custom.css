@@ -65,7 +65,7 @@ html {
 
 /* Timeline Backgrounds & Borders */
 .timeline-body::after {
-  background-color: #29d6cd !important;
+  background-color: var(--accent-color) !important;
 }
 
 .timeline-body .timeline-item:after {
@@ -104,23 +104,28 @@ html {
    Badge Component Styles
    ========================================================================== */
 
+/* Aligns badges inline and vertically centers content */
 .badge {
   position: relative;
   display: inline-block;
+  /* Controls badge shape and border appearance */
   border: 2px solid transparent; /* Ensure border is visible */
-  border-color: rgb(3, 161, 224)!important; /* Cyan border */
+  border-color: var(--accent-color) !important;
   transition: all 0.3s ease-in-out;
-  color: rgb(3, 161, 224)!important;
+  /* Sets badge text colour */
+  color: var(--accent-color) !important;
   overflow: hidden; /* Prevent content overflow */
   z-index: 1;
   vertical-align: middle; /* Ensure proper alignment */
 }
 
+/* Sets badge colours for dark theme */
 [data-theme="dark"] .badge {
   color: var(--accent-color) !important;
   border-color: var(--accent-color) !important;
 }
 
+/* Adds animated gradient background for badge hover effect */
 .badge::before {
   content: "";
   position: absolute;
@@ -128,19 +133,27 @@ html {
   left: -100%; /* Start off-screen */
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgb(3, 161, 224), rgb(0, 255, 221));
+  background: linear-gradient(to right, var(--accent-color), var(--accent-secondary));
   transition: left 0.4s ease-in-out; /* Animate the left movement */
   z-index: -1;
   display: block; /* Prevent any inline displacement */
 }
 
+/* Adds hover effects or focus styles: gradient slides in */
 .badge:hover::before {
   left: 0; /* Move the gradient from left to right */
 }
 
+/* Adds hover effects or focus styles: text turns white, border removed */
 .badge:hover {
-  color: white !important; /* Ensure text contrast */
-  border: none; /* Remove default border */
+  color: white !important;
+  border-color: transparent !important;
+}
+
+/* Keyboard accessibility: focus style for badge */
+.badge:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 
@@ -248,6 +261,9 @@ p.text-center a:hover::before {
   color: rgba(255, 255, 255, 0.6) !important; /* Equivalent to $text-black */
 }
 
+.back-button:hover {
+  color: var(--accent-color) !important;
+}
 
 /* ==========================================================================
    Outline Buttons - Theme-specific Styling
@@ -428,70 +444,62 @@ p.text-center a:hover::before {
    Gradient Fill Hover Effects for Outline Buttons
    ========================================================================== */
 
-.btn-outline-dark.resume,
-.btn-outline-dark.github,
-.btn-outline-dark.linkedin {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.btn-outline-dark.resume::before,
-.btn-outline-dark.github::before,
-.btn-outline-dark.linkedin::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease-in-out;
-}
-
-/* Resume Gradient */
-.btn-outline-dark.resume::before {
-  background: linear-gradient(to right, #b20000, #ff0000);
-}
-
-.btn-outline-dark.resume:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(178, 0, 0, 0.3);
-}
-
-.btn-outline-dark.resume:hover::before {
-  transform: scaleX(1);
-}
-
-/* GitHub Gradient */
-.btn-outline-dark.github::before {
-  background: linear-gradient(to right, #888, #333);
-}
-
-.btn-outline-dark.github:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(136, 136, 136, 0.3);
-}
-
-.btn-outline-dark.github:hover::before {
-  transform: scaleX(1);
-}
-
-/* LinkedIn Gradient */
-.btn-outline-dark.linkedin::before {
-  background: linear-gradient(to right, #005582, #0077B5, #00A8FF);
-}
-
-.btn-outline-dark.linkedin:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
-}
-
-.btn-outline-dark.linkedin:hover::before {
-  transform: scaleX(1);
-}
+   .btn-outline-dark.resume,
+   .btn-outline-dark.github,
+   .btn-outline-dark.linkedin {
+     position: relative;
+     overflow: hidden;
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   }
+   
+   /* Shared ::before styles */
+   .btn-outline-dark.resume::before,
+   .btn-outline-dark.github::before,
+   .btn-outline-dark.linkedin::before {
+     content: "";
+     position: absolute;
+     inset: 0; /* shorthand for top: 0; left: 0; right: 0; bottom: 0 */
+     z-index: -1;
+     transform: scaleX(0);
+     transform-origin: left;
+     transition: transform 0.4s ease-in-out;
+   }
+   
+   /* Resume */
+   .btn-outline-dark.resume::before {
+     background: linear-gradient(to right, #b20000, #ff0000);
+   }
+   .btn-outline-dark.resume:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 20px rgba(178, 0, 0, 0.3);
+   }
+   .btn-outline-dark.resume:hover::before {
+     transform: scaleX(1);
+   }
+   
+   /* GitHub */
+   .btn-outline-dark.github::before {
+     background: linear-gradient(to right, #888, #333);
+   }
+   .btn-outline-dark.github:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 20px rgba(136, 136, 136, 0.3);
+   }
+   .btn-outline-dark.github:hover::before {
+     transform: scaleX(1);
+   }
+   
+   /* LinkedIn */
+   .btn-outline-dark.linkedin::before {
+     background: linear-gradient(to right, #005582, #0077B5, #00A8FF);
+   }
+   .btn-outline-dark.linkedin:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
+   }
+   .btn-outline-dark.linkedin:hover::before {
+     transform: scaleX(1);
+   }
 
 
 /* ==========================================================================
@@ -521,8 +529,8 @@ p.text-center a:hover::before {
   position: relative;
   z-index: 2;
   animation: gradientGlow 3s infinite alternate;
-  box-shadow: 0px 10px 30px rgba(3, 161, 224, 0.3),
-              0px 10px 30px rgba(0, 255, 221, 0.3);
+  box-shadow: 0px 0px 30px rgba(3, 161, 224, 0.5),
+              0px 0px 40px rgba(0, 255, 221, 0.3);
 }
 
 .avatar-container::before {
@@ -531,18 +539,15 @@ p.text-center a:hover::before {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(3, 161, 224, 0.2), rgba(0, 255, 221, 0.1));
-  filter: blur(20px);
+  background: radial-gradient(circle, rgba(3, 161, 224, 0.4), rgba(0, 255, 221, 0.3));
+  filter: blur(30px);
   z-index: 1;
   opacity: 1;
-  transition: all 0.4s ease-in-out;;
+  transition: opacity 0.4s ease-in-out;
 }
 
 .avatar-container:hover::before {
-  background: radial-gradient(circle, rgba(3, 161, 224, 0.6), rgba(0, 255, 221, 0.5));
-  filter: blur(60px);
-  opacity: 1;
-  transition: all 0.4s ease-in-out;
+  animation: backgroundPulse 3s infinite alternate;
 }
 
 /* Keyframes for Avatar Effects */
@@ -577,24 +582,24 @@ p.text-center a:hover::before {
 
 @keyframes gradientGlow {
   0% {
-    box-shadow: 0px 0px 15px rgba(3, 161, 224, 0.2),
-                0px 0px 20px rgba(0, 255, 221, 0.15);
+    box-shadow: 0px 0px 30px rgba(3, 161, 224, 0.5),
+                0px 0px 40px rgba(0, 255, 221, 0.3);
   }
   50% {
-    box-shadow: 0px 0px 20px rgba(0, 255, 221, 0.25),
-                0px 0px 25px rgba(3, 161, 224, 0.2);
+    box-shadow: 0px 0px 40px rgba(0, 255, 221, 0.5),
+                0px 0px 50px rgba(3, 161, 224, 0.4);
   }
   100% {
-    box-shadow: 0px 0px 15px rgba(3, 161, 224, 0.2),
-                0px 0px 20px rgba(0, 255, 221, 0.15);
+    box-shadow: 0px 0px 30px rgba(3, 161, 224, 0.5),
+                0px 0px 40px rgba(0, 255, 221, 0.3);
   }
 }
 
 .avatar-container img:hover {
   transform: scale(1.05);
-  box-shadow: 0px 8px 24px rgba(3, 161, 224, 0.3),
-              0px 8px 24px rgba(0, 255, 221, 0.3);
-  filter: brightness(1); /* No extra brightness on hover */
+  box-shadow: 0px 10px 30px rgba(3, 161, 224, 0.4),
+              0px 10px 30px rgba(0, 255, 221, 0.4);
+  filter: brightness(1);
 }
 
 @keyframes float {
