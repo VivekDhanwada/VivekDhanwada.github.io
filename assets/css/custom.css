@@ -906,6 +906,15 @@ footer a:hover,
   from { width: 0; }
   to { width: var(--fill-width); }
 }
+
+/* Override label color based on light/dark mode */
+[data-theme="light"] .tech-bar-label {
+  color: #222 !important;
+}
+
+[data-theme="dark"] .tech-bar-label {
+  color: #e0e0e0 !important;
+}
   
   /* ==========================================================================
      Dark Mode Overrides
