@@ -895,7 +895,16 @@ footer a:hover,
   left: 0;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #111;
+  color: var(--tech-bar-label-color, #111);
+}
+
+/* Theme-specific overrides */
+[data-theme="light"] {
+  --tech-bar-label-color: #222;
+}
+
+[data-theme="dark"] {
+  --tech-bar-label-color: #e0e0e0;
 }
 
 .animate-fill {
@@ -905,15 +914,6 @@ footer a:hover,
 @keyframes fillBar {
   from { width: 0; }
   to { width: var(--fill-width); }
-}
-
-/* Override label color based on light/dark mode */
-[data-theme="light"] .tech-bar-label {
-  color: #222 !important;
-}
-
-[data-theme="dark"] .tech-bar-label {
-  color: #e0e0e0 !important;
 }
   
   /* ==========================================================================
