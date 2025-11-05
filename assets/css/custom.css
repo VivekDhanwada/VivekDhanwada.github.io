@@ -883,7 +883,7 @@ footer a:hover,
   }
   
   .tech-bar-fill {
-    background-color: #333; /* dark grey for visibility in dark mode */
+    /* background-color: #333; /* dark grey for visibility in dark mode */
     height: 100%;
     width: 0;
     transition: width 1s ease-in-out;
@@ -917,26 +917,7 @@ footer a:hover,
     from { width: 0; }
     to { width: var(--fill-width); }
   }
-  /* ==========================================================================
-     Dark Mode Overrides
-     ========================================================================== */
-  @media (prefers-color-scheme: dark) {
-    .tech-section {
-      --tech-text-color: #f0f0f0;
-    }
   
-    .tech-bar {
-      background-color: #444;
-    }
-  
-    .tech-bar-fill {
-      --progress-fill-color: #00bcd4; /* cyan for contrast */
-    }
-  
-    .tech-bar-label {
-      --progress-label-color: #f0f0f0;
-    }
-  }
   /* ==========================================================================
    Project Card Styles
    ========================================================================== */

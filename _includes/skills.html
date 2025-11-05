@@ -88,15 +88,16 @@
 </div>
 
 <script>
-  (function () {
-    var bars = document.querySelectorAll('.progress-bar.skill-bar-fill');
-    bars.forEach(function (bar) {
-      var pct = parseFloat(bar.getAttribute('data-percentage')) || 0;
-      var color = bar.getAttribute('data-color');
-      bar.style.width = pct + '%';
-      if (color) {
-        bar.style.backgroundColor = color;
-      }
-    });
-  })();
+ (function () {
+  var bars = document.querySelectorAll('.progress-bar.skill-bar-fill');
+  bars.forEach(function (bar) {
+    var pct = parseFloat(bar.getAttribute('data-percentage')) || 0;
+    var color = bar.getAttribute('data-color');
+
+    bar.style.width = pct + '%';
+
+    // Apply color from YAML if available, else use CSS fallback
+    bar.style.backgroundColor = color || getComputedStyle(bar).getPropertyValue('--progress-fill').trim();
+  });
+})();
 </script>
