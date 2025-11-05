@@ -841,6 +841,14 @@ footer a:hover,
   text-align: center;
 }
 
+/* Section Layout Grid */
+.tech-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  align-items: start;
+}
+
 /* Icon Grid */
 .tech-icons {
   display: grid;
