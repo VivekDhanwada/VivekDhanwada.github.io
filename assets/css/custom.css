@@ -868,55 +868,12 @@ footer a:hover,
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-/* ==========================================================================
-   Tech Stack Progress Bar Animation
-   ========================================================================== 
-
-   .tech-bar {
-    margin: 1.2rem auto;
-    max-width: 600px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    height: 20px;
+  .tech-section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    align-items: start;
   }
-  
-  /* .tech-bar-fill {
-    /* background-color: #333; /* dark grey for visibility in dark mode 
-    height: 100%;
-    width: 0;
-    transition: width 1s ease-in-out;
-  } */
-  
-  /* Skill labels and percentages 
-  .skill-name,
-  .skill-percentage {
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  /* Theme-specific text color 
-  [data-theme="light"] .skill-name,
-  [data-theme="light"] .skill-percentage {
-    color: #111 !important; /* dark text for light mode 
-  }
-  
-  [data-theme="dark"] .skill-name,
-  [data-theme="dark"] .skill-percentage {
-    color: #fff !important; /* white text for dark mode 
-  }*/
-  
-  /* Animate bar fill 
-  .animate-fill {
-    animation: fillBar 1.2s ease-in-out forwards;
-  }
-  
-  @keyframes fillBar {
-    from { width: 0; }
-    to { width: var(--fill-width); }
-  } */
   
   /* ==========================================================================
    Project Card Styles
@@ -1017,3 +974,53 @@ footer a:hover,
 .carousel-indicators .active {
     background-color: #29d6cd !important; /* Cyan color for active dot */
 }
+
+/* ==========================================================================
+   Tech Stack Progress Bar Animation
+   ========================================================================== 
+
+   .tech-bar {
+    margin: 1.2rem auto;
+    max-width: 600px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+  }
+  
+  /* .tech-bar-fill {
+    /* background-color: #333; /* dark grey for visibility in dark mode 
+    height: 100%;
+    width: 0;
+    transition: width 1s ease-in-out;
+  } */
+  
+  /* Skill labels and percentages 
+  .skill-name,
+  .skill-percentage {
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Theme-specific text color 
+  [data-theme="light"] .skill-name,
+  [data-theme="light"] .skill-percentage {
+    color: #111 !important; /* dark text for light mode 
+  }
+  
+  [data-theme="dark"] .skill-name,
+  [data-theme="dark"] .skill-percentage {
+    color: #fff !important; /* white text for dark mode 
+  }*/
+  
+  /* Animate bar fill 
+  .animate-fill {
+    animation: fillBar 1.2s ease-in-out forwards;
+  }
+  
+  @keyframes fillBar {
+    from { width: 0; }
+    to { width: var(--fill-width); }
+  } */
