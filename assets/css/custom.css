@@ -882,12 +882,12 @@ footer a:hover,
     height: 20px;
   }
   
-  .tech-bar-fill {
-    /* background-color: #333; /* dark grey for visibility in dark mode */
+  /* .tech-bar-fill {
+    /* background-color: #333; /* dark grey for visibility in dark mode 
     height: 100%;
     width: 0;
     transition: width 1s ease-in-out;
-  }
+  } */
   
   /* Skill labels and percentages */
   .skill-name,
