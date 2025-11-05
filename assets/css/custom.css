@@ -870,7 +870,7 @@ footer a:hover,
   
 /* ==========================================================================
    Tech Stack Progress Bar Animation
-   ========================================================================== */
+   ========================================================================== 
 
    .tech-bar {
     margin: 1.2rem auto;
@@ -889,7 +889,7 @@ footer a:hover,
     transition: width 1s ease-in-out;
   } */
   
-  /* Skill labels and percentages */
+  /* Skill labels and percentages 
   .skill-name,
   .skill-percentage {
     font-size: 0.9rem;
@@ -897,18 +897,18 @@ footer a:hover,
     transition: color 0.3s ease-in-out;
   }
   
-  /* Theme-specific text color */
+  /* Theme-specific text color 
   [data-theme="light"] .skill-name,
   [data-theme="light"] .skill-percentage {
-    color: #111 !important; /* dark text for light mode */
+    color: #111 !important; /* dark text for light mode 
   }
   
   [data-theme="dark"] .skill-name,
   [data-theme="dark"] .skill-percentage {
-    color: #fff !important; /* white text for dark mode */
-  }
+    color: #fff !important; /* white text for dark mode 
+  }*/
   
-  /* Animate bar fill */
+  /* Animate bar fill 
   .animate-fill {
     animation: fillBar 1.2s ease-in-out forwards;
   }
@@ -916,7 +916,7 @@ footer a:hover,
   @keyframes fillBar {
     from { width: 0; }
     to { width: var(--fill-width); }
-  }
+  } */
   
   /* ==========================================================================
    Project Card Styles
