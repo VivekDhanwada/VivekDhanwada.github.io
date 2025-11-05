@@ -17,14 +17,19 @@
 
   .skill-name {
     color: var(--skill-text);
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 1rem; /* larger text */
+    font-weight: 600;
+    letter-spacing: 0.3px;
   }
 
   .skill-percentage {
     color: var(--skill-percentage);
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    min-width: 40px;
+    text-align: right;
+    font-family: 'Courier New', monospace;
   }
 
   .skill-bar-fill {
@@ -33,20 +38,28 @@
 
   .progress {
     width: 95%;
-    height: 4px;
+    height: 10px; /* thicker bars */
     background-color: var(--progress-bg);
+    border-radius: 6px;
   }
 
   .progress-bar {
-    width: 0; /* set via JS to avoid CSS linter errors with Liquid */
+    width: 0; /* set via JS */
     background-color: var(--progress-fill);
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .progress-bar:hover {
+    filter: brightness(1.1);
+    transform: scaleY(1.1);
   }
 </style>
 
 <div class="row">
   <div class="col-md-6">
     {% for skill in site.data.technical-skills limit: 10 %}
-    <div class="mb-4">
+    <div class="mb-5">
       <div class="d-flex justify-content-between">
         <span class="skill-name">{{ skill.name }}</span>
         <span class="skill-percentage">{{ skill.percentage }}%</span>
@@ -67,7 +80,7 @@
 
   <div class="col-md-6">
     {% for skill in site.data.technical-skills offset:10 %}
-    <div class="mb-4">
+    <div class="mb-5">
       <div class="d-flex justify-content-between">
         <span class="skill-name">{{ skill.name }}</span>
         <span class="skill-percentage">{{ skill.percentage }}%</span>
@@ -93,10 +106,7 @@
   bars.forEach(function (bar) {
     var pct = parseFloat(bar.getAttribute('data-percentage')) || 0;
     var color = bar.getAttribute('data-color');
-
     bar.style.width = pct + '%';
-
-    // Apply color from YAML if available, else use CSS fallback
     bar.style.backgroundColor = color || getComputedStyle(bar).getPropertyValue('--progress-fill').trim();
   });
 })();
