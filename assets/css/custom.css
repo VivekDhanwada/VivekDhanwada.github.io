@@ -831,22 +831,28 @@ footer a:hover,
 
 /* Tech Section Container */
 .tech-section {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   text-align: center;
-  color: var(--tech-text-color, #111); /* override in dark mode */
+  color: var(--tech-text-color, #111);
 }
 
 /* Tech Categories */
 .tech-category {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 1.5rem 0;
 }
 
 /* Section Layout Grid */
 .tech-section-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
-  align-items: start;
+  align-items: stretch;
+  column-gap: 3rem;
+  row-gap: 3.5rem;
 }
 
 /* Icon Grid */
@@ -856,7 +862,8 @@ footer a:hover,
   gap: 1.5rem;
   justify-items: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Tech Item */
@@ -884,11 +891,12 @@ footer a:hover,
   opacity: 0.95;
 }
 
+/* Adjust dark mode brightness for specific icons */
 [data-theme="dark"] img[alt="NumPy"] {
   filter: brightness(1.9) contrast(1.3);
 }
 
-/* 3D Hover Glow + Lift */
+/* Hover Glow + Lift */
 .tech-item:hover img {
   transform: translateY(-3px) rotateY(2deg) scale(1.05);
   opacity: 1;
@@ -896,7 +904,7 @@ footer a:hover,
           drop-shadow(0 0 6px rgba(97, 153, 226, 0.3));
 }
 
-/* Subtle background glow layer */
+/* Subtle background glow */
 .tech-item::before {
   content: "";
   position: absolute;
@@ -919,7 +927,7 @@ footer a:hover,
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-/* Tooltip Label (Hidden by Default) */
+/* Tooltip Labels */
 .tech-name {
   position: absolute;
   top: 110%;
@@ -927,7 +935,6 @@ footer a:hover,
   transform: translateX(-50%);
   font-size: 0.85rem;
   color: inherit;
-  font-family: inherit;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -936,44 +943,18 @@ footer a:hover,
   line-height: 1.2;
 }
 
-/* Show Label on Hover */
 .tech-item:hover .tech-name {
   opacity: 1;
   transform: translate(-50%, 4px);
 }
 
-/* Dark Mode: Only invert black-and-white icons */
+/* Dark Mode Adjustments */
 [data-theme="dark"] .tech-item img.bw {
   filter: invert(1) brightness(1.2);
 }
 
-/* Keep coloured icons untouched */
 [data-theme="dark"] .tech-item img.color {
   filter: none !important;
-}
-
-.tech-category {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.tech-section-grid {
-  align-items: stretch;
-}
-
-.tech-section-grid {
-  row-gap: 5rem;
-}
-
-.tech-category {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.tech-icons {
-  gap: 2rem;
 }
   
   /* ==========================================================================
