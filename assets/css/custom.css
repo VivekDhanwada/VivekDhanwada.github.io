@@ -878,6 +878,12 @@ footer a:hover,
   transition: transform 0.5s ease-out, filter 0.5s ease-out, box-shadow 0.5s ease-out;
 }
 
+.icon-large {
+  width: 58px;
+  height: 58px;
+  opacity: 0.95;
+}
+
 /* 3D Hover Glow + Lift */
 .tech-item:hover img {
   transform: translateY(-3px) rotateY(2deg) scale(1.05);
@@ -940,6 +946,17 @@ footer a:hover,
 /* Keep coloured icons untouched */
 [data-theme="dark"] .tech-item img.color {
   filter: none !important;
+}
+
+.tech-category {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.tech-section-grid {
+  align-items: stretch;
 }
   
   /* ==========================================================================
