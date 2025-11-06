@@ -885,7 +885,7 @@ footer a:hover,
 }
 
 [data-theme="dark"] img[alt="NumPy"] {
-  filter: brightness(1.8) contrast(1.3);
+  filter: brightness(1.9) contrast(1.3);
 }
 
 /* 3D Hover Glow + Lift */
