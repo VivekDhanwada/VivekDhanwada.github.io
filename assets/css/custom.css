@@ -931,6 +931,16 @@ footer a:hover,
   opacity: 1;
   transform: translate(-50%, 4px);
 }
+
+/* Dark Mode: Only invert black-and-white icons */
+[data-theme="dark"] .tech-item img.bw {
+  filter: invert(1) brightness(1.2);
+}
+
+/* Keep coloured icons untouched */
+[data-theme="dark"] .tech-item img.color {
+  filter: none !important;
+}
   
   /* ==========================================================================
    Project Card Styles
