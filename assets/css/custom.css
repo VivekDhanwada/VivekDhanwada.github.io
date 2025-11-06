@@ -962,6 +962,19 @@ footer a:hover,
 .tech-section-grid {
   align-items: stretch;
 }
+
+.tech-section-grid {
+  row-gap: 5rem;
+}
+
+.tech-category {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.tech-icons {
+  gap: 2rem;
+}
   
   /* ==========================================================================
    Project Card Styles
