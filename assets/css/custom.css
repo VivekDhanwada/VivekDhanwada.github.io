@@ -884,6 +884,10 @@ footer a:hover,
   opacity: 0.95;
 }
 
+[data-theme="dark"] img[alt="NumPy"] {
+  filter: brightness(1.5) contrast(1.2);
+}
+
 /* 3D Hover Glow + Lift */
 .tech-item:hover img {
   transform: translateY(-3px) rotateY(2deg) scale(1.05);
