@@ -66,4 +66,4 @@ Trip and delay alerts were the most frequent disruption types across all months.
 
 ## Live Dashboard
 
-[View on Tableau Public](https://public.tableau.com/views/NSW_Opal_Card_Tap_Analysis/NSWOpalCardTap-OnTap-OffAnalysis)
+<a href="https://public.tableau.com/views/NSW_Opal_Card_Tap_Analysis/NSWOpalCardTap-OnTap-OffAnalysis" target="_blank" rel="noopener noreferrer">View on Tableau Public</a>

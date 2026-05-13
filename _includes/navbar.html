@@ -12,7 +12,7 @@
       {% for p in pages %}
         {% unless p.path == 'index.html' or p.name == '404.html' or p.name == 'blog.html' or p.path contains 'pages/tags' %}
           {% if p.external_url %}
-            <a class="nav-item nav-link" href="{{ p.external_url }}" target="_blank">
+            <a class="nav-item nav-link" href="{{ p.external_url }}" target="_blank" rel="noopener noreferrer">
               {{ p.title }}
               <i class="fas fa-external-link-alt"></i>
             </a>
@@ -31,12 +31,12 @@
       <div class="navbar-nav">
         {% unless page.url == '/' %}
           <span class="nav-item">
-            <a class="nav-link" href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
+            <a class="nav-link" href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-linkedin"></i>
             </a>
           </span>
           <span class="nav-item">
-            <a class="nav-link" href="https://github.com/{{ site.author.github }}" target="_blank">
+            <a class="nav-link" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">
               <i class="fab fa-github"></i>
             </a>
           </span>

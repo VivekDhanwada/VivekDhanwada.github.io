@@ -30,4 +30,4 @@ Total revenue of $91.8M is stable year-on-year. A consistent February revenue di
 - Factors outside the dataset (customer service, delivery experience) may better explain retention consistency
 
 ## Live Dashboard
-[View on Tableau Public](https://public.tableau.com/shared/2RJJMHJR9?:display_count=n&:origin=viz_share_link)
+<a href="https://public.tableau.com/shared/2RJJMHJR9?:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer">View on Tableau Public</a>
