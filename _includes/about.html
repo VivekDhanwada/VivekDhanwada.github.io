@@ -117,13 +117,15 @@
     </p>
   </div>
 
-  {% if page.url == '/about/' %}
-  <h1>Timeline</h1> 
-  <div class="row">
-  {% include about/timeline.html %}
   </div>
-  
-</div>
+
+{% if page.url == '/about/' %}
+  <h1 style="margin-top: 3rem; margin-bottom: 2rem;">Timeline</h1>
+  <div class="row">
+    {% include about/timeline.html %}
+  </div>
+{% endif %}
+
 <br>
 <h2>Activities</h2>
 <ul>
