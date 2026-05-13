@@ -70,7 +70,7 @@
 
 <div class="row">
   <div class="col-md-6">
-    {% for skill in site.data.technical-skills limit: 10 %}
+    {% for skill in site.data.technical-skills limit: 8 %}
     <div class="mb-5">
       <div class="d-flex justify-content-between">
         <span class="skill-name">{{ skill.name }}</span>
@@ -91,7 +91,7 @@
   </div>
 
   <div class="col-md-6">
-    {% for skill in site.data.technical-skills offset:10 %}
+    {% for skill in site.data.technical-skills offset:8 %}
     <div class="mb-5">
       <div class="d-flex justify-content-between">
         <span class="skill-name">{{ skill.name }}</span>
