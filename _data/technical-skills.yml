@@ -2,25 +2,49 @@
   percentage: 80
   color: "#2ecc71"
 
+- name: Jupyter Notebook
+  percentage: 80
+  color: "#f1c40f"
+
 - name: Google Workspace
   percentage: 90
   color: "#9b59b6"
+
+- name: MongoDB
+  percentage: 50
+  color: "#2ecc71"
 
 - name: Excel
   percentage: 75
   color: "#9b59b6"
 
+- name: PyMongo
+  percentage: 50
+  color: "#2ecc71"
+
 - name: Tableau
   percentage: 80
   color: "#3498db"
+
+- name: Google Tag Manager
+  percentage: 55
+  color: "#e67e22"
 
 - name: Power BI
   percentage: 75
   color: "#3498db"
 
+- name: Looker Studio
+  percentage: 55
+  color: "#3498db"
+
 - name: R
   percentage: 75
   color: "#2ecc71"
+
+- name: Canva
+  percentage: 80
+  color: "#9b59b6"
 
 - name: Google Analytics (GA4)
   percentage: 70
@@ -37,31 +61,3 @@
 - name: GitHub
   percentage: 70
   color: "#f1c40f"
-
-- name: Jupyter Notebook
-  percentage: 80
-  color: "#f1c40f"
-
-- name: MongoDB
-  percentage: 50
-  color: "#2ecc71"
-
-- name: PyMongo
-  percentage: 50
-  color: "#2ecc71"
-
-- name: MS Office
-  percentage: 75
-  color: "#9b59b6"
-
-- name: Google Tag Manager
-  percentage: 55
-  color: "#e67e22"
-
-- name: Looker Studio
-  percentage: 55
-  color: "#3498db"
-
-- name: Canva
-  percentage: 80
-  color: "#9b59b6"
