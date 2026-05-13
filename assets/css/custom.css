@@ -1016,9 +1016,23 @@ footer a:hover,
   font-size: 0.95rem;
 }
 
+
 .project.card:hover:not(.post) {
   transform: translateY(-8px);
   box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
+}
+
+/* Fix project cards breaking inside Bootstrap card-columns layout */
+.card-columns .project.card {
+  display: inline-block !important;
+  width: 100% !important;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+.card-columns {
+  column-gap: 1.5rem;
 }
 
 /* Markdown Link Styles */
