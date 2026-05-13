@@ -982,20 +982,38 @@ footer a:hover,
   filter: none !important;
 }
   
-  /* ==========================================================================
+/* ==========================================================================
    Project Card Styles
    ========================================================================== */
 
 .project.card {
+  height: 100%;
   border-radius: 15px;
   text-decoration: none !important;
   margin: 10px auto;
   display: block;
-  transition: transform 400ms;
+  overflow: hidden;
+  transition: transform 400ms, box-shadow 400ms;
 }
 
 .project.card .card-img-top {
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
   border-radius: 15px 15px 0 0;
+}
+
+.project.card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.project.card .card-title {
+  min-height: 48px;
+}
+
+.project.card .card-text {
+  font-size: 0.95rem;
 }
 
 .project.card:hover:not(.post) {
