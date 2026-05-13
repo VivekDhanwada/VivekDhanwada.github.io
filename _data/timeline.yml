@@ -1,30 +1,28 @@
-# Work Experience
-- title: Systems Integration Engineer
-  from: August 2025
-  to: Present
-  description: "<strong>OTTO by Rockwell Automation</strong><br><strong>Location:</strong> Fort Wayne, Indiana<br><br>Systems integration and automation solutions for industrial robotics and autonomous mobile robots"
-
-- title: Robotics Intern
+# Experience
+- title: Business Analytics & Development Intern
   from: March 2025
-  to: August 2025
-  description: "<strong>RoBuildX Inc. (Remote)</strong><br><br>Developed parametric URDF/XACRO models for the Roofie wall-panel placer, integrated MoveIt2 pipelines, and achieved sub-10 mm placement accuracy in Gazebo simulations<br><br>Ported Gazebo sensor and actuator plugins to ROS2 and built automated test frameworks to validate trajectories, safety interlocks, and refine control parameters — cutting commissioning time by 30%<br><br>Designed an upper-rail–mounted gripper control and payload attachment kit for a purchased 500,kg AMR; integrated CANbus I/O, e-stop circuitry, and HIL tests, then fused LiDAR + IMU + AprilTag data with Nav2 planners for reliable dynamic navigation<br><br>Liaised with clients, project managers, and AMR vendors to scope deployments, customize platforms, and author quick-start and troubleshooting guides for Tier-3 support"
+  to: October 2025
+  description: "<strong>Green The Chain</strong> — Sydney, Australia<br><br>&bull; Built a weekly traffic analysis dashboard in Google Sheets consolidating GA4 data including users, sessions, engagement rate, and signup rate by traffic source.<br>&bull; Implemented UTM tracking across LinkedIn, Slack, and cold email, enabling the team to measure website visits by source for the first time.<br>&bull; Conducted market research to identify and prioritise 50+ high-value suppliers across ESG product categories, focusing outreach efforts.<br>&bull; Mapped the supplier onboarding journey end-to-end, identifying pain points and contributing recommendations that simplified the process."
 
 - title: Event & Project Management Volunteer
   from: January 2025
   to: March 2025
-  description: "<strong>Climate Action Foundation Ltd, Sydney, Australia</strong><br><br>Delivered hands-on instruction in SolidWorks and Autodesk Inventor to over 600 students, improving design accuracy by 25% through advanced CAD lectures, targeted feedback, and collaboration with faculty on grading and assessments"
+  description: "<strong>Climate Action Foundation Ltd</strong> — Sydney, Australia<br><br>&bull; Managed backend event data across Notion and Google Sheets for a 12,500+ participant sustainability event, cleaning and organising 500+ session records.<br>&bull; Analysed event outlines to identify redundancies and support programme restructuring decisions."
 
-- title: Business Development Manager > Head of Business Development > National BD Consultant
-  from: June 2019
-  to: January 2022
-  description: "<strong>AIESEC, India</strong><br><br>Directed linen operations across 120+ programs, implementing a custom database to maintain 100% inventory tracking accuracy, achieve a 50% cost reduction, boost efficiency by 30%, and supervise a team of 25 members"
-
+# Education
 - title: Master of Business Analytics
   from: July 2023
   to: July 2025
-  description: "<strong>Macquarie University, Sydney, Australia</strong><br><strong>WAM:</strong> 70.13<br><br><strong>Coursework:</strong> Data Visualisation, Statistical Analysis, Python Programming, Business Strategy, Project Management"
+  description: "<strong>Macquarie University, Sydney, Australia</strong><br><strong>WAM:</strong> 70.13<br><br><strong>Coursework:</strong> Data Visualisation, Statistical Analysis, Python Programming, Power BI, SQL, Tableau, R Programming, Machine Learning, Project Management"
 
+# Earlier Experience
+- title: Business Development Manager → Head of Business Development → National BD Consultant
+  from: January 2019
+  to: January 2022
+  description: "<strong>AIESEC</strong> — Hyderabad, India<br><br>&bull; Built Google Sheets dashboards to track partnership outreach, CRM activity, team performance, and revenue, contributing to a nomination for the national BD Excellence Award.<br>&bull; Progressed to National BD Consultant, conducting bi-weekly performance reviews with BD Heads across six cities and contributing findings to senior stakeholders.<br>&bull; Supported delivery of events with 1,000+ participants across planning, logistics, and data management, analysing post-event data to inform future programme decisions."
+
+# Education
 - title: Bachelor of Technology in Mechatronics Engineering
   from: July 2018
   to: July 2022
-  description: "<strong>Jawaharlal Technological University, India</strong><br><br>Explored the intersection of mechanical systems, automation, and electronics with hands-on experience in robotics and control systems.<br><br><strong>Coursework:</strong> Robotics Systems, Mechanical Automation, Control Systems, Electronics Integration, and Process Optimisation"
+  description: "<strong>Mahatma Gandhi Institute of Technology, Hyderabad, India</strong><br><strong><br><br><strong>Coursework:</strong> Kinematics and Dynamics of Machinery, Robotics and Automation, CAD/CAM, Finite Element Methods, Motion Control Design, Switching Theory and Logic Design, Microprocessors and Microcontrollers, Fundamentals of IoT, MEMS, Material Science, Automotive and Manufacturing Processes, Automobile Engineering, Operations Research"
