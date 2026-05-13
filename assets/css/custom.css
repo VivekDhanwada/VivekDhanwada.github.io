@@ -11,12 +11,14 @@ html {
   --background-color: #ffffff;
   --text-color: #000000;
   --accent-color: rgb(3, 161, 224);
+  --accent-secondary: rgb(0, 255, 221);
 }
 
 [data-theme="dark"] {
   --background-color: #121212;
   --text-color: #f1f1f1;
   --accent-color: rgb(3, 161, 224);
+  --accent-secondary: rgb(0, 255, 221);
 }
 
 /* Hidden / Visible Sections */
@@ -1113,53 +1115,3 @@ footer a:hover,
 .carousel-indicators .active {
     background-color: #29d6cd !important; /* Cyan color for active dot */
 }
-
-/* ==========================================================================
-   Tech Stack Progress Bar Animation
-   ========================================================================== 
-
-   .tech-bar {
-    margin: 1.2rem auto;
-    max-width: 600px;
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    height: 20px;
-  }
-  
-  /* .tech-bar-fill {
-    /* background-color: #333; /* dark grey for visibility in dark mode 
-    height: 100%;
-    width: 0;
-    transition: width 1s ease-in-out;
-  } */
-  
-  /* Skill labels and percentages 
-  .skill-name,
-  .skill-percentage {
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  /* Theme-specific text color 
-  [data-theme="light"] .skill-name,
-  [data-theme="light"] .skill-percentage {
-    color: #111 !important; /* dark text for light mode 
-  }
-  
-  [data-theme="dark"] .skill-name,
-  [data-theme="dark"] .skill-percentage {
-    color: #fff !important; /* white text for dark mode 
-  }*/
-  
-  /* Animate bar fill 
-  .animate-fill {
-    animation: fillBar 1.2s ease-in-out forwards;
-  }
-  
-  @keyframes fillBar {
-    from { width: 0; }
-    to { width: var(--fill-width); }
-  } */
