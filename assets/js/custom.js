@@ -1,4 +1,3 @@
-console.log("✅ custom.js is loading");
 /**
  * Smoothly scroll to the About section.
  */
@@ -26,8 +25,6 @@ function scrollToAbout() {
     themeIcon.classList.remove("fa-sun", "fa-moon");
     themeIcon.classList.add(newTheme === "dark" ? "fa-sun" : "fa-moon");
   }
-
-  console.log(`🔁 Theme toggled to ${newTheme}`);
 }
   /**
    * Initialize the theme on page load based on localStorage.
@@ -167,20 +164,19 @@ function scrollToAbout() {
     // Set scroll arrow color
     setScrollArrowColor(descriptionText, scrollArrow);
   
-   // Avatar hover effects
+    // Avatar hover effects
     initAvatarHoverEffects(avatar);
 
-    // ✅ Animate skill bars from data-percentage attribute
-    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    // Animate skill bars from data-percentage attribute
+    const skillBars = document.querySelectorAll(".skill-bar-fill");
 
-    skillBars.forEach(bar => {
-      const target = bar.getAttribute('data-percentage');
-      bar.style.width = '0%'; // Start at 0
-    
+    skillBars.forEach((bar) => {
+      const target = bar.getAttribute("data-percentage");
+      bar.style.width = "0%";
+
       setTimeout(() => {
-        bar.style.transition = 'width 1.5s ease-in-out';
-        bar.style.width = target + '%'; // Animate to target
-      }, 200); // Small delay to make it look smoother
+        bar.style.transition = "width 1.5s ease-in-out";
+        bar.style.width = target + "%";
+      }, 200);
     });
-    });
-  
+  });

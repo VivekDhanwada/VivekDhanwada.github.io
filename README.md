@@ -1,25 +1,33 @@
 # Portfolio
 
-This repository contains the source code for my personal website, hosted on GitHub Pages at [https://vishnumandala.github.io](https://vishnumandala.github.io). The site is built with [Jekyll](https://jekyllrb.com/) and leverages the elegant **portfolYOU** theme to showcase my projects, experiences, and ideas in a clean, minimalist style.
+This repository contains the source code for my personal portfolio website, hosted on GitHub Pages at [https://vivekdhanwada.github.io](https://vivekdhanwada.github.io).
 
-## Theme
+The site is built with [Jekyll](https://jekyllrb.com/) and uses the [portfolYOU](https://github.com/yousinix/portfolYOU) theme. It showcases my projects, technical skills, education, and professional experience across business analytics, data visualisation, and decision support.
 
-The website uses the **portfolYOU** theme—a beautiful portfolio Jekyll theme that works seamlessly with GitHub Pages. Special thanks to [yousinix](https://github.com/yousinix/portfolYOU) for creating this excellent theme, which is licensed under the MIT License.
+## About
+
+I am a Business Analytics graduate from Macquarie University with experience across data analysis, dashboard development, business development, market research, and operational reporting.
+
+This portfolio is designed to present selected projects, tools, and experience in a clear, recruiter-friendly format.
 
 ## Features
 
-- **Responsive Design:** A modern, mobile-friendly layout.
-- **Jekyll-Powered:** Easy content management with GitHub Pages.
-- **Portfolio Showcase:** Highlighting projects and professional work.
-- **Customizable:** Simple configuration files for personal tweaks.
+- Responsive portfolio website built with Jekyll and GitHub Pages
+- Project showcase with selected analytics and dashboard work
+- About section covering education, experience, skills, and tools
+- Links to GitHub, LinkedIn, and resume
+- Custom styling layered over the portfolYOU theme
 
-## Get in Touch
+## Theme
 
-I'm always excited to connect with fellow creatives and tech enthusiasts. Feel free to reach out via email or connect with me on social media.
-- Email: vishnum@terpmail.umd.edu
-- LinkedIn: https://www.linkedin.com/in/vishnumandala
+This website uses the **portfolYOU** Jekyll theme by [yousinix](https://github.com/yousinix/portfolYOU), licensed under the MIT License.
 
-Thank you for visiting!
+## Contact
+
+- Email: vivekchinmay@gmail.com
+- LinkedIn: https://www.linkedin.com/in/vivek-dhanwada/
+- GitHub: https://github.com/VivekDhanwada
 
 ## License
-This project is licensed under the MIT License.
+
+This project uses the MIT License.
