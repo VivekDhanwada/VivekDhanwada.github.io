@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.landing-subtitle {
+  font-size: 1.15rem;
+}
+
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
