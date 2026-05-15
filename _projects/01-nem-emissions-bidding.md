@@ -40,7 +40,7 @@ Time series and intra-daily trend charts showed clear differences in emissions p
 
 ## Contribution Note
 
-This was a group capstone project. My individual contribution focused on Python code development, data cleaning, and Task 4 analysis. The final report and recommendations were produced collaboratively.
+This was a group capstone project completed at Macquarie University. The Python code included in the linked repository is the cleaned, shareable version of the project code. The report PDF is an excerpt of the collaborative group report with the cover page removed. Full group authorship is acknowledged.
 
 ## Project Files
 

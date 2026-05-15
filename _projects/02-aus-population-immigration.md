@@ -10,6 +10,8 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 A Power BI dashboard project analysing 20 years of Australian Bureau of Statistics census data from 1996 to 2016. The project explores national population growth, country-of-birth composition, and fast-growing migrant communities across Australian states and genders.
 
+This project was completed as part of the Master of Business Analytics program at Macquarie University.
+
 Three dashboards were built to move from national-level population trends to more detailed migration insights.
 
 ## Analytical Questions
