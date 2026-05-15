@@ -1,5 +1,3 @@
-
-
 ---
 name: COVID-19 Impact on Digital Learning
 tools: [R, ggplot2, dplyr, Education Analytics]
@@ -46,4 +44,4 @@ The analysis covers five US school districts only, so findings are not represent
 
 ## Project Files
 
-[View full project files](https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/05-covid-digital-learning)
+<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/05-covid-digital-learning" target="_blank" rel="noopener noreferrer">View full project files</a>

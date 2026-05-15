@@ -44,4 +44,4 @@ This was a group capstone project completed at Macquarie University. The Python 
 
 ## Project Files
 
-[View full project files](https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/01-nem-emissions-bidding)
+<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/01-nem-emissions-bidding" target="_blank" rel="noopener noreferrer">View full project files</a>

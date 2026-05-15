@@ -46,4 +46,4 @@ The analysis covers census data from 1996 to 2016 only, so post-2016 migration t
 
 ## Project Files
 
-[View full project files](https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/02-aus-population-migration)
+<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/02-aus-population-migration" target="_blank" rel="noopener noreferrer">View full project files</a>
