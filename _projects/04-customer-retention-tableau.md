@@ -1,9 +1,9 @@
 ---
 name: Customer Retention & Revenue Analysis
-tools: [Tableau, Data Visualisation, Exploratory Analysis]
+tools: [Tableau, Data Visualisation, Customer Analysis]
 image: https://public.tableau.com/static/images/Cu/CustomerRetentionRevenueAnalysis/CustomerRetentionRevenueAnalysis/4_3.png
 description: Explored customer retention drivers and revenue trends across a 100K-row synthetic Amazon e-commerce dataset using Tableau.
-github_url: https://public.tableau.com/shared/J3324MZT9?:display_count=n&:origin=viz_share_link
+github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/04-customer-retention
 ---
 
 ## Overview
@@ -16,13 +16,13 @@ An exploratory analysis of a synthetic Amazon e-commerce dataset (100,000 rows, 
 
 ## Key Findings
 
-**Dashboard 1 — Impact of Discount on Customer Retention**
+**Dashboard 1 - Impact of Discount on Customer Retention**
 59.75% of repeat customers had a discounted first order, almost identical to the 59.85% rate across all customers. Discounts do not appear to drive retention.
 
-**Dashboard 2 — Retention is Consistent Across Key Segments**
+**Dashboard 2 - Retention is Consistent Across Key Segments**
 Retention holds at ~86% regardless of product category, price tier, or payment method. No tested segment factor meaningfully differentiates retention rates.
 
-**Dashboard 3 — Temporal Business Performance**
+**Dashboard 3 - Temporal Business Performance**
 Total revenue of $91.8M is stable year-on-year. A consistent February revenue dip (~9.4% below monthly average) appears across all five years, suggesting a recurring seasonal demand pattern.
 
 ## Limitations
