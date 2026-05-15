@@ -1,6 +1,6 @@
 ---
 name: NEM Emissions & Bidding Analysis
-tools: [Python, pandas, Matplotlib, Energy Analysis]
+tools: [Python, pandas, Matplotlib, Time Series Analysis]
 image: /assets/images/projects/nem-emissions-bidding.png
 description: Analysed 1.6M+ rows of Australian National Electricity Market emissions and generator bidding data using Python, identifying regional carbon intensity trends and fossil fuel bidding shifts.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/01-nem-emissions-bidding
@@ -10,7 +10,7 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 A Python-based analysis of Australian National Electricity Market (NEM) emissions intensity and generator bidding behaviour across all NEM regions. The project used 5-minute interval dispatch and emissions data from 2019 and 2025 to examine how carbon intensity and fossil fuel generator behaviour changed over time.
 
-This was completed as part of a Macquarie University capstone project and awarded a Distinction.
+This analysis was completed as part of a Macquarie University capstone project that received a Distinction.
 
 ## Analytical Questions
 
@@ -40,7 +40,7 @@ Time series and intra-daily trend charts showed clear differences in emissions p
 
 ## Contribution Note
 
-This was a group capstone project. My individual contribution focused on Python code development, data cleaning, and Task 4 analysis. The final report represents collaborative group work.
+This was a group capstone project. My individual contribution focused on Python code development, data cleaning, and Task 4 analysis. The final report and recommendations were produced collaboratively.
 
 ## Project Files
 
