@@ -174,38 +174,33 @@ function initTechCategoryReveal() {
  */
 function initTypewriter() {
   const phrases = [
-  "Business Analytics Graduate | Macquarie University",
-  "Dashboards · Reporting · Business Intelligence",
-  "Turning messy data into clear decisions"
-];
+    "Business Analytics Graduate | Macquarie University",
+    "Dashboards · Reporting · Business Intelligence",
+    "Turning messy data into clear decisions"
+  ];
 
   const el = document.getElementById("typed-text");
   if (!el) return;
 
   let phraseIndex = 0;
   let charIndex = 0;
-  let deleting = false;
 
   function type() {
     const current = phrases[phraseIndex];
+    el.textContent = current.substring(0, charIndex + 1);
+    charIndex++;
 
-    if (!deleting) {
-      el.textContent = current.substring(0, charIndex + 1);
-      charIndex++;
-      if (charIndex === current.length) {
-        deleting = true;
-        setTimeout(type, 1800);
-        return;
-      }
-    } else {
-      el.textContent = current.substring(0, charIndex - 1);
-      charIndex--;
-      if (charIndex === 0) {
-        deleting = false;
+    if (charIndex === current.length) {
+      setTimeout(() => {
+        el.textContent = "";
+        charIndex = 0;
         phraseIndex = (phraseIndex + 1) % phrases.length;
-      }
+        setTimeout(type, 200);
+      }, 1800);
+      return;
     }
-    setTimeout(type, deleting ? 20 : 90);
+
+    setTimeout(type, 90);
   }
 
   type();
