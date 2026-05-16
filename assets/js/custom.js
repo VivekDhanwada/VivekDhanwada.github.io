@@ -132,6 +132,28 @@ function scrollToAbout() {
       avatar.style.animation = "gradientGlow 3s infinite alternate";
     });
   }
+
+  /**
+   * Reveal sections as they enter the viewport.
+   */
+  function initScrollRevealSections() {
+    const revealSections = document.querySelectorAll(".scroll-reveal");
+
+    if (!revealSections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible-section");
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealSections.forEach((section) => observer.observe(section));
+  }
   
   /**
    * Main entry point for DOMContentLoaded.
@@ -166,6 +188,9 @@ function scrollToAbout() {
   
     // Avatar hover effects
     initAvatarHoverEffects(avatar);
+
+    // Scroll reveal effects
+    initScrollRevealSections();
 
     // Animate skill bars from data-percentage attribute
     const skillBars = document.querySelectorAll(".skill-bar-fill");
