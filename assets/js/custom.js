@@ -205,7 +205,7 @@ function initTypewriter() {
         phraseIndex = (phraseIndex + 1) % phrases.length;
       }
     }
-    setTimeout(type, deleting ? 60 : 90);
+    setTimeout(type, deleting ? 20 : 90);
   }
 
   type();
