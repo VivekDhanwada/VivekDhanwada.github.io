@@ -857,6 +857,58 @@ footer a:hover,
 
 
 /* ==========================================================================
+   Capability Cards
+   ========================================================================== */
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.capability-card {
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(3, 161, 224, 0.2);
+  background-color: transparent;
+  text-align: left;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.capability-card:hover {
+  box-shadow: 0 4px 16px rgba(3, 161, 224, 0.15);
+  transform: translateY(-2px);
+}
+
+.capability-card h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--accent-color);
+}
+
+.capability-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.capability-card p:last-child {
+  margin-bottom: 0;
+}
+
+[data-theme="dark"] .capability-card {
+  border-color: rgba(3, 161, 224, 0.25);
+}
+
+@media (max-width: 768px) {
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
    Tech Section & Icons 
    ========================================================================== */
 
