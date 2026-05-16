@@ -863,12 +863,13 @@ footer a:hover,
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .capability-card {
-  padding: 1.25rem 1.5rem;
+  padding: 1.15rem 1.35rem;
   border-radius: 10px;
   border: 1px solid rgba(3, 161, 224, 0.2);
   background-color: transparent;
@@ -884,14 +885,14 @@ footer a:hover,
 .capability-card h2 {
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.65rem;
   color: var(--accent-color);
 }
 
 .capability-card p {
   font-size: 0.9rem;
-  margin-bottom: 0.4rem;
-  line-height: 1.5;
+  margin-bottom: 0.35rem;
+  line-height: 1.45;
 }
 
 .capability-card p:last-child {
