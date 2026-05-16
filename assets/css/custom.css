@@ -1261,3 +1261,15 @@ footer a:hover,
 .carousel-indicators .active {
     background-color: #29d6cd !important; /* Cyan color for active dot */
 }
+
+.typed-cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  font-weight: 300;
+  color: var(--accent-color);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
