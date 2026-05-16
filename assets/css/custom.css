@@ -879,8 +879,8 @@ footer a:hover,
   }
   
   .capability-card {
-    padding: 1.35rem 1.5rem;
-    min-height: 150px;
+    padding: 1.5rem 1.65rem;
+    min-height: 165px;
     border-radius: 14px;
     border: 1px solid rgba(3, 161, 224, 0.32);
     background-color: rgba(3, 161, 224, 0.025);
@@ -976,30 +976,37 @@ footer a:hover,
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  margin: 1.5rem 0;
+  align-items: center;
+  margin: 0;
 }
 
 /* Section Layout Grid */
 .tech-section-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  align-items: stretch;
-  column-gap: 3rem;
-  row-gap: 3.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  column-gap: 2.5rem;
+  row-gap: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tech-category h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
 }
 
 /* Icon Grid */
 .tech-icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 1rem;
   justify-items: center;
   align-items: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
 /* Tech Item */
@@ -1014,8 +1021,8 @@ footer a:hover,
 
 /* Icon Image */
 .tech-item img {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   opacity: 0.9;
   transition: transform 0.5s ease-out, filter 0.5s ease-out, box-shadow 0.5s ease-out;
@@ -1025,6 +1032,13 @@ footer a:hover,
   width: 58px;
   height: 58px;
   opacity: 0.95;
+}
+
+.category-desc {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  max-width: 330px;
+  margin: 0 auto;
 }
 
 /* Adjust dark mode brightness for specific icons */
