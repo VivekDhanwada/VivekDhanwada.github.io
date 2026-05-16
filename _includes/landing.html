@@ -2,7 +2,7 @@
   <div class="col-lg-6 col-md-8 text-center mt-5 mx-auto">
     <!-- Centered & Responsive Avatar -->
     <div class="d-flex justify-content-center">
-      <div class="avatar-container" style="width: 100%; max-width: 540px;">
+      <div class="avatar-container" style="width: 100%; max-width: 500px;">
         {% if site.author.image %}
           <img class="home__img mx-auto" src="{{ site.author.image }}" alt="{{ site.author.name }} profile photo">
         {% else %}
@@ -11,12 +11,20 @@
       </div>
     </div>
 
-    <p class="landing-subtitle text-muted wow animated slideInUp mt-4" data-wow-delay=".15s">
+    <h1 class="mt-4 wow animated slideInUp" data-wow-delay=".1s">
+      Hi, I'm Vivek
+    </h1>
+
+    <p class="landing-subtitle text-muted wow animated slideInUp mt-2" data-wow-delay=".15s">
       {{ site.description }}
     </p>
 
+    <p class="text-muted wow animated slideInUp mt-2" data-wow-delay=".2s" style="font-size: 1rem;">
+      I build dashboards and reporting workflows that turn messy data into clearer decisions.
+    </p>
+
     <!-- Social Media Buttons -->
-    <div class="mt-4 d-flex justify-content-center wow animated slideInUp" data-wow-delay=".2s" style="gap: 2rem;">
+    <div class="mt-4 d-flex justify-content-center wow animated slideInUp" data-wow-delay=".25s" style="gap: 2rem;">
       <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center resume wow animated slideInUp" data-wow-delay=".3s" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
         <i class="fas fa-file-pdf" style="margin-right: 8px;"></i>
         <span>Resume</span>

@@ -1,8 +1,7 @@
 ### Site Settings ###
 title               : Vivek Chinmay Dhanwada
 description         : >-
-                      Business Analytics Graduate | Macquarie University
-                      Python, SQL, Power BI, Tableau, Excel
+                      Business Analytics Graduate | Data Analytics & Business Intelligence
 baseurl             : ""            
 repository          : VivekDhanwada/vivekdhanwada.github.io     
 remote_theme        : yousinix/portfolYOU
