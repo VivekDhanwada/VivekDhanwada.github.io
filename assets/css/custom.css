@@ -11,6 +11,19 @@ html {
   font-size: 1.25rem;
 }
 
+.section-heading {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.capability-grid + .section-heading {
+  margin-top: 3rem;
+}
+
+.tech-section-grid + .section-heading {
+  margin-top: 3.5rem;
+}
+
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
@@ -905,9 +918,24 @@ footer a:hover,
 }
 
 @media (max-width: 768px) {
+  .section-heading {
+    margin-top: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
   .capability-grid {
     grid-template-columns: 1fr;
     margin-bottom: 2rem;
+  }
+
+  .tech-section-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .tech-icons {
+    gap: 1rem;
   }
 }
 
@@ -939,6 +967,7 @@ footer a:hover,
   align-items: stretch;
   column-gap: 3rem;
   row-gap: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 /* Icon Grid */
