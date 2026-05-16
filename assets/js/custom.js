@@ -174,11 +174,10 @@ function initTechCategoryReveal() {
  */
 function initTypewriter() {
   const phrases = [
-    "Business Analytics Graduate",
-    "Data Analyst",
-    "Dashboard Developer",
-    "BI & Reporting Specialist"
-  ];
+  "Business Analytics Graduate | Macquarie University",
+  "Dashboards · Reporting · Business Intelligence",
+  "Turning messy data into clear decisions"
+];
 
   const el = document.getElementById("typed-text");
   if (!el) return;
