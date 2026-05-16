@@ -956,6 +956,7 @@ footer a:hover,
     }
   
     .tech-icons {
+      grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
       gap: 1rem;
     }
   }
@@ -1000,13 +1001,32 @@ footer a:hover,
 /* Icon Grid */
 .tech-icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   gap: 1rem;
   justify-items: center;
   align-items: center;
   width: 100%;
   margin-top: 0;
   margin-bottom: 0.75rem;
+}
+
+.icons-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.icons-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.icons-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.icons-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.icons-8 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* Tech Item */
