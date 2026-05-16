@@ -863,6 +863,7 @@ footer a:hover,
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
   gap: 1.25rem;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
@@ -882,7 +883,7 @@ footer a:hover,
   transform: translateY(-2px);
 }
 
-.capability-card h2 {
+.capability-card h3 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.65rem;
@@ -900,12 +901,13 @@ footer a:hover,
 }
 
 [data-theme="dark"] .capability-card {
-  border-color: rgba(3, 161, 224, 0.25);
+  border-color: rgba(3, 161, 224, 0.35);
 }
 
 @media (max-width: 768px) {
   .capability-grid {
     grid-template-columns: 1fr;
+    margin-bottom: 2rem;
   }
 }
 
