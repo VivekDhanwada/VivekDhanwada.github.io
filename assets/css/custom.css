@@ -988,7 +988,7 @@ footer a:hover,
   align-items: start;
   column-gap: 2.5rem;
   row-gap: 2.5rem;
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   margin-bottom: 2rem;
 }
 
@@ -1127,6 +1127,9 @@ footer a:hover,
   filter: none !important;
 }
   
+[data-theme="dark"] img[alt="Pandas"] {
+  filter: brightness(1.9) contrast(1.3);
+}
 /* ==========================================================================
    Project Card Styles
    ========================================================================== */
