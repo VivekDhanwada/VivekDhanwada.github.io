@@ -97,5 +97,3 @@ exclude:
   - _posts
   - blog
 
-kramdown:
-  math_engine: mathjax
