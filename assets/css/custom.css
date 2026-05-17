@@ -115,9 +115,9 @@ html {
 }
 
 .timeline-body .timeline-item .content li {
-  line-height: 1.85;
-  margin-bottom: 0.8rem;
-  padding-left: 0.35rem;
+  line-height: 1.9;
+  margin-bottom: 0.95rem;
+  padding-left: 0.4rem;
 }
 
 .timeline-body .timeline-item .content li:last-child {
@@ -128,7 +128,8 @@ html {
   background-color: #f9f9f9 !important;
   border-radius: 12px;
   margin-top: 0.75rem;
-  padding-top: 1.25rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 [data-theme="light"] .timeline-body .timeline-item:after {
@@ -143,7 +144,8 @@ html {
 [data-theme="dark"] .timeline-body {
   background-color: #242526 !important;
   margin-top: 0.75rem;
-  padding-top: 1.25rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
   border-radius: 12px;
 }
 
