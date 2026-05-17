@@ -2,39 +2,45 @@
   <div class="col-lg-8 col-md-10 text-center mt-5 mx-auto">
     <div class="landing-card">
 
-      <!-- Centered & Responsive Avatar -->
-      <div class="d-flex justify-content-center">
-        <div class="avatar-container" style="width: 100%; max-width: 500px;">
-          {% if site.author.image %}
-            <img class="home__img mx-auto" src="{{ site.author.image }}" alt="{{ site.author.name }} profile photo">
-          {% else %}
-            <img class="img-fluid rounded-circle shadow-lg mx-auto" src="https://ui-avatars.com/api/?name={{ site.title }}&background=random" alt="{{ site.title }}" style="object-fit: cover;">
-          {% endif %}
+      <div class="landing-card-top">
+
+        <!-- Avatar -->
+        <div class="d-flex justify-content-center">
+          <div class="avatar-container">
+            {% if site.author.image %}
+              <img class="home__img mx-auto" src="{{ site.author.image }}" alt="{{ site.author.name }} profile photo">
+            {% else %}
+              <img class="img-fluid rounded-circle shadow-lg mx-auto" src="https://ui-avatars.com/api/?name={{ site.title }}&background=random" alt="{{ site.title }}" style="object-fit: cover;">
+            {% endif %}
+          </div>
         </div>
+
+        <!-- Role label -->
+        <p class="landing-role-label">Business Analytics Graduate | Macquarie University</p>
+
+        <!-- Name -->
+        <h1 class="landing-hero-name">Hi, I'm Vivek</h1>
+
+        <!-- Tagline -->
+        <p class="landing-tagline">I turn messy data into clearer decisions.</p>
+
       </div>
 
-      <h1 class="mt-4 wow animated slideInUp" data-wow-delay=".1s">
-        Hi, I'm Vivek
-      </h1>
-
-      <p class="landing-subtitle text-muted wow animated slideInUp mt-2" data-wow-delay=".15s">
-        <span id="typed-text"></span><span class="typed-cursor">|</span>
-      </p>
-
-      <!-- Social Media Buttons -->
-      <div class="mt-4 d-flex justify-content-center wow animated slideInUp" data-wow-delay=".25s" style="gap: 2rem;">
-        <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center resume wow animated slideInUp" data-wow-delay=".3s" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-file-pdf" style="margin-right: 8px;"></i>
-          <span>Resume</span>
-        </a>
-        <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center github wow animated slideInUp" data-wow-delay=".4s" href="https://github.com/VivekDhanwada" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github" style="margin-right: 8px;"></i>
-          <span>GitHub</span>
-        </a>
-        <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center linkedin wow animated slideInUp" data-wow-delay=".5s" href="https://www.linkedin.com/in/vivek-dhanwada/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin-in" style="margin-right: 8px;"></i>
-          <span>LinkedIn</span>
-        </a>
+      <div class="landing-card-bottom">
+        <div class="d-flex justify-content-center">
+          <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center resume" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-pdf" style="margin-right: 8px;"></i>
+            <span>Resume</span>
+          </a>
+          <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center github" href="https://github.com/VivekDhanwada" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github" style="margin-right: 8px;"></i>
+            <span>GitHub</span>
+          </a>
+          <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center linkedin" href="https://www.linkedin.com/in/vivek-dhanwada/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in" style="margin-right: 8px;"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
       </div>
 
     </div>

@@ -169,42 +169,6 @@ function initTechCategoryReveal() {
   techCategories.forEach(category => observer.observe(category));
 }
 
-/**
- * Typewriter effect for landing page subtitle.
- */
-function initTypewriter() {
-  const phrases = [
-    "Business Analytics Graduate | Macquarie University",
-    "Dashboards · Reporting · Business Intelligence",
-    "Turning messy data into clear decisions"
-  ];
-
-  const el = document.getElementById("typed-text");
-  if (!el) return;
-
-  let phraseIndex = 0;
-  let charIndex = 0;
-
-  function type() {
-    const current = phrases[phraseIndex];
-    el.textContent = current.substring(0, charIndex + 1);
-    charIndex++;
-
-    if (charIndex === current.length) {
-      setTimeout(() => {
-        el.textContent = "";
-        charIndex = 0;
-        phraseIndex = (phraseIndex + 1) % phrases.length;
-        setTimeout(type, 200);
-      }, 1800);
-      return;
-    }
-
-    setTimeout(type, 90);
-  }
-
-  type();
-}
 
 /**
  * Main entry point for DOMContentLoaded.
@@ -231,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initAvatarHoverEffects(avatar);
   initScrollRevealSections();
   initTechCategoryReveal();
-  initTypewriter();
 
   const skillBars = document.querySelectorAll(".skill-bar-fill");
   skillBars.forEach((bar) => {
