@@ -104,10 +104,17 @@ html {
   box-shadow: 0 0 18px rgba(3, 161, 224, 0.3);
 }
 
+.timeline-body .timeline-item .content p {
+  margin-bottom: 0.4rem;
+}
+
 [data-theme="light"] .timeline-body,
-[data-theme="light"] .timeline-body .timeline-item .content,
 [data-theme="light"] .timeline-body .timeline-item:after {
   background-color: var(--background-color) !important;
+}
+
+[data-theme="light"] .timeline-body .timeline-item .content {
+  background-color: #f9f9f9 !important;
 }
 
 /* Dark Mode - Timeline Backgrounds */
@@ -880,6 +887,8 @@ footer a:hover,
   
   .capability-card {
     padding: 1.5rem 1.65rem;
+    display: flex;
+    flex-direction: column;
     min-height: 165px;
     border-radius: 14px;
     border: 1px solid rgba(3, 161, 224, 0.32);
@@ -933,10 +942,10 @@ footer a:hover,
   }
   
   [data-theme="dark"] .capability-card {
-    border-color: rgba(3, 161, 224, 0.4);
+    border-color: rgba(255, 255, 255, 0.08);
     background-color: rgba(3, 161, 224, 0.04);
     box-shadow: 0 6px 18px rgba(3, 161, 224, 0.12);
-  }
+}
   
   @media (max-width: 768px) {
     .section-heading {
