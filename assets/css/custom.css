@@ -951,6 +951,8 @@ footer a:hover,
   
   .capability-card p {
     font-size: 0.92rem;
+    font-weight: 500;
+    color: #333333;
     margin-bottom: 0.35rem;
     line-height: 1.5;
   }
@@ -963,6 +965,10 @@ footer a:hover,
     border-color: rgba(255, 255, 255, 0.08);
     background-color: rgba(3, 161, 224, 0.04);
     box-shadow: 0 6px 18px rgba(3, 161, 224, 0.12);
+}
+
+[data-theme="dark"] .capability-card p {
+  color: rgba(255, 255, 255, 0.78);
 }
   
   @media (max-width: 768px) {
