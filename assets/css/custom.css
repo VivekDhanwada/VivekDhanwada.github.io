@@ -108,6 +108,21 @@ html {
   margin-bottom: 0.4rem;
 }
 
+.timeline-body .timeline-item .content ul {
+  padding-left: 1.35rem;
+  margin-top: 1rem;
+}
+
+.timeline-body .timeline-item .content li {
+  line-height: 1.7;
+  margin-bottom: 0.65rem;
+  padding-left: 0.25rem;
+}
+
+.timeline-body .timeline-item .content li:last-child {
+  margin-bottom: 0;
+}
+
 [data-theme="light"] .timeline-body {
   background-color: #f9f9f9 !important;
   border-radius: 12px;
