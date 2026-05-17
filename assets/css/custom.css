@@ -1281,7 +1281,7 @@ footer a:hover,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 640px;
+  min-height: 620px;
 }
 
 [data-theme="dark"] .landing-card {
@@ -1315,8 +1315,8 @@ footer a:hover,
 }
 
 .landing-card .avatar-container {
-  max-width: 250px !important;
-  width: 250px !important;
+  max-width: 270px !important;
+  width: 270px !important;
   margin-bottom: 1.75rem !important;
 }
 
