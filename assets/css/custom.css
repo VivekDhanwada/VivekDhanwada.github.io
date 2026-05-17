@@ -110,13 +110,14 @@ html {
 
 .timeline-body .timeline-item .content ul {
   padding-left: 1.35rem;
-  margin-top: 1rem;
+  margin-top: 1.15rem;
+  margin-bottom: 0;
 }
 
 .timeline-body .timeline-item .content li {
-  line-height: 1.7;
-  margin-bottom: 0.65rem;
-  padding-left: 0.25rem;
+  line-height: 1.85;
+  margin-bottom: 0.8rem;
+  padding-left: 0.35rem;
 }
 
 .timeline-body .timeline-item .content li:last-child {
@@ -126,6 +127,8 @@ html {
 [data-theme="light"] .timeline-body {
   background-color: #f9f9f9 !important;
   border-radius: 12px;
+  margin-top: 0.75rem;
+  padding-top: 1.25rem;
 }
 
 [data-theme="light"] .timeline-body .timeline-item:after {
@@ -139,6 +142,9 @@ html {
 /* Dark Mode - Timeline Backgrounds */
 [data-theme="dark"] .timeline-body {
   background-color: #242526 !important;
+  margin-top: 0.75rem;
+  padding-top: 1.25rem;
+  border-radius: 12px;
 }
 
 [data-theme="dark"] .timeline-body .timeline-item .content {
