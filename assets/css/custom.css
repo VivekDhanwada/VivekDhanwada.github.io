@@ -703,10 +703,12 @@ p.text-center a:hover::before {
 /* Navbar Color */
 [data-theme="light"] .navbar {
   background-color: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 [data-theme="dark"] .navbar {
   background-color: #121212 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Navbar Brand */
