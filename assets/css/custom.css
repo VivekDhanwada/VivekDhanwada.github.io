@@ -700,6 +700,15 @@ p.text-center a:hover::before {
   z-index: 1030 !important;
 }
 
+/* Navbar Color */
+[data-theme="light"] .navbar {
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .navbar {
+  background-color: #121212 !important;
+}
+
 /* Navbar Brand */
 .navbar.navbar-themed .navbar-brand {
   margin-right: 1rem;
