@@ -1281,7 +1281,7 @@ footer a:hover,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 600px;
+  min-height: 640px;
 }
 
 [data-theme="dark"] .landing-card {
@@ -1295,19 +1295,23 @@ footer a:hover,
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 3rem 3rem 2rem 3rem;
+  padding: 3.5rem 3rem 2.5rem 3rem;
   flex: 1;
 }
 
 .landing-card-bottom {
-  padding: 1rem 3rem 3rem 3rem;
+  padding: 1.25rem 3rem 3.25rem 3rem;
   display: flex;
   justify-content: center;
   flex-shrink: 0;
 }
 
 .landing-card-bottom .d-flex {
-  gap: 2rem !important;
+  gap: 2.5rem !important;
+}
+
+.landing-card-bottom .btn {
+  gap: 6px !important;
 }
 
 .landing-card .avatar-container {
@@ -1334,7 +1338,7 @@ footer a:hover,
   text-transform: uppercase;
   color: #444444;
   margin-top: 0 !important;
-  margin-bottom: 0.85rem !important;
+  margin-bottom: 0 !important;
 }
 
 [data-theme="dark"] .landing-role-label {
@@ -1347,8 +1351,8 @@ footer a:hover,
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: #0a0a0a !important;
-  margin-top: 0.75rem !important;
-  margin-bottom: 0.75rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1rem !important;
 }
 
 [data-theme="dark"] .landing-hero-name {
