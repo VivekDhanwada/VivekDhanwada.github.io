@@ -6,6 +6,8 @@ description: Explored customer retention drivers and revenue trends across a 100
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/04-customer-retention
 ---
 
+# Customer Retention & Revenue Analysis
+
 ## Overview
 An exploratory analysis of a synthetic Amazon e-commerce dataset (100,000 rows, 20 columns) built across three Tableau dashboards. The project investigates what drives customer retention and examines revenue performance across five years (2020–2024).
 
@@ -31,3 +33,7 @@ Total revenue of $91.8M is stable year-on-year. A consistent February revenue di
 
 ## Live Dashboard
 <a href="https://public.tableau.com/shared/2RJJMHJR9?:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer">View on Tableau Public</a>
+
+## Project Files
+
+<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/04-customer-retention" target="_blank" rel="noopener noreferrer">View on GitHub</a>

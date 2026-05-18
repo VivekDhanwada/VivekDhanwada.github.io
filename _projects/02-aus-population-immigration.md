@@ -6,6 +6,8 @@ description: Built three Power BI dashboards using 20 years of ABS census data t
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/02-aus-population-migration
 ---
 
+# Australian Population & Migration Trends
+
 ## Overview
 
 A Power BI dashboard project analysing 20 years of Australian Bureau of Statistics census data from 1996 to 2016. The project explores national population growth, country-of-birth composition, and fast-growing migrant communities across Australian states and genders.

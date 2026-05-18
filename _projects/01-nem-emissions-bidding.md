@@ -6,6 +6,9 @@ description: Analysed 1.6M+ rows of Australian National Electricity Market emiss
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/01-nem-emissions-bidding
 ---
 
+
+# NEM Emissions & Bidding Analysis
+
 ## Overview
 
 A Python-based analysis of Australian National Electricity Market (NEM) emissions intensity and generator bidding behaviour across all NEM regions. The project used 5-minute interval dispatch and emissions data from 2019 and 2025 to examine how carbon intensity and fossil fuel generator behaviour changed over time.
