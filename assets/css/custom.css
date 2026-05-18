@@ -136,6 +136,18 @@ html {
   margin-bottom: 0;
 }
 
+/* Pull Timeline header closer to outer box */
+h2.section-heading + .row .col.mt-4 {
+  margin-top: 0 !important;
+}
+h2.section-heading + .row .timeline-body {
+  padding-top: 8px !important;
+  margin-top: 0 !important;
+}
+h2.section-heading:last-of-type {
+  margin-bottom: 0.5rem !important;
+}
+
 [data-theme="light"] .timeline-body {
   background-color: #f9f9f9 !important;
   border-radius: 12px;
