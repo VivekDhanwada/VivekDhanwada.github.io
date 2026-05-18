@@ -124,6 +124,18 @@ html {
   margin-bottom: 0;
 }
 
+/* Bullet item spans — processed by JS */
+.bullet-item {
+  display: block;
+  margin-bottom: 0.95rem;
+  line-height: 1.9;
+  padding-left: 0.4rem;
+}
+
+.bullet-item:last-child {
+  margin-bottom: 0;
+}
+
 [data-theme="light"] .timeline-body {
   background-color: #f9f9f9 !important;
   border-radius: 12px;
