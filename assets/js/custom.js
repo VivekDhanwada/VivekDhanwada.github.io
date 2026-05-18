@@ -169,6 +169,45 @@ function initTechCategoryReveal() {
   techCategories.forEach(category => observer.observe(category));
 }
 
+/**
+ * Convert timeline bullet text into block spans for cleaner spacing.
+ */
+function processBulletParagraphs() {
+  document.querySelectorAll('.timeline-item .content p').forEach(p => {
+    const nodes = Array.from(p.childNodes);
+    if (!nodes.some(n => n.nodeType === 3 && n.textContent.includes('•'))) return;
+
+    const segments = [];
+    let current = [];
+
+    for (const node of nodes) {
+      if (node.nodeName === 'BR') {
+        segments.push(current);
+        current = [];
+      } else {
+        current.push(node);
+      }
+    }
+
+    segments.push(current);
+
+    p.innerHTML = '';
+
+    for (const seg of segments) {
+      const text = seg.map(n => n.textContent || '').join('').trim();
+      if (text === '') continue;
+
+      if (text.startsWith('•')) {
+        const span = document.createElement('span');
+        span.className = 'bullet-item';
+        seg.forEach(n => span.appendChild(n.cloneNode(true)));
+        p.appendChild(span);
+      } else {
+        seg.forEach(n => p.appendChild(n.cloneNode(true)));
+      }
+    }
+  });
+}
 
 /**
  * Main entry point for DOMContentLoaded.
@@ -195,6 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initAvatarHoverEffects(avatar);
   initScrollRevealSections();
   initTechCategoryReveal();
+  processBulletParagraphs();
 
   const skillBars = document.querySelectorAll(".skill-bar-fill");
   skillBars.forEach((bar) => {
