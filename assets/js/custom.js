@@ -5,7 +5,7 @@ function scrollToAbout() {
   const aboutSection = document.getElementById("about");
   if (aboutSection) {
     window.scrollTo({
-      top: aboutSection.offsetTop - 120,
+      top: aboutSection.offsetTop - 100,
       behavior: "smooth",
     });
   }
