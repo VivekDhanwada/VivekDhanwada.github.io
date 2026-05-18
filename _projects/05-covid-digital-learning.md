@@ -4,7 +4,7 @@ tools: [R, ggplot2, dplyr, Education Analytics]
 image: /assets/images/projects/covid-digital-learning.png
 description: Analysed student engagement and broadband access data across five US school districts using R and ggplot2 to examine digital learning patterns during COVID-19.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/05-covid-digital-learning
-
+---
 
 # COVID-19 Impact on Digital Learning
 
