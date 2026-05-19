@@ -494,64 +494,6 @@ p.text-center a:hover::before {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  /* Mobile Landing Hero */
-  .landing-card {
-    min-height: auto !important;
-    margin-top: 1rem !important;
-  }
-
-  .landing-card-top {
-    padding: 2rem 1.5rem 1.5rem 1.5rem !important;
-  }
-
-  .landing-card-bottom {
-    padding: 1.25rem 1rem 1.75rem 1rem !important;
-  }
-
-  .landing-card .avatar-container {
-    max-width: 170px !important;
-    width: 170px !important;
-  }
-
-  .landing-hero-name {
-    font-size: 3.2rem !important;
-    line-height: 1.05 !important;
-    margin-top: 1rem !important;
-    margin-bottom: 0.75rem !important;
-  }
-
-  .landing-role-label {
-    font-size: 0.8rem !important;
-    letter-spacing: 0.22rem !important;
-    line-height: 1.6 !important;
-  }
-
-  .landing-tagline {
-    font-size: 1.05rem !important;
-    line-height: 1.45 !important;
-    margin-bottom: 1.5rem !important;
-  }
-
-  .landing-card-bottom .d-flex {
-    gap: 1rem !important;
-    justify-content: center !important;
-  }
-
-  .landing-card-bottom .btn {
-    width: 64px !important;
-    height: 64px !important;
-    padding: 0 !important;
-    justify-content: center !important;
-  }
-
-  .landing-card-bottom .btn span {
-    display: none !important;
-  }
-
-  .landing-card-bottom .btn i,
-  .landing-card-bottom .btn svg {
-    font-size: 1.6rem !important;
-  }
   .d-flex.justify-content-center {
     gap: 0.5rem !important;
   }
@@ -1521,3 +1463,59 @@ footer a:hover,
 [data-theme="dark"] .landing-tagline {
   color: rgba(255, 255, 255, 0.65);
 }
+
+/* ==========================================================================
+   Final Mobile Overrides
+   ========================================================================== */
+
+   @media (max-width: 768px) {
+    .landing-card {
+      min-height: auto !important;
+      margin-top: 1rem !important;
+    }
+  
+    .landing-card-top {
+      padding: 2rem 1.5rem 1.5rem 1.5rem !important;
+    }
+  
+    .landing-card-bottom {
+      padding: 1.25rem 1rem 1.75rem 1rem !important;
+    }
+  
+    .landing-card .avatar-container {
+      max-width: 170px !important;
+      width: 170px !important;
+    }
+  
+    .landing-hero-name {
+      font-size: 3.2rem !important;
+      line-height: 1.05 !important;
+      margin-top: 1rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+  
+    .landing-role-label {
+      font-size: 0.8rem !important;
+      letter-spacing: 0.22rem !important;
+      line-height: 1.6 !important;
+    }
+  
+    .landing-tagline {
+      font-size: 1.05rem !important;
+      line-height: 1.45 !important;
+      margin-bottom: 1.5rem !important;
+    }
+  
+    .tech-section-grid {
+      grid-template-columns: 1fr !important;
+      row-gap: 2rem !important;
+    }
+  
+    .icons-3,
+    .icons-4,
+    .icons-5,
+    .icons-6,
+    .icons-8 {
+      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)) !important;
+    }
+  }
