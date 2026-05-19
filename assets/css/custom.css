@@ -88,7 +88,7 @@ html {
 .timeline-body .timeline-item::after {
   background-color: var(--accent-color) !important;
   border-color: var(--accent-color) !important;
-  left: -13px !important;
+  left: -11px !important;
 }
 
 /* Light Mode - Timeline Content */
