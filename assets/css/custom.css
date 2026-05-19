@@ -1522,8 +1522,21 @@ footer a:hover,
       grid-template-columns: repeat(4, 1fr) !important;
     }
   
+    .timeline-body {
+      padding-left: 0.75rem !important;
+      padding-right: 0.75rem !important;
+    }
+    
+    .timeline-body .timeline-item {
+      width: 100% !important;
+      padding-left: 1.25rem !important;
+      padding-right: 0 !important;
+    }
+    
     .timeline-body .timeline-item .content {
-      padding: 1rem !important;
+      width: 100% !important;
+      max-width: none !important;
+      padding: 1.15rem !important;
     }
   
     .timeline-body .timeline-item .content h3 {
