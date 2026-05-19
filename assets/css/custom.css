@@ -1511,11 +1511,27 @@ footer a:hover,
       row-gap: 2rem !important;
     }
   
-    .icons-3,
+    .icons-3 {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
     .icons-4,
     .icons-5,
     .icons-6,
     .icons-8 {
       grid-template-columns: repeat(4, 1fr) !important;
+    }
+  
+    .timeline-body .timeline-item .content {
+      padding: 1rem !important;
+    }
+  
+    .timeline-body .timeline-item .content h3 {
+      font-size: 1.2rem !important;
+    }
+  
+    .bullet-item {
+      line-height: 1.5 !important;
+      margin-bottom: 0.6rem !important;
     }
   }
