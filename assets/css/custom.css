@@ -1534,17 +1534,19 @@ footer a:hover,
     }
 
     .timeline-body::after {
-      left: 2px !important;
+      left: 10px !important;
     }
     
     .timeline-body .timeline-item {
       width: 100% !important;
-      padding-left: 0.45rem !important;
+      padding-left: 1.35rem !important;
       padding-right: 0 !important;
     }
 
+    .timeline-body .timeline-item::after,
     .timeline-body .timeline-item:after {
-      left: 2px !important;
+      left: 10px !important;
+      transform: translateX(-50%) !important;
     }
     
     .timeline-body .timeline-item .content {
