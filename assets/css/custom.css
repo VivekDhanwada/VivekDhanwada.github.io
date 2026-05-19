@@ -1545,7 +1545,7 @@ footer a:hover,
 
     .timeline-body .timeline-item::after,
     .timeline-body .timeline-item:after {
-      left: 0px !important;
+      left: -4px !important;
       transform: none !important;
     }
     
