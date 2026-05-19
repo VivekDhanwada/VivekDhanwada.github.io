@@ -88,7 +88,7 @@ html {
 .timeline-body .timeline-item::after {
   background-color: var(--accent-color) !important;
   border-color: var(--accent-color) !important;
-  left: -18px !important;
+  left: -13px !important;
 }
 
 /* Light Mode - Timeline Content */
@@ -161,7 +161,8 @@ h2.section-heading:last-of-type {
 }
 
 [data-theme="light"] .timeline-body .timeline-item:after {
-  background-color: var(--background-color) !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
 }
 
 [data-theme="light"] .timeline-body .timeline-item .content {
@@ -182,7 +183,8 @@ h2.section-heading:last-of-type {
 }
 
 [data-theme="dark"] .timeline-body .timeline-item:after {
-  background-color: #242526 !important;
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
 }
 
 .timeline-item {
