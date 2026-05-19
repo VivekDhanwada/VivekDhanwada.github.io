@@ -1516,6 +1516,6 @@ footer a:hover,
     .icons-5,
     .icons-6,
     .icons-8 {
-      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)) !important;
+      grid-template-columns: repeat(4, 1fr) !important;
     }
   }
