@@ -84,7 +84,8 @@ html {
 }
 
 .timeline-body .timeline-item:after {
-  border: 4px solid var(--accent-color) !important; /* Keeps the cyan border */
+  border: 4px solid var(--accent-color) !important;
+  background-color: var(--accent-color) !important;
 }
 
 /* Light Mode - Timeline Content */
