@@ -1523,14 +1523,22 @@ footer a:hover,
     }
   
     .timeline-body {
-      padding-left: 0.75rem !important;
-      padding-right: 0.75rem !important;
+      padding-left: 0.35rem !important;
+      padding-right: 0.35rem !important;
+    }
+
+    .timeline-body::after {
+      left: 18px !important;
     }
     
     .timeline-body .timeline-item {
       width: 100% !important;
-      padding-left: 1.25rem !important;
+      padding-left: 2.1rem !important;
       padding-right: 0 !important;
+    }
+
+    .timeline-body .timeline-item:after {
+      left: 8px !important;
     }
     
     .timeline-body .timeline-item .content {
@@ -1540,11 +1548,19 @@ footer a:hover,
     }
   
     .timeline-body .timeline-item .content h3 {
-      font-size: 1.2rem !important;
+      font-size: 1.55rem !important;
+      line-height: 1.18 !important;
+    }
+
+    .timeline-body .timeline-item .content p {
+      font-size: 0.95rem !important;
+      line-height: 1.55 !important;
     }
   
     .bullet-item {
-      line-height: 1.5 !important;
-      margin-bottom: 0.6rem !important;
+      font-size: 0.95rem !important;
+      line-height: 1.55 !important;
+      margin-bottom: 0.75rem !important;
+      padding-left: 0 !important;
     }
   }
