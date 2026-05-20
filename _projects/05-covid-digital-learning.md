@@ -2,7 +2,7 @@
 name: COVID-19 Impact on Digital Learning
 tools: [R, ggplot2, dplyr, Education Analytics]
 image: /assets/images/projects/covid-digital-learning.png
-description: Analysed student engagement and broadband access data across five US school districts using R and ggplot2 to examine digital learning patterns during COVID-19.
+description: Analysed student engagement, education platform usage, and broadband access data across five US school districts using R and ggplot2.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/05-covid-digital-learning
 ---
 
@@ -10,7 +10,7 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 ## Overview
 
-An R-based exploratory analysis of how the COVID-19 pandemic affected student engagement with digital learning platforms across five US school districts in 2020. The project combines district engagement data, product information, and broadband access indicators to understand changes in online learning participation.
+An R-based exploratory analysis of how the COVID-19 pandemic affected student engagement with digital learning platforms across five US school districts in 2020. The project combines district engagement data, product information, and broadband access indicators to examine patterns in online learning participation.
 
 This project was completed as part of the Master of Business Analytics program at Macquarie University.
 
@@ -23,7 +23,7 @@ This project was completed as part of the Master of Business Analytics program a
 ## Key Findings
 
 **Connectivity was strongly linked to engagement**  
-Districts with higher broadband access consistently showed higher student engagement, highlighting the role of digital infrastructure in online learning participation.
+Districts with higher broadband access showed higher student engagement in the dataset, highlighting the role of digital infrastructure in online learning participation.
 
 **Engagement declined during the mid-year disruption period**  
 Engagement and access declined between June and August 2020, followed by a recovery phase across all five districts.
