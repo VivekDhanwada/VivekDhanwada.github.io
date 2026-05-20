@@ -2,7 +2,7 @@
 name: Australian Population & Migration Trends
 tools: [Power BI, Excel, ABS Data, Dashboard Design]
 image: /assets/images/projects/aus-population-migration.png
-description: Built three Power BI dashboards using 20 years of ABS census data to analyse Australian population growth, country-of-birth composition, and fast-growing migrant communities.
+description: Built three Power BI dashboards using 20 years of ABS census data to analyse population growth, country-of-birth composition, and fast-growing migrant communities across Australia.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/02-aus-population-migration
 ---
 
@@ -10,7 +10,7 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 ## Overview
 
-A Power BI dashboard project analysing 20 years of Australian Bureau of Statistics census data from 1996 to 2016. The project explores national population growth, country-of-birth composition, and fast-growing migrant communities across Australian states and genders.
+A Power BI dashboard project analysing 20 years of Australian Bureau of Statistics census data from 1996 to 2016. The project explores national population growth, country-of-birth composition, and fast-growing migrant communities across Australian states and demographic groups.
 
 This project was completed as part of the Master of Business Analytics program at Macquarie University.
 
@@ -40,7 +40,7 @@ Nepal increased from 2,430 residents in 2001 to more than 59,000 in 2016, repres
 - Data storytelling and demographic analysis
 - Interactive slicer and filter design
 - Excel-based percentage growth calculation
-- Translating population data into business-style insights
+- Translating population data into dashboard-ready insights
 
 ## Data Source
 
