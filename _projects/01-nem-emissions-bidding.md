@@ -11,7 +11,7 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 ## Overview
 
-A Python-based analysis of Australian National Electricity Market (NEM) emissions intensity and generator bidding behaviour across all NEM regions. The project used 5-minute interval dispatch and emissions data from 2019 and 2025 to examine how carbon intensity and fossil fuel generator behaviour changed over time.
+A Python-based analysis of Australian National Electricity Market (NEM) emissions intensity and generator bidding behaviour across NEM regions. The project used selected 5-minute interval dispatch and emissions data from 2019 and 2025 to examine how carbon intensity and fossil fuel generator behaviour changed over time.
 
 This analysis was completed as part of a Macquarie University capstone project that received a Distinction.
 
@@ -35,11 +35,10 @@ Time series and intra-daily trend charts showed clear differences in emissions p
 ## Skills Demonstrated
 
 - Python data cleaning and preparation
-- API-based data extraction
 - Time series analysis using 5-minute interval dispatch data
 - Data aggregation and regional comparison
 - Matplotlib visualisation and analytical reporting
-- Translating technical findings into client-style recommendations
+- Translating technical findings into a client-style analytical report
 
 ## Contribution Note
 
