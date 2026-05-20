@@ -24,13 +24,13 @@ Three dashboards were built to move from national-level population trends to mor
 
 ## Key Findings
 
-**Australia's population grew steadily over two decades**  
+**Australia's population grew steadily over two decades**
 NSW and Victoria contributed the largest absolute population increases, while the national population showed signs of ageing through increased representation in the 50-74 age cohort.
 
-**Migration patterns showed both scale and diversity**  
+**Migration patterns showed both scale and diversity**
 England, India, China, and New Zealand were among the largest migrant communities, while country-of-birth analysis highlighted Australia's increasingly diverse population base.
 
-**Nepal showed the strongest percentage growth**  
+**Nepal showed the strongest percentage growth**
 Nepal increased from 2,430 residents in 2001 to more than 59,000 in 2016, representing 2,330% growth. Bhutan, Liberia, and Mongolia also showed strong relative growth.
 
 ## Skills Demonstrated
@@ -42,9 +42,13 @@ Nepal increased from 2,430 residents in 2001 to more than 59,000 in 2016, repres
 - Excel-based percentage growth calculation
 - Translating population data into business-style insights
 
+## Data Source
+
+Australian Bureau of Statistics (ABS) census data, 1996–2016. Data accessed via ABS community profile and country of birth datasets.
+
 ## Limitations
 
-The analysis covers census data from 1996 to 2016 only, so post-2016 migration trends are not captured. Power BI Web was used on Mac, so percentage growth calculations were prepared externally in Excel due to platform limitations.
+Percentage growth calculations were prepared in Excel and integrated into the Power BI dashboards. The analysis covers census data from 1996 to 2016 only, so post-2016 migration trends are not captured.
 
 ## Project Files
 
