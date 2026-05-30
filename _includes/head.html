@@ -12,19 +12,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="{{ image }}">
+    <meta property="og:image" content="{{ site.url }}/{{ image }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ site.url }}/{{ image }}">
   
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}">
   
-   <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
   
     <!-- Theme style -->
     <script src="/assets/js/custom.js" defer></script>
-      <!--  <script src="{{ '/assets/js/theme.js' | relative_url }}"></script> -->
+    <!-- <script src="{{ '/assets/js/theme.js' | relative_url }}"></script> -->
   
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -39,4 +47,4 @@
     <link rel="stylesheet" href="{{ '/assets/css/custom.css?v=22' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
-  </head>
+</head>
