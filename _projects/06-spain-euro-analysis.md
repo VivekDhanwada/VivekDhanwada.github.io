@@ -33,8 +33,6 @@ A Python and Tableau analysis of Spain's UEFA Euro 2024 campaign using StatsBomb
 
 ## Dashboard Preview
 
-## Dashboard Preview
-
 ### 1. Shot Analysis — How Spain Created Chances
 
 ![Shot Analysis](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/spain-euro-2024/screenshots/shot-analysis.png)
