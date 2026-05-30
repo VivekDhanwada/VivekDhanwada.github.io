@@ -6,15 +6,22 @@ description: Built three Power BI dashboards using 20 years of ABS census data t
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/02-aus-population-migration
 ---
 
+
 # Australian Population & Migration Trends
+
+**Key Result:** Nepal emerged as Australia's fastest-growing migrant community, increasing from 2,430 residents in 2001 to more than 59,000 in 2016 (+2,330%), highlighting demographic shifts that are often hidden behind larger migrant populations.
 
 ## Overview
 
-A Power BI dashboard project analysing 20 years of Australian Bureau of Statistics census data from 1996 to 2016. The project explores national population growth, country-of-birth composition, and fast-growing migrant communities across Australian states and demographic groups.
+A Power BI project analysing 20 years of Australian Bureau of Statistics (ABS) census data to understand how Australia's population evolved between 1996 and 2016. Three dashboards were developed to examine national population growth, migrant population composition, and emerging migrant communities that experienced rapid growth over time.
 
 This project was completed as part of the Master of Business Analytics program at Macquarie University.
 
-Three dashboards were built to move from national-level population trends to more detailed migration insights.
+## Project Preview
+
+### Fastest-Growing Migrant Communities
+
+![Fastest-Growing Migrant Communities](/assets/images/projects/aus-population-migration.png)
 
 ## Analytical Questions
 
@@ -33,23 +40,33 @@ England, India, China, and New Zealand were among the largest migrant communitie
 **Nepal showed the strongest percentage growth**
 Nepal increased from 2,430 residents in 2001 to more than 59,000 in 2016, representing 2,330% growth. Bhutan, Liberia, and Mongolia also showed strong relative growth.
 
+
+## Data & Methodology
+
+### Data Sources
+- Australian Bureau of Statistics (ABS) Census Data
+- Census years: 1996, 2001, 2006, 2011 and 2016
+- Population, age, gender and country-of-birth datasets
+
+### Dataset Scope
+- Five national census periods
+- State-level and national demographic data
+- Country-of-birth analysis across migrant communities
+- Population growth calculations prepared in Excel and visualised in Power BI
+
 ## Skills Demonstrated
 
 - Power BI dashboard development
-- ABS census data analysis
-- Data storytelling and demographic analysis
-- Interactive slicer and filter design
-- Excel-based percentage growth calculation
-- Translating population data into dashboard-ready insights
-
-## Data Source
-
-Australian Bureau of Statistics (ABS) census data, 1996–2016. Data accessed via ABS community profile and country of birth datasets.
+- Demographic and population analysis
+- Data cleaning and preparation
+- Excel-based growth calculations
+- Interactive dashboard design
+- Data storytelling and insight communication
 
 ## Limitations
 
 Percentage growth calculations were prepared in Excel and integrated into the Power BI dashboards. The analysis covers census data from 1996 to 2016 only, so post-2016 migration trends are not captured.
 
-## Project Files
+## Source Code & Files
 
-<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/02-aus-population-migration" target="_blank" rel="noopener noreferrer">View full project files</a>
+<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/02-aus-population-migration" target="_blank" rel="noopener noreferrer">View full project files on GitHub →</a>
