@@ -2,7 +2,7 @@
 name: NEM Emissions & Bidding Analysis
 tools: [Python, pandas, Matplotlib, Time Series Analysis]
 image: /assets/images/projects/nem-emissions-bidding.png
-description: Analysed 1.6M+ rows of Australian National Electricity Market emissions and generator bidding data using Python, identifying regional carbon intensity trends and fossil fuel bidding shifts.
+description: Analysed 1.6M+ rows of Australian National Electricity Market data using Python, uncovering regional emissions trends, generator bidding behaviour, and market structure changes between 2019 and 2025.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/01-nem-emissions-bidding
 ---
 
@@ -11,9 +11,13 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 ## Overview
 
-A Python-based analysis of Australian National Electricity Market (NEM) emissions intensity and generator bidding behaviour across NEM regions. The project used selected 5-minute interval dispatch and emissions data from 2019 and 2025 to examine how carbon intensity and fossil fuel generator behaviour changed over time.
+A Python-based analysis of emissions intensity and generator bidding behaviour in the Australian National Electricity Market (NEM).
 
-This analysis was completed as part of a Macquarie University capstone project that received a Distinction.
+Using more than 1.6 million rows of dispatch and emissions data, the project examines how Australia's electricity market evolved between 2019 and 2025, focusing on regional decarbonisation trends, fossil-fuel bidding behaviour, and differences in market structure across NEM regions.
+
+This analysis was completed as part of a Macquarie University capstone project and received a Distinction.
+
+**Key Result:** NSW reduced carbon intensity by 21.7% between 2019 and 2025, while fossil fuel generator bid-price volatility increased substantially, with the interquartile range widening from $85/MWh to $210/MWh.
 
 ## Analytical Questions
 
@@ -32,18 +36,38 @@ Fossil generators shifted from baseload providers toward more strategic peak-pri
 **Regional emissions patterns varied significantly**  
 Time series and intra-daily trend charts showed clear differences in emissions profiles across NEM regions, highlighting the importance of region-level analysis.
 
+## Project Preview
+
+### Regional Emissions Comparison
+
+![Regional Emissions Comparison](/assets/images/projects/nem-emissions-bidding.png)
+
+## Data & Methodology
+
+### Data Sources
+- CSIRO NEM Emissions API
+- NEM generator bidding datasets (2019 and 2025)
+- Five NEM regions: NSW, VIC, QLD, SA and TAS
+
+### Dataset Size
+- Over 1.6 million rows of dispatch and emissions data
+- Five-minute interval observations across multiple years
+- Generator bidding and emissions records analysed across regions and technologies
+
 ## Skills Demonstrated
 
-- Python data cleaning and preparation
-- Time series analysis using 5-minute interval dispatch data
-- Data aggregation and regional comparison
-- Matplotlib visualisation and analytical reporting
-- Translating technical findings into a client-style analytical report
+- Data collection and preparation
+- Python data cleaning and transformation
+- Time series analysis using 5-minute interval market data
+- Regional comparison and trend analysis
+- Market behaviour and bidding analysis
+- Matplotlib data visualisation
+- Translating technical findings into business insights
 
 ## Contribution Note
 
 This was a group capstone project completed at Macquarie University. The Python code included in the linked repository is the cleaned, shareable version of the project code. The report PDF is an excerpt of the collaborative group report with the cover page removed. Full group authorship is acknowledged.
 
-## Project Files
+## Source Code & Files
 
-<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/01-nem-emissions-bidding" target="_blank" rel="noopener noreferrer">View full project files</a>
+<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/01-nem-emissions-bidding" target="_blank" rel="noopener noreferrer">View full project files on GitHub →</a>
