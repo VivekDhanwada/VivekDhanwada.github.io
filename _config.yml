@@ -2,10 +2,11 @@
 title               : Vivek Chinmay Dhanwada
 description         : >-
                       Business Analytics Graduate | Data Analytics & Business Intelligence
-baseurl             : ""            
-repository          : VivekDhanwada/vivekdhanwada.github.io     
+baseurl             : ""
+url                 : "https://vivekdhanwada.github.io"
+repository          : VivekDhanwada/vivekdhanwada.github.io
 remote_theme        : yousinix/portfolYOU
-open_new_tab        : true                    
+open_new_tab        : true                 
 
 
 ### Plugins ###
