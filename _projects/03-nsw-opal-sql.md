@@ -1,6 +1,6 @@
 ---
 name: NSW Opal Card Tap-On/Tap-Off Analysis
-tools: [PostgreSQL, SQL, Tableau, Transport Analysis]
+tools: [PostgreSQL, SQL, Tableau]
 image: https://public.tableau.com/static/images/NS/NSW_Opal_Card_Tap_Analysis/NSWOpalCardTap-OnTap-OffAnalysis/4_3.png
 description: Analysed 398,019 rows of real Transport for NSW Opal card data using PostgreSQL and Tableau, comparing travel behaviour between a standard November week and the Christmas/New Year period.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/03-nsw-opal-card
@@ -8,11 +8,19 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 # NSW Opal Card Tap-On/Tap-Off Analysis
 
+**Key Result:** Weekday travel demand fell by 50% during the Christmas/New Year period, while ferry usage increased and Circular Quay became one of the busiest locations in the network, indicating a shift from commuter travel to leisure-focused travel behaviour.
+
 ## Overview
 
 An exploratory analysis of real Transport for NSW Opal card tap-on/tap-off data across two contrasting one-week periods: a standard November week (Nov 21-27, 2016) and the Christmas/New Year period (Dec 26, 2016 - Jan 1, 2017). The project uses PostgreSQL for data loading, cleaning, and analysis, with Tableau used to visualise travel behaviour, location demand, and service disruption patterns.
 
 The dataset includes 398,019 rows across train, bus, ferry, and light rail records.
+
+## Project Preview
+
+### Service Disruptions Dashboard
+
+![Service Disruptions](https://public.tableau.com/static/images/NS/NSW_Opal_Card_Tap_Analysis/NSWOpalCardTap-OnTap-OffAnalysis/4_3.png)
 
 ## Analytical Questions
 
@@ -31,13 +39,29 @@ Circular Quay was the only top location where December tap volume exceeded Novem
 **Disruption impact varied by alert type**  
 Trip and delay alerts were the most frequent disruption types. Incident alerts had the longest average duration in December, suggesting that lower-frequency events can still create significant operational impact.
 
+## Data & Methodology
+
+### Data Sources
+- Transport for NSW Opal card tap-on/tap-off dataset
+- Transport for NSW service alerts dataset
+- November 21–27, 2016 travel period
+- December 26, 2016 – January 1, 2017 travel period
+
+### Dataset Scope
+- 398,019 transport transactions
+- Four transport modes: train, bus, ferry, and light rail
+- Two contrasting one-week travel periods
+- Service disruption and delay records
+
 ## Skills Demonstrated
 
 - SQL data cleaning and transformation
-- PostgreSQL querying and aggregation
-- CTEs, joins, window functions, and date/time extraction
+- PostgreSQL querying, aggregation, and multi-table joins
+- Common Table Expressions (CTEs)
+- Window functions and analytical queries
 - Tableau dashboard development
 - Transport demand and disruption analysis
+- Data storytelling and insight communication
 
 ## Limitations
 
@@ -47,6 +71,6 @@ The analysis compares two one-week periods, so findings are illustrative rather 
 
 <a href="https://public.tableau.com/views/NSW_Opal_Card_Tap_Analysis/NSWOpalCardTap-OnTap-OffAnalysis" target="_blank" rel="noopener noreferrer">View on Tableau Public</a>
 
-## Project Files
+## Source Code & Files
 
-<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/03-nsw-opal-card" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/03-nsw-opal-card" target="_blank" rel="noopener noreferrer">View full project files on GitHub →</a>
