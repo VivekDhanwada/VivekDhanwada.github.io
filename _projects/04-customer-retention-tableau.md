@@ -1,6 +1,6 @@
 ---
 name: Customer Retention & Revenue Analysis
-tools: [Tableau, Data Visualisation, Customer Analysis]
+tools: [Tableau]
 image: https://public.tableau.com/static/images/Cu/CustomerRetentionRevenueAnalysis/CustomerRetentionRevenueAnalysis/4_3.png
 description: Built three Tableau dashboards to explore customer retention patterns and revenue trends across a 100,000-row synthetic Amazon e-commerce dataset.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/04-customer-retention
@@ -8,8 +8,16 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 # Customer Retention & Revenue Analysis
 
+**Key Result:** Retention remained consistently high (~86%) across product categories, price tiers, and payment methods, while discounts showed no meaningful relationship with repeat purchasing behaviour.
+
 ## Overview
 An exploratory analysis of a synthetic Amazon e-commerce dataset (100,000 rows, 20 columns) built across three Tableau dashboards. The project investigates customer retention patterns and examines revenue performance across five years (2020–2024).
+
+## Project Preview
+
+### Dashboard 3 – Temporal Business Performance
+
+![Temporal Business Performance](https://public.tableau.com/static/images/Cu/CustomerRetentionRevenueAnalysis/CustomerRetentionRevenueAnalysis/4_3.png)
 
 ## Business Questions
 1. Are discounts associated with repeat purchasing behaviour?
@@ -27,13 +35,35 @@ Retention holds at ~86% regardless of product category, price tier, or payment m
 **Dashboard 3 - Temporal Business Performance**
 Total revenue of $91.8M is stable year-on-year. A consistent February revenue dip (~9.4% below monthly average) appears across all five years, suggesting a recurring seasonal demand pattern.
 
+## Data & Methodology
+
+### Data Sources
+- Synthetic Amazon e-commerce dataset
+- 100,000 customer transaction records
+- 20 variables covering orders, discounts, products, payments, and revenue
+
+### Dataset Scope
+- Five-year period (2020–2024)
+- Customer retention and purchasing behaviour
+- Revenue performance and seasonality analysis
+
+## Skills Demonstrated
+
+- Tableau dashboard development
+- Customer retention analysis
+- Revenue and seasonality analysis
+- Business-focused exploratory data analysis
+- Segment comparison and performance evaluation
+- Data storytelling and insight communication
+
 ## Limitations
 - Findings are descriptive, not causal
 - Factors outside the dataset (customer service, delivery experience) may better explain retention consistency
+- Dataset is synthetic, so patterns may not reflect real Amazon behaviour
 
 ## Live Dashboard
 <a href="https://public.tableau.com/shared/2RJJMHJR9?:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer">View on Tableau Public</a>
 
-## Project Files
+## Source Code & Files
 
-<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/04-customer-retention" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/04-customer-retention" target="_blank" rel="noopener noreferrer">View full project files on GitHub →</a>
