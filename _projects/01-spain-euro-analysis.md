@@ -3,7 +3,7 @@ name: Spain at Euro 2024 — A Tactical Analysis
 tools: [Python, pandas, Matplotlib, Tableau, Sports Analytics]
 image: https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/06-spain-euro-2024/screenshots/shot-analysis.png
 description: Analysed Spain's UEFA Euro 2024 campaign using StatsBomb open event data accessed via raw API calls, examining attacking threat, defensive pressing, and passing network structure across all seven matches and benchmarked against all 24 tournament teams.
-github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/spain-euro-2024
+github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/06-spain-euro-2024
 ---
 
 # Spain at Euro 2024 — A Tactical Analysis
@@ -59,4 +59,4 @@ A Python and Tableau analysis of Spain's UEFA Euro 2024 campaign using StatsBomb
 
 ## Source Code & Files
 
-<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/spain-euro-2024" target="_blank" rel="noopener noreferrer">View Full Project Files on GitHub →</a>
+<a href="https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/06-spain-euro-2024" target="_blank" rel="noopener noreferrer">View Full Project Files on GitHub →</a>
