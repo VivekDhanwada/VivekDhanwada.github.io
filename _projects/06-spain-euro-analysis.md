@@ -1,7 +1,7 @@
 ---
 name: Spain at Euro 2024 — A Tactical Analysis
 tools: [Python, pandas, Matplotlib, Tableau, Sports Analytics]
-image: https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/spain-euro-2024/screenshots/shot-analysis.png
+image: https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/06-spain-euro-2024/screenshots/shot-analysis.png
 description: Analysed Spain's UEFA Euro 2024 campaign using StatsBomb open event data accessed via raw API calls, examining attacking threat, defensive pressing, and passing network structure across all seven matches and benchmarked against all 24 tournament teams.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/spain-euro-2024
 ---
@@ -35,15 +35,15 @@ A Python and Tableau analysis of Spain's UEFA Euro 2024 campaign using StatsBomb
 
 ### 1. Shot Analysis — How Spain Created Chances
 
-![Shot Analysis](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/spain-euro-2024/screenshots/shot-analysis.png)
+![Shot Analysis](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/06-spain-euro-2024/screenshots/shot-analysis.png)
 
 ### 2. Press Analysis — How Spain Won The Ball Back
 
-![Press Analysis](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/spain-euro-2024/screenshots/press-analysis.png)
+![Press Analysis](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/06-spain-euro-2024/screenshots/press-analysis.png)
 
 ### 3. Pass Analysis — How Spain Controlled Possession
 
-![Pass Analysis](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/spain-euro-2024/screenshots/pass-analysis.png)
+![Pass Analysis](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/06-spain-euro-2024/screenshots/pass-analysis.png)
 
 ## Tech Stack
 
