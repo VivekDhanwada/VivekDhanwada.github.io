@@ -1378,8 +1378,8 @@ footer a:hover,
   border: 1px solid rgba(3, 161, 224, 0.2);
   border-radius: 14px;
   overflow: hidden;
-  margin-top: 3.5rem;
-  margin-bottom: 3rem;
+  margin-top: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .landing-cred-tile {
@@ -1437,14 +1437,14 @@ footer a:hover,
 #about {
   padding-top: 1.5rem !important;
   margin-top: 0 !important;
-  padding-bottom: calc(100vh - 68px);
+  padding-bottom: 3rem;
   scroll-snap-align: start;
   scroll-margin-top: 68px;
   min-height: calc(100vh - 68px);
 }
 
 #about p.text-center {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .landing-hero-shell {
