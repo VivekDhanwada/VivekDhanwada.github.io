@@ -1437,14 +1437,14 @@ footer a:hover,
 #about {
   padding-top: 1.5rem !important;
   margin-top: 0 !important;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
   scroll-snap-align: start;
   scroll-margin-top: 68px;
   min-height: calc(100vh - 68px);
 }
 
 #about p.text-center {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
 
 .landing-hero-shell {
