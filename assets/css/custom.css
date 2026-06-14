@@ -1444,11 +1444,8 @@ footer a:hover,
 }
 
 .landing-hero-content {
-  min-height: calc(100vh - 68px - 80px);
-  display: flex;
-  align-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
 }
 
 .landing-hero-inner {
@@ -1461,11 +1458,8 @@ footer a:hover,
 }
 
 .landing-arrow-wrap {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 .landing-left {

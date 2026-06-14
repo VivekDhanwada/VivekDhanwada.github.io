@@ -5,7 +5,6 @@ permalink: /
 
 {% include landing.html %}
 
-<!-- About Section (Initially Hidden) -->
-<section id="about" class="hidden-section">
+<section id="about">
   {% include about.html %}
 </section>
