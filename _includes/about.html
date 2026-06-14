@@ -1,5 +1,22 @@
 <h1>About Me</h1>
 
+{% if page.url == '/' %}
+<div class="landing-creds-strip">
+  <div class="landing-cred-tile">
+    <span class="landing-cred-value">MBusAnalytics</span>
+    <span class="landing-cred-label">Macquarie University</span>
+  </div>
+  <div class="landing-cred-tile">
+    <span class="landing-cred-value">6</span>
+    <span class="landing-cred-label">Portfolio Projects</span>
+  </div>
+  <div class="landing-cred-tile">
+    <span class="landing-cred-value">Python · SQL · Power BI · Tableau</span>
+    <span class="landing-cred-label">Core Stack</span>
+  </div>
+</div>
+{% endif %}
+
 <div style="text-align: justify;">
   <p>
     Hi, I'm <strong>{{ site.author.name }}</strong> — a Business Analytics graduate from Macquarie University based in Sydney. My background combines a Master's in Business Analytics with a degree in Mechatronics Engineering, which gives me an engineer's instinct for data: where it comes from, where it breaks, and how insights reach business decisions.
