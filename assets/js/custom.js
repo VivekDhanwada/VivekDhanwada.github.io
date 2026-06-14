@@ -5,10 +5,8 @@ function scrollToAbout() {
   const aboutSection = document.getElementById("about");
   if (aboutSection) {
     aboutSection.classList.add("visible-section");
-    window.scrollTo({
-      top: aboutSection.offsetTop - 80,
-      behavior: "smooth",
-    });
+    const target = aboutSection.getBoundingClientRect().top + window.scrollY - 68;
+    window.scrollTo({ top: target, behavior: "smooth" });
   }
 }
 
@@ -52,13 +50,14 @@ function initAboutSectionSnap(aboutSection) {
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const aboutTop = aboutSection.offsetTop - 68;
-    const snapThreshold = aboutTop * 0.65;
+    const aboutDocTop = aboutSection.getBoundingClientRect().top + scrollY;
+    const aboutTarget = aboutDocTop - 68;
+    const snapThreshold = aboutTarget * 0.65;
 
-    if (!hasSnapped && scrollY >= snapThreshold && scrollY < aboutTop) {
+    if (!hasSnapped && scrollY >= snapThreshold && scrollY < aboutTarget) {
       hasSnapped = true;
       aboutSection.classList.add('visible-section');
-      window.scrollTo({ top: aboutTop, behavior: 'smooth' });
+      window.scrollTo({ top: aboutTarget, behavior: 'smooth' });
     }
 
     if (scrollY < 100) {
