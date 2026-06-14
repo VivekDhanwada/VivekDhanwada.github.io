@@ -5,6 +5,7 @@
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
 }
 
 /* Remove inherited Bootstrap top spacing on the homepage wrapper */
@@ -1440,6 +1441,8 @@ footer a:hover,
 #about {
   padding-top: 1.5rem;
   padding-bottom: 5rem;
+  scroll-snap-align: start;
+  scroll-margin-top: 68px;
 }
 
 #about p.text-center {
