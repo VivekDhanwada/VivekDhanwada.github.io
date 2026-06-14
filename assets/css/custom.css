@@ -1372,49 +1372,51 @@ footer a:hover,
    Landing Credentials Strip
    ========================================================================== */
 
-.landing-creds {
+.landing-creds-strip {
   display: flex;
-  gap: 0;
-  margin-top: 1.75rem;
   border: 1px solid rgba(3, 161, 224, 0.2);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
+  margin-top: 2.5rem;
 }
 
-.landing-cred-item {
+.landing-cred-tile {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0.85rem 1rem;
+  padding: 1.1rem 1.4rem;
   border-right: 1px solid rgba(3, 161, 224, 0.15);
+  background: rgba(3, 161, 224, 0.018);
 }
 
-.landing-cred-item:last-child {
+.landing-cred-tile:last-child {
   border-right: none;
 }
 
 .landing-cred-value {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--accent-color);
   line-height: 1.2;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .landing-cred-label {
   font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #888888;
 }
 
-[data-theme="dark"] .landing-creds {
+[data-theme="dark"] .landing-creds-strip {
   border-color: rgba(3, 161, 224, 0.18);
+  background: transparent;
 }
 
-[data-theme="dark"] .landing-cred-item {
+[data-theme="dark"] .landing-cred-tile {
   border-right-color: rgba(3, 161, 224, 0.12);
+  background: rgba(3, 161, 224, 0.03);
 }
 
 [data-theme="dark"] .landing-cred-label {
@@ -1439,7 +1441,7 @@ footer a:hover,
 .landing-hero-row {
   align-items: flex-start;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 .landing-left {
@@ -1460,11 +1462,11 @@ footer a:hover,
 }
 
 .landing-avatar-small {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   border: 2px solid rgba(3, 161, 224, 0.35);
   box-shadow: 0 0 18px rgba(3, 161, 224, 0.16);
   flex-shrink: 0;
@@ -1479,28 +1481,28 @@ footer a:hover,
 }
 
 .landing-role-label {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #444444;
+  color: var(--accent-color);
   margin-top: 0 !important;
-  margin-bottom: 0.55rem !important;
+  margin-bottom: 1rem !important;
   text-align: left;
 }
 
 [data-theme="dark"] .landing-role-label {
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--accent-color);
 }
 
 .landing-hero-name {
-  font-size: clamp(2.6rem, 4.8vw, 4rem);
+  font-size: clamp(3rem, 5.5vw, 5rem);
   font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
   color: #0a0a0a !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.85rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.25rem !important;
   text-align: left;
 }
 
@@ -1509,12 +1511,13 @@ footer a:hover,
 }
 
 .landing-tagline {
-  font-size: 1.1rem;
-  color: #666666;
+  font-size: 1.2rem;
+  color: #555555;
   font-weight: 400;
   margin-top: 0 !important;
-  margin-bottom: 1.75rem !important;
+  margin-bottom: 2rem !important;
   text-align: left;
+  line-height: 1.5;
 }
 
 [data-theme="dark"] .landing-tagline {
@@ -1727,11 +1730,29 @@ footer a:hover,
       width: 170px !important;
     }
   
+    .landing-creds-strip {
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .landing-cred-tile {
+      flex: 1 1 45%;
+      border-right: none !important;
+      border-bottom: 1px solid rgba(3, 161, 224, 0.15);
+    }
+
+    .landing-cred-tile:nth-child(odd) {
+      border-right: 1px solid rgba(3, 161, 224, 0.15) !important;
+    }
+
+    .landing-cred-tile:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+
     .landing-hero-name {
-      font-size: 3.2rem !important;
-      line-height: 1.05 !important;
-      margin-top: 1rem !important;
-      margin-bottom: 0.75rem !important;
+      font-size: 3rem !important;
+      line-height: 1.0 !important;
+      margin-bottom: 1rem !important;
     }
   
     .landing-role-label {
