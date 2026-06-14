@@ -66,22 +66,15 @@ function initAboutSectionScrollAnimation(aboutSection) {
  * Use IntersectionObserver to toggle the visibility of the scroll arrow.
  */
 function initScrollArrowIntersection(aboutSection, scrollArrow) {
-  if (!aboutSection || !scrollArrow) return;
+  if (!scrollArrow) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          scrollArrow.classList.add("hidden");
-        } else {
-          scrollArrow.classList.remove("hidden");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  observer.observe(aboutSection);
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+      scrollArrow.classList.add("hidden");
+    } else {
+      scrollArrow.classList.remove("hidden");
+    }
+  }, { passive: true });
 }
 
 /**

@@ -1441,11 +1441,15 @@ footer a:hover,
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
+  min-height: calc(100vh - 68px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .landing-hero-content {
-  padding-top: 5rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .landing-hero-inner {
@@ -1453,7 +1457,7 @@ footer a:hover,
 }
 
 .landing-hero-row {
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 
