@@ -1369,70 +1369,56 @@ footer a:hover,
 }
 
 /* ===========================================================================
-   About Credentials Strip
+   Landing Credentials Strip
    ========================================================================== */
 
-.about-creds {
+.landing-creds {
   display: flex;
   gap: 0;
-  margin-bottom: 1.75rem;
+  margin-top: 1.75rem;
   border: 1px solid rgba(3, 161, 224, 0.2);
   border-radius: 12px;
   overflow: hidden;
 }
 
-.about-cred-item {
+.landing-cred-item {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1rem;
   border-right: 1px solid rgba(3, 161, 224, 0.15);
 }
 
-.about-cred-item:last-child {
+.landing-cred-item:last-child {
   border-right: none;
 }
 
-.about-cred-value {
-  font-size: 1rem;
+.landing-cred-value {
+  font-size: 0.95rem;
   font-weight: 700;
   color: var(--accent-color);
   line-height: 1.2;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
-.about-cred-label {
-  font-size: 0.72rem;
+.landing-cred-label {
+  font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: #888888;
 }
 
-[data-theme="dark"] .about-creds {
+[data-theme="dark"] .landing-creds {
   border-color: rgba(3, 161, 224, 0.18);
 }
 
-[data-theme="dark"] .about-cred-item {
+[data-theme="dark"] .landing-cred-item {
   border-right-color: rgba(3, 161, 224, 0.12);
 }
 
-[data-theme="dark"] .about-cred-label {
+[data-theme="dark"] .landing-cred-label {
   color: rgba(255, 255, 255, 0.45);
-}
-
-@media (max-width: 768px) {
-  .about-creds {
-    flex-direction: column;
-  }
-  .about-cred-item {
-    border-right: none;
-    border-bottom: 1px solid rgba(3, 161, 224, 0.15);
-    padding: 0.75rem 1rem;
-  }
-  .about-cred-item:last-child {
-    border-bottom: none;
-  }
 }
 
 /* ===========================================================================
@@ -1451,10 +1437,9 @@ footer a:hover,
 }
 
 .landing-hero-row {
-  min-height: calc(100vh - 92px);
-  align-items: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  align-items: flex-start;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .landing-left {
@@ -1691,9 +1676,8 @@ footer a:hover,
     }
 
     .landing-hero-row {
-      min-height: auto;
-      padding-top: 1.5rem;
-      padding-bottom: 2rem;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
     }
 
     .landing-left {
