@@ -1450,7 +1450,7 @@ footer a:hover,
 .landing-hero-shell {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem 2.5rem 0;
+  padding: 0.5rem 2.5rem 0;
   min-height: calc(100vh - 68px);
   display: flex;
   flex-direction: column;
