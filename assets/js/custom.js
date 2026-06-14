@@ -52,7 +52,9 @@ function initAboutSectionScrollAnimation(aboutSection) {
     const rect = aboutSection.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
       aboutSection.classList.add("visible-section");
-      window.removeEventListener("scroll", checkReveal);
+    }
+    if (window.scrollY < 80) {
+      aboutSection.classList.remove("visible-section");
     }
   }
 
