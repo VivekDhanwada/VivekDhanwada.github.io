@@ -43,6 +43,31 @@ function initTheme() {
 }
 
 /**
+ * Snap the About section to the top of the viewport when the user
+ * naturally scrolls past the midpoint of the hero's trailing space.
+ */
+function initAboutSectionSnap(aboutSection) {
+  if (!aboutSection) return;
+  let hasSnapped = false;
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const aboutTop = aboutSection.offsetTop - 68;
+    const snapThreshold = aboutTop * 0.65;
+
+    if (!hasSnapped && scrollY >= snapThreshold && scrollY < aboutTop) {
+      hasSnapped = true;
+      aboutSection.classList.add('visible-section');
+      window.scrollTo({ top: aboutTop, behavior: 'smooth' });
+    }
+
+    if (scrollY < 100) {
+      hasSnapped = false;
+    }
+  }, { passive: true });
+}
+
+/**
  * Set up the about section scroll animation.
  */
 function initAboutSectionScrollAnimation(aboutSection) {
@@ -218,6 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  initAboutSectionSnap(aboutSection);
   initAboutSectionScrollAnimation(aboutSection);
   initScrollArrowIntersection(aboutSection, scrollArrow);
   setScrollArrowColor(descriptionText, scrollArrow);
