@@ -4,6 +4,7 @@
 function scrollToAbout() {
   const aboutSection = document.getElementById("about");
   if (aboutSection) {
+    aboutSection.classList.add("visible-section");
     window.scrollTo({
       top: aboutSection.offsetTop - 80,
       behavior: "smooth",

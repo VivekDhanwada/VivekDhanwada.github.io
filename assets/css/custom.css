@@ -53,10 +53,14 @@ main.flex-shrink-0 {
   pointer-events: auto;
 }
 
+.landing-arrow-wrap {
+  padding-bottom: 1.5rem;
+}
+
 /* Scroll Down Arrow */
 .scroll-down {
   position: relative;
-  margin-top: 48px;
+  margin-top: 0;
   font-size: 32px;
   cursor: pointer;
   animation: bounce 3s ease-in-out infinite;
