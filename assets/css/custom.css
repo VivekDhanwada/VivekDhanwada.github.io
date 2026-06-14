@@ -1459,8 +1459,8 @@ footer a:hover,
 }
 
 .landing-hero-content {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .landing-hero-inner {
@@ -1480,7 +1480,7 @@ footer a:hover,
 }
 
 .landing-left {
-  padding: 2.5rem 2.75rem 2.5rem 0;
+  padding: 1rem 2.75rem 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1488,7 +1488,7 @@ footer a:hover,
 }
 
 .landing-right {
-  padding: 2.5rem 0 2.5rem 5.25rem;
+  padding: 1rem 0 1rem 5.25rem;
   border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -1497,11 +1497,11 @@ footer a:hover,
 }
 
 .landing-avatar-small {
-  width: 170px;
-  height: 170px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   border: 2px solid rgba(3, 161, 224, 0.35);
   box-shadow: 0 0 18px rgba(3, 161, 224, 0.16);
   flex-shrink: 0;
@@ -1516,13 +1516,13 @@ footer a:hover,
 }
 
 .landing-role-label {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent-color);
   margin-top: 0 !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 1.25rem !important;
   text-align: left;
 }
 
@@ -1531,13 +1531,13 @@ footer a:hover,
 }
 
 .landing-hero-name {
-  font-size: clamp(2.8rem, 4.5vw, 4.9rem);
+  font-size: clamp(3.5rem, 6.5vw, 6.5rem);
   font-weight: 800;
   line-height: 1.0;
   letter-spacing: -0.03em;
   color: #0a0a0a !important;
   margin-top: 0 !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.25rem !important;
   text-align: left;
 }
 
@@ -1546,11 +1546,11 @@ footer a:hover,
 }
 
 .landing-tagline {
-  font-size: 1.45rem;
+  font-size: 1.2rem;
   color: #555555;
   font-weight: 400;
   margin-top: 0 !important;
-  margin-bottom: 2.5rem !important;
+  margin-bottom: 2rem !important;
   text-align: left;
   line-height: 1.5;
 }
@@ -1607,13 +1607,13 @@ footer a:hover,
 .project-row-card {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
-  padding: 1.3rem 1.4rem;
+  gap: 1.5rem;
+  padding: 1.9rem 1.75rem;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 12px;
   text-decoration: none !important;
   color: inherit;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
   background: rgba(0, 0, 0, 0.015);
   transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
@@ -1637,8 +1637,8 @@ footer a:hover,
 }
 
 .project-row-thumb {
-  width: 100px;
-  height: 68px;
+  width: 140px;
+  height: 96px;
   border-radius: 8px;
   overflow: hidden;
   flex-shrink: 0;
@@ -1659,7 +1659,7 @@ footer a:hover,
 }
 
 .project-row-title {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 650;
   color: #111111;
   margin: 0 0 0.35rem 0;
