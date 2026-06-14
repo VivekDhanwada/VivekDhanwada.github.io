@@ -1505,7 +1505,7 @@ footer a:hover,
 .landing-hero-content {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  transform: translateY(-50px);
+  transform: translateY(-80px);
 }
 
 .landing-hero-inner {
