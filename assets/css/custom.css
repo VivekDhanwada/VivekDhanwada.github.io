@@ -1461,6 +1461,7 @@ footer a:hover,
 .landing-hero-content {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  transform: translateY(-40px);
 }
 
 .landing-hero-inner {
@@ -1715,6 +1716,9 @@ footer a:hover,
 
     .landing-hero-shell {
       min-height: calc(100vh - 56px);
+    }
+    .landing-hero-content {
+      transform: none;
     }
 
     .landing-hero-row {
