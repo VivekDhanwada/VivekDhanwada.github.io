@@ -48,19 +48,16 @@ function initTheme() {
 function initAboutSectionScrollAnimation(aboutSection) {
   if (!aboutSection) return;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          aboutSection.classList.add("visible-section");
-          observer.unobserve(aboutSection);
-        }
-      });
-    },
-    { threshold: 0.05 }
-  );
+  function checkReveal() {
+    const rect = aboutSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      aboutSection.classList.add("visible-section");
+      window.removeEventListener("scroll", checkReveal);
+    }
+  }
 
-  observer.observe(aboutSection);
+  window.addEventListener("scroll", checkReveal, { passive: true });
+  checkReveal();
 }
 
 /**

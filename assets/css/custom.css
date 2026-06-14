@@ -1453,12 +1453,16 @@ footer a:hover,
   padding-bottom: 2rem;
 }
 
+.landing-hero-inner {
+  width: 100%;
+}
+
 .landing-hero-row {
   align-items: flex-start;
   width: 100%;
 }
 
-.landing-hero-footer {
+.landing-arrow-wrap {
   padding-bottom: 1.75rem;
 }
 
