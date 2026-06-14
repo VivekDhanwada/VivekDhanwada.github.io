@@ -1441,17 +1441,14 @@ footer a:hover,
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
-  min-height: calc(100vh - 68px);
-  display: flex;
-  flex-direction: column;
 }
 
 .landing-hero-content {
-  flex: 1;
+  min-height: calc(100vh - 68px - 80px);
   display: flex;
-  align-items: flex-start;
-  padding-top: 4rem;
-  padding-bottom: 1rem;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .landing-hero-inner {
@@ -1464,7 +1461,11 @@ footer a:hover,
 }
 
 .landing-arrow-wrap {
-  padding-bottom: 1.75rem;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
 }
 
 .landing-left {
