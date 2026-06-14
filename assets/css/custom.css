@@ -53,9 +53,6 @@ main.flex-shrink-0 {
   pointer-events: auto;
 }
 
-.landing-arrow-wrap {
-  padding-bottom: 1.5rem;
-}
 
 /* Scroll Down Arrow */
 .scroll-down {
@@ -1456,6 +1453,7 @@ footer a:hover,
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .landing-hero-content {
@@ -1473,12 +1471,14 @@ footer a:hover,
 }
 
 .landing-arrow-wrap {
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
+  position: absolute;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .landing-left {
-  padding: 2.5rem 2rem 2.5rem 0;
+  padding: 2.5rem 3rem 2.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1486,7 +1486,7 @@ footer a:hover,
 }
 
 .landing-right {
-  padding: 2.5rem 0 2.5rem 3.5rem;
+  padding: 2.5rem 0 2.5rem 3rem;
   border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
