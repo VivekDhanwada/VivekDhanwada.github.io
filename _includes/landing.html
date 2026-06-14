@@ -1,113 +1,118 @@
 <div class="landing-hero-shell">
-  <div class="row landing-hero-row">
 
-    <div class="col-lg-6 col-md-6 landing-left">
+  <!-- Main content — vertically centred in available space -->
+  <div class="landing-hero-content">
+    <div class="row landing-hero-row">
 
-      <div class="landing-avatar-small">
-        {% if site.author.image %}
-          <img src="{{ site.author.image }}" alt="{{ site.author.name }} profile photo" class="landing-avatar-img">
-        {% else %}
-          <img src="https://ui-avatars.com/api/?name={{ site.title }}&background=random" alt="{{ site.title }}" class="landing-avatar-img">
-        {% endif %}
+      <div class="col-lg-6 col-md-6 landing-left">
+
+        <div class="landing-avatar-small">
+          {% if site.author.image %}
+            <img src="{{ site.author.image }}" alt="{{ site.author.name }} profile photo" class="landing-avatar-img">
+          {% else %}
+            <img src="https://ui-avatars.com/api/?name={{ site.title }}&background=random" alt="{{ site.title }}" class="landing-avatar-img">
+          {% endif %}
+        </div>
+
+        <p class="landing-role-label">Data & Business Analyst</p>
+
+        <h1 class="landing-hero-name">Hi, I'm Vivek</h1>
+
+        <p class="landing-tagline">Engineering thinking, applied to data.</p>
+
+        <div class="landing-buttons">
+          <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center resume" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-pdf"></i>
+            <span>Resume</span>
+          </a>
+          <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center github" href="https://github.com/VivekDhanwada" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center linkedin" href="https://www.linkedin.com/in/vivek-dhanwada/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+
       </div>
 
-      <p class="landing-role-label">Data & Business Analyst</p>
+      <div class="col-lg-6 col-md-6 landing-right">
 
-      <h1 class="landing-hero-name">Hi, I'm Vivek</h1>
+        <p class="selected-work-label">SELECTED WORK</p>
 
-      <p class="landing-tagline">Engineering thinking, applied to data.</p>
+        <a href="/projects/01-spain-euro-analysis" class="project-row-card">
+          <div class="project-row-thumb">
+            <img src="https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/06-spain-euro-2024/screenshots/shot-analysis.png" alt="Spain at Euro 2024 project thumbnail">
+          </div>
+          <div class="project-row-info">
+            <p class="project-row-title">Spain at Euro 2024 — A Tactical Analysis</p>
+            <div class="project-row-tags">
+              <span class="badge">Python</span>
+              <span class="badge">Tableau</span>
+              <span class="badge">Sports Analytics</span>
+            </div>
+          </div>
+        </a>
 
-      <div class="landing-buttons">
-        <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center resume" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-file-pdf"></i>
-          <span>Resume</span>
+        <a href="/projects/03-nsw-opal-sql" class="project-row-card">
+          <div class="project-row-thumb">
+            <img src="https://public.tableau.com/static/images/NS/NSW_Opal_Card_Tap_Analysis/NSWOpalCardTap-OnTap-OffAnalysis/4_3.png" alt="NSW Opal Card project thumbnail">
+          </div>
+          <div class="project-row-info">
+            <p class="project-row-title">NSW Opal Card Tap-On/Tap-Off Analysis</p>
+            <div class="project-row-tags">
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">SQL</span>
+              <span class="badge">Tableau</span>
+            </div>
+          </div>
         </a>
-        <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center github" href="https://github.com/VivekDhanwada" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
+
+        <a href="/projects/02-nem-emissions-bidding" class="project-row-card">
+          <div class="project-row-thumb">
+            <img src="{{ '/assets/images/projects/nem-emissions-bidding.png' | relative_url }}" alt="NEM Emissions and Bidding project thumbnail">
+          </div>
+          <div class="project-row-info">
+            <p class="project-row-title">NEM Emissions &amp; Bidding Analysis</p>
+            <div class="project-row-tags">
+              <span class="badge">Python</span>
+              <span class="badge">pandas</span>
+              <span class="badge">Matplotlib</span>
+            </div>
+          </div>
         </a>
-        <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center linkedin" href="https://www.linkedin.com/in/vivek-dhanwada/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin-in"></i>
-          <span>LinkedIn</span>
-        </a>
+
+        <p class="view-all-link">
+          <a href="/projects">View all projects →</a>
+        </p>
+
       </div>
 
-    </div>
-
-    <div class="col-lg-6 col-md-6 landing-right">
-
-      <p class="selected-work-label">SELECTED WORK</p>
-
-      <a href="/projects/01-spain-euro-analysis" class="project-row-card">
-        <div class="project-row-thumb">
-          <img src="https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/06-spain-euro-2024/screenshots/shot-analysis.png" alt="Spain at Euro 2024 project thumbnail">
-        </div>
-        <div class="project-row-info">
-          <p class="project-row-title">Spain at Euro 2024 — A Tactical Analysis</p>
-          <div class="project-row-tags">
-            <span class="badge">Python</span>
-            <span class="badge">Tableau</span>
-            <span class="badge">Sports Analytics</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="/projects/03-nsw-opal-sql" class="project-row-card">
-        <div class="project-row-thumb">
-          <img src="https://public.tableau.com/static/images/NS/NSW_Opal_Card_Tap_Analysis/NSWOpalCardTap-OnTap-OffAnalysis/4_3.png" alt="NSW Opal Card project thumbnail">
-        </div>
-        <div class="project-row-info">
-          <p class="project-row-title">NSW Opal Card Tap-On/Tap-Off Analysis</p>
-          <div class="project-row-tags">
-            <span class="badge">PostgreSQL</span>
-            <span class="badge">SQL</span>
-            <span class="badge">Tableau</span>
-          </div>
-        </div>
-      </a>
-
-      <a href="/projects/02-nem-emissions-bidding" class="project-row-card">
-        <div class="project-row-thumb">
-          <img src="{{ '/assets/images/projects/nem-emissions-bidding.png' | relative_url }}" alt="NEM Emissions and Bidding project thumbnail">
-        </div>
-        <div class="project-row-info">
-          <p class="project-row-title">NEM Emissions &amp; Bidding Analysis</p>
-          <div class="project-row-tags">
-            <span class="badge">Python</span>
-            <span class="badge">pandas</span>
-            <span class="badge">Matplotlib</span>
-          </div>
-        </div>
-      </a>
-
-      <p class="view-all-link">
-        <a href="/projects">View all projects →</a>
-      </p>
-
-    </div>
-
-  </div>
-
-  <!-- Full-width credentials strip -->
-  <div class="landing-creds-strip">
-    <div class="landing-cred-tile">
-      <span class="landing-cred-value">6</span>
-      <span class="landing-cred-label">Portfolio Projects</span>
-    </div>
-    <div class="landing-cred-tile">
-      <span class="landing-cred-value">MBusAnalytics</span>
-      <span class="landing-cred-label">Macquarie University</span>
-    </div>
-    <div class="landing-cred-tile">
-      <span class="landing-cred-value">Python · SQL · Power BI · Tableau</span>
-      <span class="landing-cred-label">Core Stack</span>
     </div>
   </div>
 
-  <!-- Scroll Down Arrow (inside shell so it stays in viewport) -->
-  <div class="text-center landing-arrow-wrap">
-    <div class="scroll-down" id="scrollArrow" onclick="scrollToAbout()">
-      <i class="fas fa-chevron-down"></i>
+  <!-- Footer — credentials strip + arrow, pinned to bottom of viewport -->
+  <div class="landing-hero-footer">
+    <div class="landing-creds-strip">
+      <div class="landing-cred-tile">
+        <span class="landing-cred-value">6</span>
+        <span class="landing-cred-label">Portfolio Projects</span>
+      </div>
+      <div class="landing-cred-tile">
+        <span class="landing-cred-value">MBusAnalytics</span>
+        <span class="landing-cred-label">Macquarie University</span>
+      </div>
+      <div class="landing-cred-tile">
+        <span class="landing-cred-value">Python · SQL · Power BI · Tableau</span>
+        <span class="landing-cred-label">Core Stack</span>
+      </div>
+    </div>
+
+    <div class="text-center landing-arrow-wrap">
+      <div class="scroll-down" id="scrollArrow" onclick="scrollToAbout()">
+        <i class="fas fa-chevron-down"></i>
+      </div>
     </div>
   </div>
 

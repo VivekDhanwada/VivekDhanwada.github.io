@@ -1443,14 +1443,23 @@ footer a:hover,
   min-height: calc(100vh - 68px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.landing-hero-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .landing-hero-row {
   align-items: flex-start;
-  padding-top: 5rem;
-  padding-bottom: 3rem;
-  flex: 1;
+  width: 100%;
+}
+
+.landing-hero-footer {
+  padding-bottom: 1.75rem;
 }
 
 .landing-left {

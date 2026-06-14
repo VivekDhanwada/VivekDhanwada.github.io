@@ -17,12 +17,7 @@
               <i class="fas fa-external-link-alt"></i>
             </a>
           {% else %}
-            {% if p.url == '/about/' and page.url == '/' %}
-              <!-- When on home page, link the About nav item to the #about anchor -->
-              <a class="nav-item nav-link" href="javascript:void(0);" onclick="scrollToAbout()">{{ p.title }}</a>
-            {% else %}
-              <a class="nav-item nav-link {% if page.url == p.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
-            {% endif %}
+                <a class="nav-item nav-link {% if page.url == p.url %}active{% endif %}" href="{{ p.url | relative_url }}">{{ p.title }}</a>
           {% endif %}
         {% endunless %}
       {% endfor %}

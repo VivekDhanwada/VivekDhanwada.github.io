@@ -48,22 +48,19 @@ function initTheme() {
 function initAboutSectionScrollAnimation(aboutSection) {
   if (!aboutSection) return;
 
-  let lastScrollY = window.scrollY;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          aboutSection.classList.add("visible-section");
+          observer.unobserve(aboutSection);
+        }
+      });
+    },
+    { threshold: 0.05 }
+  );
 
-  function handleScroll() {
-    const currentScrollY = window.scrollY;
-    const triggerHeight = window.innerHeight * 0.5;
-
-    if (currentScrollY > triggerHeight && currentScrollY > lastScrollY) {
-      aboutSection.classList.add("visible-section");
-    } else if (currentScrollY < lastScrollY && currentScrollY < triggerHeight) {
-      aboutSection.classList.remove("visible-section");
-    }
-
-    lastScrollY = currentScrollY;
-  }
-
-  window.addEventListener("scroll", handleScroll);
+  observer.observe(aboutSection);
 }
 
 /**
