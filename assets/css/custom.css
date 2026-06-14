@@ -1435,11 +1435,12 @@ footer a:hover,
 }
 
 #about {
-  padding-top: 0 !important;
+  padding-top: 1.5rem !important;
   margin-top: 0 !important;
-  padding-bottom: 5rem;
+  padding-bottom: calc(100vh - 68px);
   scroll-snap-align: start;
   scroll-margin-top: 68px;
+  min-height: calc(100vh - 68px);
 }
 
 #about p.text-center {
