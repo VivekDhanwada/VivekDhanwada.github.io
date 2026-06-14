@@ -1,49 +1,85 @@
-<div class="row justify-content-center align-items-center p-4">
-  <div class="col-lg-8 col-md-10 text-center mt-5 mx-auto">
-    <div class="landing-card">
+<div class="landing-hero-shell">
+  <div class="row align-items-center landing-hero-row">
 
-      <div class="landing-card-top">
+    <div class="col-lg-5 col-md-6 landing-left">
 
-        <!-- Avatar -->
-        <div class="d-flex justify-content-center">
-          <div class="avatar-container">
-            {% if site.author.image %}
-              <img class="home__img mx-auto" src="{{ site.author.image }}" alt="{{ site.author.name }} profile photo">
-            {% else %}
-              <img class="img-fluid rounded-circle shadow-lg mx-auto" src="https://ui-avatars.com/api/?name={{ site.title }}&background=random" alt="{{ site.title }}" style="object-fit: cover;">
-            {% endif %}
-          </div>
-        </div>
-
-        <!-- Role label -->
-        <p class="landing-role-label">Business Analytics Graduate | Macquarie University</p>
-
-        <!-- Name -->
-        <h1 class="landing-hero-name">Hi, I'm Vivek</h1>
-
-        <!-- Tagline -->
-        <p class="landing-tagline">Engineering thinking, applied to data.</p>
-
+      <div class="landing-avatar-small">
+        {% if site.author.image %}
+          <img src="{{ site.author.image }}" alt="{{ site.author.name }} profile photo" class="landing-avatar-img">
+        {% else %}
+          <img src="https://ui-avatars.com/api/?name={{ site.title }}&background=random" alt="{{ site.title }}" class="landing-avatar-img">
+        {% endif %}
       </div>
 
-      <div class="landing-card-bottom">
-        <div class="d-flex justify-content-center">
-          <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center resume" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-file-pdf"></i>
-            <span>Resume</span>
-          </a>
-          <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center github" href="https://github.com/VivekDhanwada" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
-          </a>
-          <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center linkedin" href="https://www.linkedin.com/in/vivek-dhanwada/" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-linkedin-in"></i>
-            <span>LinkedIn</span>
-          </a>
-        </div>
+      <p class="landing-role-label">Business Analytics Graduate | Macquarie University</p>
+
+      <h1 class="landing-hero-name">Hi, I'm Vivek</h1>
+
+      <p class="landing-tagline">Engineering thinking, applied to data.</p>
+
+      <div class="landing-buttons">
+        <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center resume" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-pdf"></i>
+          <span>Resume</span>
+        </a>
+        <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center github" href="https://github.com/VivekDhanwada" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a class="btn btn-outline-dark btn-lg shadow-sm d-flex align-items-center linkedin" href="https://www.linkedin.com/in/vivek-dhanwada/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+        </a>
       </div>
 
     </div>
+
+    <div class="col-lg-7 col-md-6 landing-right">
+
+      <p class="selected-work-label">SELECTED WORK</p>
+
+      <a href="/projects/01-spain-euro-analysis" class="project-row-card">
+        <div class="project-row-thumb"></div>
+        <div class="project-row-info">
+          <p class="project-row-title">Spain at Euro 2024 — A Tactical Analysis</p>
+          <div class="project-row-tags">
+            <span class="badge">Python</span>
+            <span class="badge">Tableau</span>
+            <span class="badge">Sports Analytics</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/projects/03-nsw-opal-sql" class="project-row-card">
+        <div class="project-row-thumb"></div>
+        <div class="project-row-info">
+          <p class="project-row-title">NSW Opal Card Tap-On/Tap-Off Analysis</p>
+          <div class="project-row-tags">
+            <span class="badge">PostgreSQL</span>
+            <span class="badge">SQL</span>
+            <span class="badge">Tableau</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/projects/02-nem-emissions-bidding" class="project-row-card">
+        <div class="project-row-thumb"></div>
+        <div class="project-row-info">
+          <p class="project-row-title">NEM Emissions &amp; Bidding Analysis</p>
+          <div class="project-row-tags">
+            <span class="badge">Python</span>
+            <span class="badge">pandas</span>
+            <span class="badge">Matplotlib</span>
+          </div>
+        </div>
+      </a>
+
+      <p class="view-all-link">
+        <a href="/projects">View all projects →</a>
+      </p>
+
+    </div>
+
   </div>
 </div>
 
