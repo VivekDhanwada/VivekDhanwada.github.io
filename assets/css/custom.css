@@ -1369,6 +1369,73 @@ footer a:hover,
 }
 
 /* ===========================================================================
+   About Credentials Strip
+   ========================================================================== */
+
+.about-creds {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.75rem;
+  border: 1px solid rgba(3, 161, 224, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about-cred-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  border-right: 1px solid rgba(3, 161, 224, 0.15);
+}
+
+.about-cred-item:last-child {
+  border-right: none;
+}
+
+.about-cred-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.about-cred-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888888;
+}
+
+[data-theme="dark"] .about-creds {
+  border-color: rgba(3, 161, 224, 0.18);
+}
+
+[data-theme="dark"] .about-cred-item {
+  border-right-color: rgba(3, 161, 224, 0.12);
+}
+
+[data-theme="dark"] .about-cred-label {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+@media (max-width: 768px) {
+  .about-creds {
+    flex-direction: column;
+  }
+  .about-cred-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(3, 161, 224, 0.15);
+    padding: 0.75rem 1rem;
+  }
+  .about-cred-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ===========================================================================
    Landing Hero
    ========================================================================== */
 
@@ -1408,8 +1475,8 @@ footer a:hover,
 }
 
 .landing-avatar-small {
-  width: 92px;
-  height: 92px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 1.5rem;
@@ -1639,8 +1706,8 @@ footer a:hover,
     }
 
     .landing-avatar-small {
-      width: 68px;
-      height: 68px;
+      width: 80px;
+      height: 80px;
       margin-bottom: 1rem;
     }
 
