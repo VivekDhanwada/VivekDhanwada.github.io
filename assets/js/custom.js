@@ -50,7 +50,7 @@ function initAboutSectionScrollAnimation(aboutSection) {
 
   function checkReveal() {
     const rect = aboutSection.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
+    if (rect.top < window.innerHeight - 40) {
       aboutSection.classList.add("visible-section");
     }
     if (window.scrollY < 80) {
