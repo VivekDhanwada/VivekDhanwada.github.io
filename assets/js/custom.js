@@ -1,12 +1,23 @@
 /**
+ * Walk up offsetParent chain to get true layout position, ignoring CSS transforms.
+ */
+function getLayoutTop(el) {
+  let top = 0;
+  while (el) {
+    top += el.offsetTop;
+    el = el.offsetParent;
+  }
+  return top;
+}
+
+/**
  * Smoothly scroll to the About section.
  */
 function scrollToAbout() {
   const aboutSection = document.getElementById("about");
   if (aboutSection) {
     aboutSection.classList.add("visible-section");
-    const target = aboutSection.getBoundingClientRect().top + window.scrollY - 68;
-    window.scrollTo({ top: target, behavior: "smooth" });
+    window.scrollTo({ top: getLayoutTop(aboutSection) - 68, behavior: "smooth" });
   }
 }
 
@@ -48,11 +59,12 @@ function initAboutSectionSnap(aboutSection) {
   if (!aboutSection) return;
   let hasSnapped = false;
 
+  // Calculate once at init using true layout position (ignores CSS transforms)
+  const aboutTarget = getLayoutTop(aboutSection) - 68;
+  const snapThreshold = aboutTarget / 2;
+
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const aboutDocTop = aboutSection.getBoundingClientRect().top + scrollY;
-    const aboutTarget = aboutDocTop - 68;
-    const snapThreshold = aboutTarget * 0.65;
 
     if (!hasSnapped && scrollY >= snapThreshold && scrollY < aboutTarget) {
       hasSnapped = true;
