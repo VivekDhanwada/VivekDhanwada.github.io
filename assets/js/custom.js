@@ -17,7 +17,8 @@ function scrollToAbout() {
   const aboutSection = document.getElementById("about");
   if (aboutSection) {
     aboutSection.classList.add("visible-section");
-    window.scrollTo({ top: getLayoutTop(aboutSection) - 68, behavior: "smooth" });
+    const pageBottom = document.body.scrollHeight - window.innerHeight;
+    window.scrollTo({ top: pageBottom, behavior: "smooth" });
   }
 }
 
@@ -59,17 +60,15 @@ function initAboutSectionSnap(aboutSection) {
   if (!aboutSection) return;
   let hasSnapped = false;
 
-  // Calculate once at init using true layout position (ignores CSS transforms)
-  const aboutTarget = getLayoutTop(aboutSection) - 68;
-  const snapThreshold = aboutTarget / 2;
-
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
+    const pageBottom = document.body.scrollHeight - window.innerHeight;
+    const snapThreshold = pageBottom / 2;
 
-    if (!hasSnapped && scrollY >= snapThreshold && scrollY < aboutTarget) {
+    if (!hasSnapped && scrollY >= snapThreshold && scrollY < pageBottom) {
       hasSnapped = true;
       aboutSection.classList.add('visible-section');
-      window.scrollTo({ top: aboutTarget, behavior: 'smooth' });
+      window.scrollTo({ top: pageBottom, behavior: 'smooth' });
     }
 
     if (scrollY < 100) {
