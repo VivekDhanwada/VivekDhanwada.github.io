@@ -1438,22 +1438,22 @@ footer a:hover,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.75rem 1.75rem;
+  padding: 2.5rem 2rem;
   border: 1px solid rgba(3, 161, 224, 0.18);
   border-radius: 14px;
   background: rgba(3, 161, 224, 0.018);
 }
 
 .about-stat-value {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--accent-color);
   line-height: 1.25;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .about-stat-label {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -1505,7 +1505,7 @@ footer a:hover,
 .landing-hero-content {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  transform: translateY(-40px);
+  transform: translateY(-50px);
 }
 
 .landing-hero-inner {
