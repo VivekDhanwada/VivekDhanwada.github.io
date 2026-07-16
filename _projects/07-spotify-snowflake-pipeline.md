@@ -10,7 +10,7 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 ## Overview
 
-A serverless ELT pipeline extracting playlist data from the Spotify API, transforming it through AWS Lambda, and auto-ingesting it into Snowflake via Snowpipe. Built to develop hands-on Snowflake and cloud pipeline fluency for a Commercial Data Analyst skill set.
+A serverless ELT pipeline extracting playlist data from the Spotify API, transforming it through AWS Lambda, and auto-ingesting it into Snowflake via Snowpipe. A personal project built to deepen practical experience with cloud data engineering, centered on AWS (Lambda, S3, IAM) with Snowflake as the destination warehouse.
 
 **Key Result:** Built a fully automated Extract-Transform-Load pipeline using AWS Lambda, S3, and Snowflake Snowpipe. New playlist data flows into query-ready Snowflake tables with zero manual intervention, verified end-to-end by triggering a live run and confirming row counts increased purely through automated ingestion.
 
