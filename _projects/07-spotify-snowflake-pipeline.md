@@ -2,7 +2,7 @@
 name: Spotify Snowflake Pipeline
 tools: [Python, AWS Lambda, AWS S3, Snowpipe, Snowflake, SQL]
 image: https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/08-spotify-snowflake-pipeline/images/architecture.png
-description: Built a fully automated ELT pipeline extracting playlist data from the Spotify API through AWS Lambda, staging it in S3, and auto-ingesting it into Snowflake via Snowpipe, verified end-to-end with zero manual intervention.
+description: Built a fully automated pipeline that pulls listening data from the Spotify API and loads it into Snowflake with zero manual work, verified end-to-end with a live test run.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/08-spotify-snowflake-pipeline
 ---
 
@@ -10,9 +10,9 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 ## Overview
 
-A serverless ELT pipeline extracting playlist data from the Spotify API, transforming it through AWS Lambda, and auto-ingesting it into Snowflake via Snowpipe. A personal project built to deepen practical experience with cloud data engineering, centered on AWS (Lambda, S3, IAM) with Snowflake as the destination warehouse.
+A fully automated data pipeline that pulls listening data from the Spotify API, processes it, and loads it into Snowflake with zero manual work required. Built to gain hands-on experience with cloud data engineering, using AWS as the automation layer and Snowflake as the destination warehouse.
 
-**Key Result:** Built a fully automated Extract-Transform-Load pipeline using AWS Lambda, S3, and Snowflake Snowpipe. New playlist data flows into query-ready Snowflake tables with zero manual intervention, verified end-to-end by triggering a live run and confirming row counts increased purely through automated ingestion.
+**Key Result:** New playlist data flows automatically from the Spotify API into query-ready Snowflake tables with no manual steps. Verified this end-to-end by triggering a live run and confirming the data updated correctly on its own.
 
 ## Pipeline Architecture
 
@@ -20,17 +20,17 @@ A serverless ELT pipeline extracting playlist data from the Spotify API, transfo
 
 ## Key Decisions
 
-1. **Storage Integration over static credentials.** IAM role-based trust with Snowflake avoids long-lived AWS secrets and scopes access to a single S3 path.
-2. **SQS as the Snowpipe notification layer.** Decouples file arrival from ingestion timing, since Snowpipe polls its queue rather than being directly invoked.
-3. **Deduplication via views, not at ingestion.** Snowpipe only supports `COPY INTO`, not `MERGE`, so duplicate handling is solved with self-correcting views rather than complicating the ingestion layer.
+1. **Secure by design.** Connected AWS and Snowflake using role-based access rather than stored passwords or keys, so no sensitive credentials are sitting in the system long-term.
+2. **Scalable by design.** The storage integration and SQS-based ingestion pattern extend to new data types without rework, adding a new Snowpipe for a future data feed is just one more pipe using the same integration and queue.
+3. **Solved a real data-quality problem cleanly.** Snowflake's automated ingestion tool can't update existing records, only add new ones, so repeated runs would create duplicates. Fixed this by building self-correcting views that clean the data automatically every time it's queried, rather than requiring manual cleanup.
 
 ## Key Findings
 
-**Pipeline verification confirmed full automation**  
-Triggering the Extract Lambda manually caused row counts to increase automatically across all three tables (albums, artists, songs) with no manual `COPY INTO` required, confirming the Load layer works exactly as designed.
+**Full automation confirmed**  
+Ran a live test by manually triggering the pipeline. Without touching anything else, new data flowed all the way through and landed correctly in Snowflake, confirming the automation works as intended.
 
-**Raw ingestion revealed real duplicate accumulation**  
-The artist table contained 3 rows despite only 1 unique artist across the entire playlist, expected given Snowpipe's append-only ingestion model. Solved permanently via deduplicated views.
+**Caught a real data-quality issue**  
+Found that the automated ingestion process was creating duplicate records, exactly as expected given how the ingestion tool works. Solved this permanently with database views that filter out duplicates automatically, so anyone querying the data always sees clean results.
 
 ## Verification
 
@@ -38,7 +38,7 @@ The artist table contained 3 rows despite only 1 unique artist across the entire
 
 ## Tech Stack
 
-- Python (`spotipy`, `boto3`, `pandas`)
+- Python
 - SQL
 - AWS Lambda
 - AWS S3
