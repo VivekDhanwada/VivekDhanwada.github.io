@@ -27,7 +27,7 @@ A fully automated data pipeline that pulls listening data from the Spotify API, 
 ## Key Findings
 
 **Full automation confirmed**  
-The pipeline is designed to run automatically every day with no manual steps. To verify this, the daily trigger was simulated with a manual run; the data flowed through and landed correctly in Snowflake exactly as an automatic run would, confirming the automation works as intended.
+The pipeline was designed to run automatically every day with no manual steps. It ran successfully unattended for several consecutive days, with new data landing correctly in Snowflake purely through the scheduled trigger. Manual runs were only used later, to speed up testing specific fixes, not to prove the automation itself.
 
 **Caught a real data-quality issue**  
 Found that the automated ingestion process was creating duplicate records, exactly as expected given how the ingestion tool works. Solved this permanently with database views that filter out duplicates automatically, so anyone querying the data always sees clean results.
