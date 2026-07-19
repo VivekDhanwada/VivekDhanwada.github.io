@@ -3,6 +3,10 @@
   from: March 2025
   to: October 2025
   description: "<strong>Green The Chain</strong> — Sydney, Australia<br><br>&bull; Built a weekly automated GA4 traffic dashboard in Google Sheets using the GA4 Sheets extension, configuring auto-refreshing data pulls and week-on-week comparisons across traffic KPIs by channel, adopted by the founding team as their primary tool for monitoring performance trends and supporting commercial decisions.<br>&bull; Independently implemented UTM tracking across LinkedIn, Slack, and email outreach campaigns, closing a source-tracking gap that had prevented the team from measuring channel performance — website traffic doubled week-on-week following implementation, with Slack identified as the highest-performing channel.<br>&bull; Researched and compiled a prioritised tracker of 50+ ESG suppliers across multiple sources, enabling the founding team to focus outreach efforts and onboard 2-3 new suppliers.<br>&bull; Mapped the supplier onboarding journey by completing the full process as a test profile, identifying friction points that led the founding team to directly redesign the onboarding form; separately trained a GPT assistant to guide suppliers through ESG compliance questions with document requirements and answer templates."
+- title: Sales Assistant
+  from: November 2024
+  to: April 2026
+  description: "<strong>Unison Label</strong> — Sydney, Australia<br><br>&bull; Analysed and reported daily and weekly sales performance, trade results, and budget vs. actual metrics to the State Manager and Visual Merchandising teams, providing consistent visibility into store trading trends that fed into weekend task planning.<br>&bull; Personally fulfilled more than 50% of online orders during peak trading periods, including days of record store sales, at the outlet ranked NSW/ACT's highest-volume online fulfilment location.<br>&bull; Managed floor operations and online order fulfilment during periods of full store supervision, stepping into an expanded oversight role for a three-month stretch."
 - title: Event & Project Management Volunteer
   from: January 2025
   to: March 2025
@@ -20,7 +24,7 @@
 - title: Business Development Manager to Head of Business Development
   from: January 2019
   to: January 2021
-  description: "<strong>AIESEC</strong> — Hyderabad, India<br><br>&bull; Led the BD department to a top 5 ranking nationally across 30 chapters, building Google Sheets dashboards to track partnership outreach, CRM activity, team performance, and revenue — performance that earned a nomination for the national BD Excellence Award.<br>&bull; Delivered events with 1,000+ participants, analysing post-event attendance and engagement data to identify highest-performing sponsor industries and attendee markets — findings directly shaped outreach strategy for subsequent events, streamlining partner and attendee acquisition."
+  description: "<strong>AIESEC</strong> — Hyderabad, India<br><br>&bull; Led the BD department to a top 5 ranking nationally among 30 BD departments, building Google Sheets dashboards to track partnership outreach, CRM activity, team performance, and revenue — performance that earned a nomination for the national BD Excellence Award.<br>&bull; Delivered events with 1,000+ participants, analysing post-event attendance and engagement data to identify highest-performing sponsor industries and attendee markets — findings directly shaped outreach strategy for subsequent events, streamlining partner and attendee acquisition."
 # Education
 - title: Bachelor of Technology in Mechatronics Engineering
   from: July 2018
