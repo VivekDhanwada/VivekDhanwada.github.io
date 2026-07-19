@@ -2,7 +2,7 @@
 name: Spotify Snowflake Pipeline
 tools: [Python, AWS Lambda, AWS S3, Snowpipe, Snowflake, SQL]
 image: https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/08-spotify-snowflake-pipeline/images/architecture.png
-description: Built a fully automated pipeline that pulls listening data from the Spotify API and loads it into Snowflake with zero manual work, verified end-to-end with a live test run.
+description: A fully automated pipeline that pulls listening data from the Spotify API and loads it into Snowflake with zero manual work, running unattended via a daily scheduled trigger.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/08-spotify-snowflake-pipeline
 ---
 
@@ -10,9 +10,9 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 ## Overview
 
-A fully automated data pipeline that pulls listening data from the Spotify API, processes it, and loads it into Snowflake with zero manual work required. Built to gain hands-on experience with cloud data engineering, using AWS as the automation layer and Snowflake as the destination warehouse.
+A serverless data pipeline that extracts listening data from the Spotify API, transforms it, and loads it into Snowflake on a daily automated schedule. AWS handles orchestration end to end; Snowflake is the destination warehouse, kept continuously in sync with no manual steps.
 
-**Key Result:** New playlist data flows automatically from the Spotify API into query-ready Snowflake tables with no manual steps. Verified this end-to-end by triggering a live run and confirming the data updated correctly on its own.
+**Key Result:** The pipeline runs automatically every day via a scheduled trigger, with no manual intervention from extract through to load. It operated unattended for several consecutive days, correctly ingesting new data on every run.
 
 ## Pipeline Architecture
 
@@ -20,17 +20,17 @@ A fully automated data pipeline that pulls listening data from the Spotify API, 
 
 ## Key Decisions
 
-1. **Secure by design.** Connected AWS and Snowflake using role-based access rather than stored passwords or keys, so no sensitive credentials are sitting in the system long-term.
-2. **Scalable by design.** The storage integration and SQS-based ingestion pattern extend to new data types without rework, adding a new Snowpipe for a future data feed is just one more pipe using the same integration and queue.
-3. **Solved a real data-quality problem cleanly.** Snowflake's automated ingestion tool can't update existing records, only add new ones, so repeated runs would create duplicates. Fixed this by building self-correcting views that clean the data automatically every time it's queried, rather than requiring manual cleanup.
+1. **Secure by design.** AWS and Snowflake are connected using role-based access rather than stored passwords or keys, so no long-lived credentials sit in the system.
+2. **Scalable by design.** The storage integration and SQS-based ingestion pattern extend to new data sources without rework, adding a new feed is a matter of wiring up one more pipe against the same integration and queue.
+3. **Data quality handled at the right layer.** Snowflake's automated ingestion tool only appends, it can't update existing records, so repeated runs naturally produce duplicates. Rather than complicating ingestion to prevent this, self-correcting views resolve it at query time, so every read reflects clean, deduplicated data.
 
 ## Key Findings
 
-**Full automation confirmed**  
-The pipeline was designed to run automatically every day with no manual steps. It ran successfully unattended for several consecutive days, with new data landing correctly in Snowflake purely through the scheduled trigger. Manual runs were only used later, to speed up testing specific fixes, not to prove the automation itself.
+**Automation held up under real conditions**  
+The scheduled pipeline ran unattended for several consecutive days, with new data landing correctly in Snowflake on every run, no manual steps involved.
 
-**Caught a real data-quality issue**  
-Found that the automated ingestion process was creating duplicate records, exactly as expected given how the ingestion tool works. Solved this permanently with database views that filter out duplicates automatically, so anyone querying the data always sees clean results.
+**A real data-quality issue surfaced and was resolved**  
+The automated ingestion process was producing duplicate records, a direct consequence of how the ingestion tool works. This was resolved permanently with database views that filter duplicates automatically, so any query against the data returns clean results without manual cleanup.
 
 ## Tech Stack
 
