@@ -32,10 +32,6 @@ Ran a live test by manually triggering the pipeline. Without touching anything e
 **Caught a real data-quality issue**  
 Found that the automated ingestion process was creating duplicate records, exactly as expected given how the ingestion tool works. Solved this permanently with database views that filter out duplicates automatically, so anyone querying the data always sees clean results.
 
-## Verification
-
-![Pipeline Verification](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/08-spotify-snowflake-pipeline/images/verification.png)
-
 ## Tech Stack
 
 - Python
