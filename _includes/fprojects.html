@@ -1,3 +1,4 @@
+{% assign sorted_projects = site.projects | sort: 'order' %}
 <div id="featured-projects">
   <div class="m-3 wow animated slideInUp" data-wow-delay="0.15s">
     <br /><br /><br />
@@ -5,7 +6,7 @@
   </div>
   <div class="row m-3 mt-4">
     {% assign featured_count = 0 %}
-    {% for project in site.projects | sort: 'order' %}
+    {% for project in sorted_projects %}
       {% if featured_count < 3 %}
         {% assign project_type = "local" %}
         {% assign project_id = project.name | slugify %}

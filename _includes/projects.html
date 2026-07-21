@@ -1,5 +1,6 @@
+{% assign sorted_projects = site.projects | sort: 'order' %}
 <div class="row">
-  {% for project in site.projects | sort: 'order' %}
+  {% for project in sorted_projects %}
     {% assign project_type = "local" %}
     {% assign project_id = project.name | slugify %}
     {% assign project_img = project.image %}
