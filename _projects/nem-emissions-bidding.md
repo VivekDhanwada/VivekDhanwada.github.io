@@ -1,6 +1,10 @@
 ---
 name: NEM Emissions & Bidding Analysis
 order: 4
+redirect_from:
+  - /projects/02-nem-emissions-bidding/
+  - /projects/04-nem-emissions-bidding/
+  - /projects/01-nem-emissions-bidding/
 tools: [Python, pandas, Matplotlib, Time Series Analysis]
 image: /assets/images/projects/nem-emissions-bidding.png
 description: Analysed 1.6M+ rows of Australian National Electricity Market data using Python, uncovering regional emissions trends, generator bidding behaviour, and market structure changes between 2019 and 2025.

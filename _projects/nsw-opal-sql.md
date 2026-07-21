@@ -1,6 +1,10 @@
 ---
 name: NSW Opal Card Tap-On/Tap-Off Analysis
 order: 2
+redirect_from:
+  - /projects/02-nsw-opal-sql/
+  - /projects/03-nsw-opal-sql/
+  - /projects/03-nsw-opal-card/
 tools: [PostgreSQL, SQL, Tableau]
 image: https://public.tableau.com/static/images/NS/NSW_Opal_Card_Tap_Analysis/NSWOpalCardTap-OnTap-OffAnalysis/4_3.png
 description: Analysed 398,019 rows of real Transport for NSW Opal card data using PostgreSQL and Tableau, comparing travel behaviour between a standard November week and the Christmas/New Year period.

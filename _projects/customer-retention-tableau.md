@@ -1,6 +1,10 @@
 ---
 name: Customer Retention & Revenue Analysis
 order: 6
+redirect_from:
+  - /projects/05-customer-retention-tableau/
+  - /projects/06-customer-retention-tableau/
+  - /projects/04-customer-retention/
 tools: [Tableau]
 image: https://public.tableau.com/static/images/Cu/CustomerRetentionRevenueAnalysis/CustomerRetentionRevenueAnalysis/4_3.png
 description: Built three Tableau dashboards to explore customer retention patterns and revenue trends across a 100,000-row synthetic Amazon e-commerce dataset.
