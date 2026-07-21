@@ -3,10 +3,9 @@
     <br /><br /><br />
     <h2>Featured Projects</h2>
   </div>
-
   <div class="row m-3 mt-4">
     {% assign featured_count = 0 %}
-    {% for project in site.projects %}
+    {% for project in site.projects | sort: 'order' %}
       {% if featured_count < 3 %}
         {% assign project_type = "local" %}
         {% assign project_id = project.name | slugify %}
@@ -19,16 +18,13 @@
         {% else %}
           {% assign project_url = project.url | relative_url %}
         {% endif %}
-
         <div class="col-lg-4 col-md-6 mb-4">
           {% include projects/project-card.html %}
         </div>
-
         {% assign featured_count = featured_count | plus: 1 %}
       {% endif %}
     {% endfor %}
   </div>
-
   <p class="text-center">
     {% include elements/button.html link="/projects" text="View all" %}
   </p>

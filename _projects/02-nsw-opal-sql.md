@@ -1,5 +1,6 @@
 ---
 name: NSW Opal Card Tap-On/Tap-Off Analysis
+order: 2
 tools: [PostgreSQL, SQL, Tableau]
 image: https://public.tableau.com/static/images/NS/NSW_Opal_Card_Tap_Analysis/NSWOpalCardTap-OnTap-OffAnalysis/4_3.png
 description: Analysed 398,019 rows of real Transport for NSW Opal card data using PostgreSQL and Tableau, comparing travel behaviour between a standard November week and the Christmas/New Year period.
@@ -8,7 +9,7 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 # NSW Opal Card Tap-On/Tap-Off Analysis
 
-**Key Result:** Weekday travel demand fell by 50% during the Christmas/New Year period, while ferry usage increased and Circular Quay became one of the busiest locations in the network, indicating a shift from commuter travel to leisure-focused travel behaviour.
+**Key Result:** Total weekday travel volume fell by 50% during the Christmas/New Year period, with morning peak demand (8:15am) dropping even more sharply at 80%. Ferry usage increased and Circular Quay became one of the busiest locations in the network, indicating a shift from commuter travel to leisure-focused travel behaviour.
 
 ## Overview
 
@@ -31,7 +32,7 @@ The dataset includes 398,019 rows across train, bus, ferry, and light rail recor
 ## Key Findings
 
 **Holiday travel behaviour changed demand patterns**  
-Morning peak demand fell sharply in December, while ferry travel increased, suggesting a shift away from regular commuter travel during the holiday period. Weekday travel dropped 50%, while weekend travel remained comparatively stable.
+Morning peak demand (8:15am) fell 80% in December, while ferry travel increased, suggesting a shift away from regular commuter travel during the holiday period. Total weekday volume dropped 50%, while weekend travel remained comparatively stable.
 
 **Circular Quay showed clear holiday-period uplift**  
 Circular Quay was the only top location where December tap volume exceeded November, reaching 490,482 taps and rising from 10th to 4th busiest location, consistent with increased ferry activity during the holiday period. Sydney CBD (postcode 2000) and Town Hall Station remained the highest-volume locations across both periods.

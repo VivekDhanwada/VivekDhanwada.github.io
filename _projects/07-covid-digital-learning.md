@@ -1,5 +1,6 @@
 ---
 name: COVID-19 Impact on Digital Learning
+order: 7
 tools: [R, tidyverse, ggplot2, Plotly]
 image: /assets/images/projects/covid-digital-learning.png
 description: Analysed student engagement, education platform usage, and broadband access data across five US school districts in 2020, using R to clean, integrate, and analyse multiple education datasets.

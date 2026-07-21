@@ -1,5 +1,6 @@
 ---
 name: Spotify Snowflake Pipeline
+order: 1
 tools: [Python, AWS Lambda, AWS S3, Snowpipe, Snowflake, SQL]
 image: https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/08-spotify-snowflake-pipeline/images/architecture.png
 description: A fully automated pipeline that pulls listening data from the Spotify API and loads it into Snowflake with zero manual work, running unattended via a daily scheduled trigger.

@@ -1,5 +1,6 @@
 ---
 name: Australian Population & Migration Trends
+order: 5
 tools: [Power BI, Excel, ABS Data, Dashboard Design]
 image: /assets/images/projects/aus-population-migration.png
 description: Built three Power BI dashboards using 20 years of ABS census data to analyse population growth, country-of-birth composition, and fast-growing migrant communities across Australia.
