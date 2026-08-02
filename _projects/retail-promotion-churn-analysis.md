@@ -17,6 +17,16 @@ An end-to-end retail analytics project using Dunnhumby "The Complete Journey" da
 
 **Key Finding:** Coupon-redeemed transactions average $54 per basket, more than double the non-promoted baseline of $25, though this may reflect self-selection by high-value customers rather than a causal promotion effect. Mass-market display and mailer promotions average $7-9. 7.25% of customers churned, with near-identical promotional coverage between churned and active customers, suggesting promotion exposure alone does not explain churn.
 
+## Dashboard Preview
+
+### Promotion Effectiveness
+
+![Promotion Effectiveness](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/07-retail-promotion-churn-analysis/PowerBI/promotion-effectiveness.png)
+
+### Churn Analysis
+
+![Churn Analysis](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/07-retail-promotion-churn-analysis/PowerBI/churn-analysis.png)
+
 ## Analytical Questions
 
 1. Which promotion types and campaign strategies generate the highest basket value?
@@ -27,30 +37,17 @@ An end-to-end retail analytics project using Dunnhumby "The Complete Journey" da
 ## Key Findings
 
 **Coupon promotions significantly outperform mass-market alternatives**
-
 Coupon-redeemed transactions average $54 per basket vs $25 non-promoted, $9 mailer, and $7 display. TypeA and TypeC campaigns consistently outperform TypeB. Whether this reflects coupon effectiveness or self-selection by high-value customers requires controlled experimentation to confirm.
 
 **Promotion exposure does not explain churn**
-
 7.25% churn rate concentrated in 65+ and 19-24 age groups. Churned and active customers received near-identical promotional coverage (22.50% vs 22.27%), suggesting churn is driven by factors other than promotion volume.
 
 **Statistical note**
-
 Chi-square test (n=2,482 promoted, n=18 non-promoted) found a statistically significant difference in repeat purchase rate between promoted and non-promoted customers (p=0.0011), though the small non-promoted sample limits interpretability.
 
 ## Recommendation
 
 Shift promotional budget away from mass-market display and mailer campaigns toward targeted coupon campaigns, prioritising TypeA and TypeC. Preventatively target 65+ and 19-24 customer segments before churn occurs rather than continuing spend on already-churned customers.
-
-## Dashboard Preview
-
-### Promotion Effectiveness
-
-![Promotion Effectiveness](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/07-retail-promotion-churn-analysis/PowerBI/promotion-effectiveness.png)
-
-### Churn Analysis
-
-![Churn Analysis](https://raw.githubusercontent.com/VivekDhanwada/data-analytics-portfolio/main/07-retail-promotion-churn-analysis/PowerBI/churn-analysis.png)
 
 ## Tech Stack
 
