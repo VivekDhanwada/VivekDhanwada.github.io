@@ -1,6 +1,6 @@
 ---
 name: COVID-19 Impact on Digital Learning
-order: 7
+order: 8
 redirect_from:
   - /projects/06-covid-digital-learning/
   - /projects/07-covid-digital-learning/

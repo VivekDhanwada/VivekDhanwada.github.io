@@ -1,6 +1,6 @@
 ---
 name: NSW Opal Card Tap-On/Tap-Off Analysis
-order: 2
+order: 4
 redirect_from:
   - /projects/02-nsw-opal-sql/
   - /projects/03-nsw-opal-sql/

@@ -1,6 +1,6 @@
 ---
 name: Customer Retention & Revenue Analysis
-order: 6
+order: 7
 redirect_from:
   - /projects/05-customer-retention-tableau/
   - /projects/06-customer-retention-tableau/

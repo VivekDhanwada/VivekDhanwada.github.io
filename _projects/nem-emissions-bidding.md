@@ -1,6 +1,6 @@
 ---
 name: NEM Emissions & Bidding Analysis
-order: 4
+order: 5
 redirect_from:
   - /projects/02-nem-emissions-bidding/
   - /projects/04-nem-emissions-bidding/

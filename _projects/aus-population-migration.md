@@ -1,6 +1,6 @@
 ---
 name: Australian Population & Migration Trends
-order: 5
+order: 6
 redirect_from:
   - /projects/04-aus-population-migration/
   - /projects/05-aus-population-migration/

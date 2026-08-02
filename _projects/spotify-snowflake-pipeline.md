@@ -1,6 +1,6 @@
 ---
 name: Spotify Snowflake Pipeline
-order: 1
+order: 2
 redirect_from:
   - /projects/01-spotify-snowflake-pipeline/
   - /projects/08-spotify-snowflake-pipeline/
