@@ -13,6 +13,8 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 # NSW Opal Card Tap-On/Tap-Off Analysis
 
+Transport planners rely on aggregate ridership figures to guide service levels, but aggregate numbers can mask very different underlying shifts. A 50% drop in total weekday volume and an 80% collapse in the 8:15am morning peak look like the same story at different scales, but they imply very different planning responses, one is a general decline, the other is a structural disappearance of the commuter peak itself.
+
 **Key Result:** Total weekday travel volume fell by 50% during the Christmas/New Year period, with morning peak demand (8:15am) dropping even more sharply at 80%. Ferry usage increased and Circular Quay became one of the busiest locations in the network, indicating a shift from commuter travel to leisure-focused travel behaviour.
 
 ## Overview
@@ -70,7 +72,7 @@ Trip and delay alerts were the most frequent disruption types. Incident alerts h
 
 ## Limitations
 
-The analysis compares two one-week periods, so findings are illustrative rather than statistically representative of broader seasonal trends. Tap-on and tap-off records are separate rows, so origin-destination analysis was not possible.
+The analysis compares two one-week periods, so findings are illustrative rather than statistically representative of broader seasonal trends. Tap-on and tap-off records are separate rows, so origin-destination analysis was not possible. Approximately 13% of rows (22,425 records) had missing tap direction values; these were retained for volume analysis but excluded from directional analysis to avoid skewing results.
 
 ## Live Dashboard
 
