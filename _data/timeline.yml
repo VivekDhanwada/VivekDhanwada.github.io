@@ -2,7 +2,7 @@
 - title: Business Analytics and Development Intern
   from: March 2025
   to: October 2025
-  description: "<strong>Green The Chain</strong> — Sydney, Australia<br><br>&bull; Built a weekly automated GA4 traffic dashboard in Google Sheets using the GA4 Sheets extension, configuring auto-refreshing data pulls and week-on-week comparisons across traffic KPIs by channel, adopted by the founding team as their primary tool for monitoring performance trends and supporting commercial decisions.<br>&bull; Independently implemented UTM tracking across LinkedIn, Slack, and email outreach campaigns, closing a source-tracking gap that had prevented the team from measuring channel performance — website traffic doubled week-on-week following implementation, with Slack identified as the highest-performing channel.<br>&bull; Researched and compiled a prioritised tracker of 50+ ESG suppliers across multiple sources, enabling the founding team to focus outreach efforts and onboard 2-3 new suppliers.<br>&bull; Mapped the supplier onboarding journey by completing the full process as a test profile, identifying friction points that led the founding team to directly redesign the onboarding form; separately trained a GPT assistant to guide suppliers through ESG compliance questions with document requirements and answer templates."
+  description: "<strong>Green The Chain</strong> — Sydney, Australia<br><br>&bull; Built a weekly automated GA4 traffic dashboard in Google Sheets using the GA4 Sheets extension, modelling reporting metrics and configuring auto-refreshing data pulls for week-on-week comparisons across traffic KPIs by channel, adopted by the founding team as their primary tool for monitoring performance trends and supporting commercial decisions.<br>&bull; Independently implemented UTM tracking across LinkedIn, Slack, and email outreach campaigns, closing a source-tracking gap that had prevented the team from measuring channel performance; website traffic doubled week-on-week following implementation, with Slack identified as the highest-performing channel.<br>&bull; Researched and compiled a structured, prioritised dataset of 50+ ESG suppliers across multiple sources, enabling the founding team to focus outreach efforts and onboard 2-3 new suppliers.<br>&bull; Mapped the supplier onboarding journey by completing the full process as a test profile, identifying friction points that led the founding team to directly redesign the onboarding form; separately trained a GPT assistant to guide suppliers through ESG compliance questions with document requirements and answer templates."
 - title: Sales Assistant
   from: November 2024
   to: April 2026
@@ -10,7 +10,7 @@
 - title: Data Management Volunteer
   from: January 2025
   to: March 2025
-  description: "<strong>Climate Action Foundation Ltd</strong> — Sydney, Australia<br><br>&bull; Managed backend event data across Notion and Google Sheets for a 12,500+ participant sustainability event, cleaning and validating 500+ session records to ensure accuracy and completeness.<br>&bull; Analysed event outlines to identify redundancies and support programme restructuring decisions across the event schedule."
+  description: "<strong>Climate Action Foundation Ltd</strong> — Sydney, Australia<br><br>&bull; Managed data cleaning and integrity for 500+ session records across Notion and Google Sheets for a 12,500+ participant sustainability event, deduplicating entries, standardising formatting, and flagging missing data to ensure accuracy and completeness.<br>&bull; Analysed event outlines to identify redundancies and support programme restructuring decisions across the event schedule."
 # Education
 - title: Master of Business Analytics
   from: July 2023
@@ -20,11 +20,11 @@
 - title: National Business Development Consultant
   from: February 2021
   to: January 2022
-  description: "<strong>AIESEC</strong> — Hyderabad, India<br><br>&bull; Conducted bi-weekly performance reviews with BD Heads across six cities, cascading national guidelines and identifying execution gaps to align local committee activity with national BD targets.<br>&bull; Presented pipeline and performance analysis to national leadership, translating multi-city performance data into planning recommendations adopted across the BD network."
+  description: "<strong>AIESEC</strong> — Hyderabad, India<br><br>&bull; Conducted bi-weekly performance reviews with BD Heads across six cities, cascading national guidelines and identifying execution gaps to align local committee activity with national BD targets.<br>&bull; Presented performance analysis to national leadership, translating multi-city performance data into planning recommendations adopted across the BD network."
 - title: Business Development Manager to Head of Business Development
   from: January 2019
   to: January 2021
-  description: "<strong>AIESEC</strong> — Hyderabad, India<br><br>&bull; Led the BD department to a top 5 ranking nationally among 30 BD departments, building Google Sheets dashboards to track partnership outreach, CRM activity, team performance, and revenue — performance that earned a nomination for the national BD Excellence Award.<br>&bull; Delivered events with 1,000+ participants, analysing post-event attendance and engagement data to identify highest-performing sponsor industries and attendee markets — findings directly shaped outreach strategy for subsequent events, streamlining partner and attendee acquisition."
+  description: "<strong>AIESEC</strong> — Hyderabad, India<br><br>&bull; Led the BD department to a top 5 ranking nationally among 30 BD departments, building Google Sheets dashboards to track partnership outreach, CRM activity, team performance, and revenue; performance that earned a nomination for the national BD Excellence Award.<br>&bull; Delivered events with 1,000+ participants, analysing post-event attendance and engagement data to identify highest-performing sponsor industries and attendee markets; findings directly shaped outreach strategy for subsequent events, streamlining partner and attendee acquisition."
 # Education
 - title: Bachelor of Technology in Mechatronics Engineering
   from: July 2018
