@@ -1,0 +1,55 @@
+<svg width="680" height="280" viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="280" fill="#ffffff"/>
+<g>
+  <rect x="42" y="40" width="185" height="220" rx="12" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="134" y="214" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#26215C">Neural networks</text>
+  <text x="134" y="230" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#534AB7">Scribe classification</text>
+</g>
+<line x1="77" y1="85" x2="137" y2="95" stroke="#7F77DD" stroke-width="1" opacity="0.5"/>
+<line x1="77" y1="85" x2="137" y2="135" stroke="#7F77DD" stroke-width="1" opacity="0.5"/>
+<line x1="77" y1="115" x2="137" y2="95" stroke="#7F77DD" stroke-width="1" opacity="0.5"/>
+<line x1="77" y1="115" x2="137" y2="135" stroke="#7F77DD" stroke-width="1" opacity="0.5"/>
+<line x1="77" y1="145" x2="137" y2="95" stroke="#7F77DD" stroke-width="1" opacity="0.5"/>
+<line x1="77" y1="145" x2="137" y2="135" stroke="#7F77DD" stroke-width="1" opacity="0.5"/>
+<line x1="137" y1="95" x2="192" y2="115" stroke="#7F77DD" stroke-width="1" opacity="0.5"/>
+<line x1="137" y1="135" x2="192" y2="115" stroke="#7F77DD" stroke-width="1" opacity="0.5"/>
+<circle cx="77" cy="85" r="5" fill="#534AB7"/>
+<circle cx="77" cy="115" r="5" fill="#534AB7"/>
+<circle cx="77" cy="145" r="5" fill="#534AB7"/>
+<circle cx="137" cy="95" r="5" fill="#534AB7"/>
+<circle cx="137" cy="135" r="5" fill="#534AB7"/>
+<circle cx="192" cy="115" r="6" fill="#3C3489"/>
+
+<g>
+  <rect x="247" y="40" width="185" height="220" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="340" y="214" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#04342C">Regression</text>
+  <text x="340" y="230" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#0F6E56">Car price prediction</text>
+</g>
+<path d="M262 148 L410 88" stroke="#0F6E56" stroke-width="2" opacity="0.8" fill="none"/>
+<circle cx="270" cy="140" r="4" fill="#1D9E75"/>
+<circle cx="290" cy="130" r="4" fill="#1D9E75"/>
+<circle cx="305" cy="115" r="4" fill="#1D9E75"/>
+<circle cx="320" cy="125" r="4" fill="#1D9E75"/>
+<circle cx="340" cy="105" r="4" fill="#1D9E75"/>
+<circle cx="360" cy="100" r="4" fill="#1D9E75"/>
+<circle cx="380" cy="95" r="4" fill="#1D9E75"/>
+<circle cx="400" cy="90" r="4" fill="#1D9E75"/>
+
+<g>
+  <rect x="452" y="40" width="185" height="220" rx="12" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="545" y="214" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#4A1B0C">Clustering</text>
+  <text x="545" y="230" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#993C1D">Customer segmentation</text>
+</g>
+<ellipse cx="500" cy="105" rx="25" ry="20" stroke="#993C1D" stroke-width="0.5" stroke-dasharray="3 3" fill="none" opacity="0.6"/>
+<ellipse cx="548" cy="143" rx="25" ry="20" stroke="#993C1D" stroke-width="0.5" stroke-dasharray="3 3" fill="none" opacity="0.6"/>
+<ellipse cx="592" cy="112" rx="25" ry="20" stroke="#993C1D" stroke-width="0.5" stroke-dasharray="3 3" fill="none" opacity="0.6"/>
+<circle cx="492" cy="100" r="4" fill="#D85A30"/>
+<circle cx="506" cy="97" r="4" fill="#D85A30"/>
+<circle cx="500" cy="113" r="4" fill="#D85A30"/>
+<circle cx="540" cy="137" r="4" fill="#D85A30"/>
+<circle cx="555" cy="147" r="4" fill="#D85A30"/>
+<circle cx="548" cy="152" r="4" fill="#D85A30"/>
+<circle cx="585" cy="107" r="4" fill="#D85A30"/>
+<circle cx="600" cy="115" r="4" fill="#D85A30"/>
+<circle cx="592" cy="122" r="4" fill="#D85A30"/>
+</svg>
