@@ -1168,6 +1168,10 @@ footer a:hover,
   margin: 0 auto;
 }
 
+.tech-category-featured .category-desc {
+  max-width: 600px;
+}
+
 /* Adjust dark mode brightness for specific icons */
 [data-theme="dark"] img[alt="NumPy"] {
   filter: brightness(1.9) contrast(1.3);
