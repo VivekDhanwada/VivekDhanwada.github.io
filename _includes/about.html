@@ -15,7 +15,7 @@
     <span class="about-stat-label">Portfolio Projects</span>
   </div>
   <div class="about-stat-tile">
-    <span class="about-stat-value">Python · SQL · Power BI · dbt · Snowflake · Microsoft Fabric · BigQuery</span></span>
+    <span class="about-stat-value">Python · SQL · Power BI · dbt · Snowflake · Microsoft Fabric · BigQuery</span>
     <span class="about-stat-label">Analytics & Cloud</span>
   </div>
 </div>
@@ -40,6 +40,35 @@
 {% endif %}
 
 {% if page.url == '/about/' %}
+
+<h2 class="section-heading">Timeline</h2>
+<div class="row">
+  {% include about/timeline.html %}
+</div>
+
+<br>
+<h2 class="section-heading">Certifications</h2>
+<div class="row">
+  <div class="col-12">
+    <p><strong>Microsoft Certified: Fabric Analytics Engineer Associate</strong><br>
+      Microsoft · August 2026<br>
+      <a href="https://learn.microsoft.com/api/credentials/share/en-us/VivekDhanwada-5335/80D2F70A8C27C707" target="_blank">View credential</a></p>
+
+    <p><strong>Microsoft Certified: Power BI Data Analyst Associate</strong><br>
+    Microsoft · June 2026<br>
+    <a href="https://learn.microsoft.com/api/credentials/share/en-us/VivekDhanwada-5335/AFDC6DB4CEBBACD2" target="_blank">View credential</a></p>
+
+    <p><strong>Northstar - Data Ingestion, Transformation, and Delivery with Snowflake</strong><br>
+    Snowflake · July 2026<br>
+    <a href="https://developerbadges.snowflake.com/970753c2-1b85-4c00-adf9-1021116a7694#acc.OVxfQrd9" target="_blank">View credential</a></p>
+
+    <p><strong>Creating Declarative Data Pipelines with Dynamic Tables</strong><br>
+    Snowflake · July 2026<br>
+    <a href="https://developerbadges.snowflake.com/240a29a9-177d-4f35-b1f9-74b2996a7c12#acc.92chjNpk" target="_blank">View credential</a></p>
+  </div>
+</div>
+
+<br>
 <h2 class="section-heading">Capabilities</h2>
 
 <div class="capability-grid">
@@ -203,30 +232,5 @@
 
   </div>
 </div>
-<h2 class="section-heading">Timeline</h2>
-<div class="row">
-  {% include about/timeline.html %}
-</div>
+
 {% endif %}
-
-<br>
-<h2 class="section-heading">Certifications</h2>
-<div class="row">
-  <div class="col-12">
-    <p><strong>Microsoft Certified: Fabric Analytics Engineer Associate</strong><br>
-      Microsoft · August 2026<br>
-      <a href="https://learn.microsoft.com/api/credentials/share/en-us/VivekDhanwada-5335/80D2F70A8C27C707" target="_blank">View credential</a></p>
-
-    <p><strong>Microsoft Certified: Power BI Data Analyst Associate</strong><br>
-    Microsoft · June 2026<br>
-    <a href="https://learn.microsoft.com/api/credentials/share/en-us/VivekDhanwada-5335/AFDC6DB4CEBBACD2" target="_blank">View credential</a></p>
-
-    <p><strong>Northstar - Data Ingestion, Transformation, and Delivery with Snowflake</strong><br>
-    Snowflake · July 2026<br>
-    <a href="https://developerbadges.snowflake.com/970753c2-1b85-4c00-adf9-1021116a7694#acc.OVxfQrd9" target="_blank">View credential</a></p>
-
-    <p><strong>Creating Declarative Data Pipelines with Dynamic Tables</strong><br>
-    Snowflake · July 2026<br>
-    <a href="https://developerbadges.snowflake.com/240a29a9-177d-4f35-b1f9-74b2996a7c12#acc.92chjNpk" target="_blank">View credential</a></p>
-  </div>
-</div>
