@@ -1571,11 +1571,24 @@ footer a:hover,
   text-transform: uppercase;
   color: var(--accent-color);
   margin-top: 0 !important;
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 0.4rem !important;
   text-align: left;
 }
 
 [data-theme="dark"] .landing-role-label {
+  color: var(--accent-color);
+}
+
+.landing-credential {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+  text-align: left;
+}
+
+[data-theme="dark"] .landing-credential {
   color: var(--accent-color);
 }
 
@@ -1850,6 +1863,12 @@ footer a:hover,
       font-size: 0.8rem !important;
       letter-spacing: 0.22rem !important;
       line-height: 1.6 !important;
+    }
+    
+    .landing-credential {
+      font-size: 0.85rem !important;
+      line-height: 1.4 !important;
+      margin-bottom: 1.25rem !important;
     }
   
     .landing-tagline {
