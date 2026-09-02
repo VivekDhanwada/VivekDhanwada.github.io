@@ -1537,7 +1537,7 @@ footer a:hover,
 }
 
 .landing-right {
-  padding: 1rem 0 1rem 5.25rem;
+  padding: 1.75rem 0 1rem 5.25rem;
   border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -1580,7 +1580,7 @@ footer a:hover,
 }
 
 .landing-credential {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--accent-color);
   margin-top: 0 !important;
