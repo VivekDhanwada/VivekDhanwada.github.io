@@ -142,6 +142,8 @@ main.flex-shrink-0 {
   margin-bottom: 0.95rem;
   line-height: 1.9;
   padding-left: 0.4rem;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .bullet-item:last-child {
@@ -1021,6 +1023,8 @@ footer a:hover,
     color: #3f3f3f;
     margin-bottom: 0.35rem;
     line-height: 1.5;
+    text-align: justify;
+    hyphens: auto;
   }
   
   .capability-card p:last-child {
@@ -1166,6 +1170,8 @@ footer a:hover,
   line-height: 1.45;
   max-width: 330px;
   margin: 0 auto;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .tech-category-featured .category-desc {
