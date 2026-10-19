@@ -66,7 +66,7 @@ disqus:
 
 ### Analytics ###
 analytics:
-  enabled: true                                        # Set true to enable analytics
+  enabled: false                                       # GA4 is now sent through GTM (GTM-N48ZGB9D)
   google:
     tracking_id: G-13MV78MDFQ
 
