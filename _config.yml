@@ -20,12 +20,11 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
-  - pages/blog.html
 
 
 ### Author Info ###
 author:
-  name              : Vivek Chinmay Dhanwada
+  name              : Vivek Dhanwada
   image             : profile.jpg
   # behance           : your_username
 # dribbble          : your_username
@@ -48,8 +47,6 @@ author:
 # keybase           : your_username
 
 
-### Posts ###
-permalink: /blog/:title
 
 
 ### Collections ###
@@ -57,6 +54,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
+  blog:
+    output: true
+    permalink: /blog/:name
 
 
 ### Disqus ###
@@ -88,6 +88,11 @@ defaults:
       type: "projects"
     values:
       layout: "page"
+  - scope:
+      path: ""
+      type: "blog"
+    values:
+      layout: "post"
 
 
 ### Exclude from processing ###
@@ -96,6 +101,3 @@ exclude:
   - CONTRIBUTING.md
   - LICENSE
   - "*.log"
-  - _posts
-  - blog
-
