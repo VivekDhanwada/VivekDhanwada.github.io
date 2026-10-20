@@ -13,7 +13,7 @@ A tracking implementation and QA project on this portfolio site. It covers a bas
 
 **Business Question:** How can a team tell that tracking still works after a site release, and catch it when it silently breaks?
 
-**Key Finding:** Deliberately renaming one dataLayer key dropped a parameter from an event with no error in the console, GTM or GA4, and the GTM tag still reported Succeeded. It was caught only by checking variable values in Tag Assistant and parameters in DebugView.
+**Key Finding:** Deliberately renaming one dataLayer key dropped a parameter from an event with no error message in the console, GTM or GA4, and the GTM tag still reported Succeeded. It was caught only by checking variable values in Tag Assistant and parameters in DebugView.
 
 Portfolio scale, not client work: traffic is low, counts include my own test clicks, testing was on desktop only, mainly in Chrome, and consent management is not implemented.
 
@@ -33,7 +33,7 @@ After the key rename, the GTM tag still reported Succeeded and GA4 received the 
 ![GA4 DebugView on a contact_click: link_location is missing from the parameters](/assets/images/projects/tracking-break-debugview.png)
 
 **Automatic and custom events overlapped**
-GA4 Enhanced Measurement counted clicks, file downloads and scrolls alongside the custom events, so each interaction was counted twice. I switched the three automatic events off once the custom ones passed QA.
+GA4 Enhanced Measurement counted clicks, file downloads and scrolls alongside the custom events, so the same interactions were measured twice under different event names. I switched the three automatic events off once the custom ones passed QA.
 
 **An event name can overstate what it measures**
 `resume_download` counts opens of the resume in a new tab, not confirmed saves, so the definition says so.
@@ -42,7 +42,7 @@ GA4 Enhanced Measurement counted clicks, file downloads and scrolls alongside th
 
 1. **Test after every release.** Click one of each event with GTM Preview connected, confirm every variable has a value and every parameter reaches DebugView, then log the date and versions.
 2. **Audit overlapping events before adding new ones.** Check what Enhanced Measurement already collects and switch off the overlap once the replacement is tested.
-3. **Agree a UTM and naming standard before campaigns launch.** Lowercase source, medium and campaign (purpose and month), tag every outbound link and never tag internal links.
+3. **Agree a UTM and naming standard before campaigns launch.** Lowercase source, medium and campaign (purpose and month), tag every link shared to the site and never tag links within it.
 
 ## Tech Stack
 
