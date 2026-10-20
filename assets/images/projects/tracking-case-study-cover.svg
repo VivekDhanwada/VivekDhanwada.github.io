@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Tracking and QA: Audit, Spec, Build, QA">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <text x="600" y="150" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="84" font-weight="700" fill="#ffffff">Tracking and QA</text>
+
+  <g transform="translate(165 335)" fill="none" stroke="#03a1e0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="-14" cy="-12" r="50"/>
+    <path d="M23 25 L64 66"/>
+  </g>
+
+  <g transform="translate(465 335)">
+    <g fill="#03a1e0"><circle cx="-58" cy="-50" r="8"/><circle cx="-58" cy="0" r="8"/><circle cx="-58" cy="50" r="8"/></g>
+    <g fill="none" stroke="#03a1e0" stroke-width="10" stroke-linecap="round"><path d="M-30 -50 H58"/><path d="M-30 0 H58"/><path d="M-30 50 H58"/></g>
+  </g>
+
+  <g transform="translate(765 335)" fill="none" stroke="#03a1e0" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-18 -55 L-68 0 L-18 55"/>
+    <path d="M18 -55 L68 0 L18 55"/>
+  </g>
+
+  <g transform="translate(1065 335)">
+    <circle r="68" fill="none" stroke="#22c55e" stroke-width="10"/>
+    <path d="M-30 2 L-7 25 L33 -23" fill="none" stroke="#22c55e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g stroke="#03a1e0" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M285 335 H345"/><path d="M333 322 L346 335 L333 348"/>
+    <path d="M585 335 H645"/><path d="M633 322 L646 335 L633 348"/>
+    <path d="M885 335 H945"/><path d="M933 322 L946 335 L933 348"/>
+  </g>
+
+  <g font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="46" font-weight="600" text-anchor="middle" fill="#ffffff">
+    <text x="165" y="500">Audit</text>
+    <text x="465" y="500">Spec</text>
+    <text x="765" y="500">Build</text>
+    <text x="1065" y="500">QA</text>
+  </g>
+</svg>
