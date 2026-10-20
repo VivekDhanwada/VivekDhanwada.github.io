@@ -65,7 +65,7 @@
       else if (host === 'github.com' && /^\/vivekdhanwada\/?$/i.test(u.pathname)) { contact = 'github'; }
   
       if (contact) {
-        send({ event: 'contact_click', contact_method: contact, link_location: loc });
+        send({ event: 'contact_click', contact_method: contact, link_loc: loc });
         return;
       }
   
