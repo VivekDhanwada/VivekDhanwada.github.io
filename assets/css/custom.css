@@ -1943,3 +1943,6 @@ footer a:hover,
 
 /* Make bold text render consistently across browsers */
 strong, b { font-weight: 700; font-synthesis: weight; }
+
+/* Keep bold labels visible in Chrome */
+strong, b { font-weight: 700; font-synthesis: weight; }
