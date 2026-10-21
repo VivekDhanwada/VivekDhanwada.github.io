@@ -30,7 +30,7 @@ Portfolio scale, not client work: traffic is low, counts include my own test cli
 
 ## Key Findings
 
-**A tag can succeed while a parameter is missing**
+**A tag can succeed while a parameter is missing.**
 After the key rename, the GTM tag still reported Succeeded and GA4 received the event, but without `link_location`. Tag Assistant showed the variable as undefined and DebugView showed the parameter missing.
 
 ```
@@ -42,10 +42,10 @@ Tag Assistant: DLV - link_location = undefined
 DebugView: link_location absent from the event
 ```
 
-**Automatic and custom events overlapped**
+**Automatic and custom events overlapped.**
 GA4 Enhanced Measurement counted clicks, file downloads and scrolls alongside the custom events, so the same interactions were measured twice under different event names. I switched the three automatic events off once the custom ones passed QA.
 
-**An event name can overstate what it measures**
+**An event name can overstate what it measures.**
 `resume_download` counts opens of the resume in a new tab, not confirmed saves, so the definition says so.
 
 ## Recommendations
