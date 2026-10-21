@@ -15,7 +15,7 @@ A website tracking implementation and QA project on this portfolio site. It cove
 
 **Business Question:** How can a team tell that tracking still works after a site release, and catch it when it silently breaks?
 
-**Key Finding:** Deliberately renaming one dataLayer key dropped a parameter from an event with no error message in the console, GTM or GA4, and the GTM tag still reported Succeeded. It was caught only by checking variable values in Tag Assistant and parameters in DebugView.
+**Key Finding:** Deliberately renaming one dataLayer key dropped a parameter from an event with no error message in the console, GTM or GA4, and the GTM tag still reported Succeeded. It was caught only by checking variable values in Tag Assistant and parameters in DebugView. The automated tests now catch the same break.
 
 Portfolio scale, not client work: traffic is low, counts include my own test clicks, testing was on desktop only, mainly in Safari, and consent management is not implemented.
 
