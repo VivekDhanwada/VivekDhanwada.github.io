@@ -50,7 +50,7 @@ GA4 Enhanced Measurement counted clicks, file downloads and scrolls alongside th
 
 ## Recommendations
 
-1. **Test every release, not just the build.** With GTM Preview connected, trigger one of each event, then check that every variable has a value and every parameter arrives in DebugView. Log the date and versions. An automated Playwright suite runs the equivalent checks on every event in under a minute.
+1. **Test after every release, not just the build.** Verify every event in GA4 DebugView and GTM Preview to make sure nothing broke in the release. Automated Playwright tests run the equivalent checks on every event in under a minute, but adding or changing an event still needs manual testing.
 2. **Audit overlapping events before adding new ones.** Check what Enhanced Measurement already collects so the same interaction is not measured twice, and switch off the overlap once the custom event passes QA.
 3. **Document every event and KPI before building reports on them.** A written specification of each event's trigger, parameters and role, plus a definition for each KPI, keeps reports from being misread.
 
