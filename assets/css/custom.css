@@ -1940,3 +1940,6 @@ footer a:hover,
       padding-left: 0 !important;
     }
   }
+
+/* Make bold text render consistently across browsers */
+strong, b { font-weight: 700; font-synthesis: weight; }
