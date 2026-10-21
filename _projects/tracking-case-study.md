@@ -11,7 +11,7 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 ## Overview
 
-A website tracking implementation and QA project on this portfolio site. It covers a baseline audit, a measurement plan, an event specification, a build in Google Tag Manager and GA4, QA with a deliberate failure, and an audit of overlapping events.
+A website tracking implementation and QA project on this portfolio site. It covers a baseline audit, a measurement plan, an event specification, an implementation in Google Tag Manager and GA4, QA with a deliberate failure, and an audit of overlapping events.
 
 **Business Question:** How can a team tell that tracking still works after a site release, and catch it when it silently breaks?
 
@@ -24,7 +24,7 @@ Portfolio scale, not client work: traffic is low, counts include my own test cli
 - **Baseline audit and measurement plan.** An audit of the GA4 property (7 automatic events, no custom events) and a written plan with four KPIs.
 - **Five custom events.** `resume_download`, `project_click`, `contact_click`, `outbound_click` and `scroll_depth`, pushed to a dataLayer by one JavaScript file, built with GenAI (Claude), and sent to GA4 through Google Tag Manager.
 - **Manual QA.** Every event checked in Tag Assistant, GA4 DebugView and the browser developer tools console, with each test and its result logged.
-- **Automated tests.** Playwright tests, written with GenAI (Claude) from my event specification, repeat the post-release check in code. Each test loads the live site, clicks a link, and checks the dataLayer push against the event specification and the outgoing GA4 request against the push. They run in Chromium and WebKit (the engine Safari uses), and the request is intercepted so no test data is recorded. After a release, one command (`npx playwright test`) runs all 18 tests in under a minute. Run against a copy of the script with the deliberate break applied, 14 of the 18 tests fail.
+- **Automated tests.** Playwright tests, written with GenAI (Claude) from my event specification, run the post-release check automatically. Each test loads the live site, clicks a link, and checks the dataLayer push against the event specification and the outgoing GA4 request against the push. They run in Chromium and WebKit (the engine Safari uses), and the request is intercepted so no test data is recorded. After a release, one command (`npx playwright test`) runs all 18 tests in under a minute. The suite catches the deliberate break: run against a copy of the script with the key renamed, 14 of the 18 tests fail.
 - **Measurement setup.** Key events for resume opens and contact clicks, an internal traffic flag, an Engaged visitors audience and a daily BigQuery export. A SQL check on the first day of exported data found the one `contact_click` missing `link_location` from the deliberate break.
 - **Looker Studio report.** A two-page report built around the measurement plan: visitor behaviour on page 1, outreach attribution and a tracking health table on page 2.
 
@@ -45,14 +45,14 @@ DebugView: link_location absent from the event
 **Automatic and custom events overlapped.**
 GA4 Enhanced Measurement counted clicks, file downloads and scrolls alongside the custom events, so the same interactions were measured twice under different event names. I switched the three automatic events off once the custom ones passed QA.
 
-**An event name can overstate what it measures.**
-`resume_download` counts opens of the resume in a new tab, not confirmed saves, so the definition says so.
+**An event name can claim more than it measures.**
+`resume_download` sounds like a saved file, but it fires when the resume opens in a new tab, and a browser cannot confirm a save. Reporting it as downloads would overstate interest. Renaming it would split the event history, so I defined it, and labelled it in the report, as resume opens.
 
 ## Recommendations
 
 1. **Test every release, not just the build.** With GTM Preview connected, trigger one of each event, then check that every variable has a value and every parameter arrives in DebugView. Log the date and versions. An automated Playwright suite repeats these checks on every event in under a minute.
 2. **Audit overlapping events before adding new ones.** Check what Enhanced Measurement already collects so the same interaction is not measured twice, and switch off the overlap once the custom event passes QA.
-3. **Document every event and KPI before building reports on them.** A name like `resume_download` implies a saved file, but it counts opens. A written specification of each event's trigger, parameters and role, plus a definition for each KPI, keeps reports from being misread.
+3. **Document every event and KPI before building reports on them.** A written specification of each event's trigger, parameters and role, plus a definition for each KPI, keeps reports from being misread.
 
 ## Tech Stack
 
