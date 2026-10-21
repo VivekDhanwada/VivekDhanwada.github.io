@@ -26,7 +26,7 @@ Portfolio scale, not client work: traffic is low, counts include my own test cli
 - **Manual QA.** Every event checked in Tag Assistant, GA4 DebugView and the browser developer tools console, with each test and its result logged.
 - **Automated tests.** Playwright tests repeat the post-release check in code. Each test loads the live site, clicks a link, and checks the dataLayer push against the event specification and the outgoing GA4 request against the push. They run in Chromium and WebKit (the engine Safari uses), and the request is intercepted so no test data is recorded. After a release, one command (`npx playwright test`) runs all 18 tests in under a minute.
 - **Measurement setup.** Key events for resume opens and contact clicks, an internal traffic flag, an Engaged visitors audience and a daily BigQuery export. A SQL check on the first day of exported data found the one `contact_click` missing `link_location` from the deliberate break.
-- **Looker Studio report.** A two-page report with a tracking health table.
+- **Looker Studio report.** A two-page report built around the measurement plan: visitor behaviour on page 1, outreach attribution and a tracking health table on page 2.
 
 ## Key Findings
 
