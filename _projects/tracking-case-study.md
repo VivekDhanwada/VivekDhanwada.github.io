@@ -1,7 +1,7 @@
 ---
 name: "Website Tracking and QA: Case Study"
 order: 11
-tools: [GA4, Google Tag Manager, JavaScript, Looker Studio]
+tools: [GA4, GTM, JavaScript, Looker Studio, BigQuery, Playwright]
 image: /assets/images/projects/tracking-case-study-cover.png
 description: Tracking built on this site with Google Tag Manager and GA4, covering an event specification, a QA log with a deliberate break and fix, and an audit of overlapping events. Portfolio scale, not client work.
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/12-tracking-implementation-qa
@@ -61,6 +61,7 @@ GA4 Enhanced Measurement counted clicks, file downloads and scrolls alongside th
 - JavaScript
 - Looker Studio
 - BigQuery (GA4 export, SQL check)
+- Playwright (automated tests)
 
 ## Live Report
 
