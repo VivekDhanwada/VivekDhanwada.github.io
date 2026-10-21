@@ -11,20 +11,20 @@ github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/
 
 ## Overview
 
-A website tracking implementation and QA project on this portfolio site. It covers a baseline audit, a measurement plan, an event specification, an implementation in Google Tag Manager and GA4, QA with a deliberate failure, automated tests, and an audit of overlapping events.
+A website tracking implementation and QA project on this portfolio site. It covers a measurement plan, an event specification, GTM and GA4 implementation, manual and automated QA, built around a deliberate failure.
 
 **Business Question:** How can a team trust its tracking data after a site release, and catch it when it silently breaks?
 
-**Key Finding:** Deliberately renaming one dataLayer key dropped a parameter from an event with no error message in the console, GTM or GA4, and the GTM tag still reported Succeeded. It was found by checking variable values in Tag Assistant and parameters in DebugView. The automated tests would now catch a repeat of the same break.
+**Key Finding:** Deliberately renaming one dataLayer key dropped a parameter from an event with no error message in the console, GTM or GA4, and the GTM tag still reported Succeeded. It was found by checking variable values in Tag Assistant and parameters in DebugView. Automated tests catch the same break in under a minute.
 
-Portfolio scale, not client work: traffic is low, counts include my own test clicks, testing was on desktop only, mainly in Safari, and consent management is not implemented.
+**Scope:** Portfolio scale, not client work. Traffic is low, counts include my own test clicks, testing was on desktop only, mainly in Safari, and consent management is not implemented.
 
 ## What I Built
 
 - **Baseline audit and measurement plan.** An audit of the GA4 property (7 automatic events, no custom events) and a written plan with four KPIs.
 - **Five custom events.** `resume_download`, `project_click`, `contact_click`, `outbound_click` and `scroll_depth`, pushed to a dataLayer by one JavaScript file, built with GenAI (Claude), and sent to GA4 through Google Tag Manager.
 - **Manual QA.** Every event checked in Tag Assistant, GA4 DebugView and the browser developer tools console, with each test and its result logged.
-- **Automated tests.** Playwright tests, written with GenAI (Claude) from my event specification, run the post-release check automatically. Each test loads the live site, clicks a link or scrolls the page, and checks the dataLayer push against the event specification and the outgoing GA4 request against the push. They run in Chromium and WebKit (the engine Safari uses), and the request is intercepted so no test data is recorded. After a release, one command (`npx playwright test`) runs all 18 tests in under a minute. The tests catch the deliberate break: with the key renamed in the contact_click push only, the 3 contact_click tests fail in each browser and the other 12 pass.
+- **Automated tests.** Playwright tests, written with GenAI (Claude) from my event specification, run the post-release check automatically. Each test loads the live site, clicks a link or scrolls the page, and checks the dataLayer push against the specification and the outgoing GA4 request against the push. They run in Chromium and WebKit (the engine Safari uses), with requests intercepted so no test data is recorded, and one command (`npx playwright test`) runs all tests in under a minute. With the deliberate break applied to a copy of the script, the `contact_click` tests fail in each browser and the rest pass.
 - **Measurement setup.** Key events for resume opens and contact clicks, an internal traffic flag, an Engaged visitors audience and a daily BigQuery export. A SQL check on the first day of exported data found the one `contact_click` missing `link_location` from the deliberate break.
 - **Looker Studio report.** A two-page report built around the measurement plan: visitor behaviour on page 1, outreach attribution and a tracking health table on page 2.
 
