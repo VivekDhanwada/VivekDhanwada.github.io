@@ -7,21 +7,23 @@ description: Tracking built on this site with Google Tag Manager and GA4, coveri
 github_url: https://github.com/VivekDhanwada/data-analytics-portfolio/tree/main/12-tracking-implementation-qa
 ---
 
+# Website Tracking and QA: Case Study
+
 ## Overview
 
-A tracking implementation and QA project on this portfolio site. It covers a baseline audit, a measurement plan, an event specification, a build in Google Tag Manager and GA4, QA with a deliberate failure, and an audit of overlapping events.
+A website tracking implementation and QA project on this portfolio site. It covers a baseline audit, a measurement plan, an event specification, a build in Google Tag Manager and GA4, QA with a deliberate failure, and an audit of overlapping events.
 
 **Business Question:** How can a team tell that tracking still works after a site release, and catch it when it silently breaks?
 
 **Key Finding:** Deliberately renaming one dataLayer key dropped a parameter from an event with no error message in the console, GTM or GA4, and the GTM tag still reported Succeeded. It was caught only by checking variable values in Tag Assistant and parameters in DebugView.
 
-Portfolio scale, not client work: traffic is low, counts include my own test clicks, testing was on desktop only, mainly in Chrome, and consent management is not implemented.
+Portfolio scale, not client work: traffic is low, counts include my own test clicks, testing was on desktop only, mainly in Safari, and consent management is not implemented.
 
 ## What I Built
 
 - A baseline audit of the GA4 property (7 automatic events, no custom events) and a written measurement plan with four KPIs.
-- Five custom events (`resume_download`, `project_click`, `contact_click`, `outbound_click`, `scroll_depth`) pushed to a dataLayer by one JavaScript file and sent to GA4 through Google Tag Manager.
-- QA of every event in Tag Assistant and GA4 DebugView on desktop, mainly in Chrome with some events also checked in Safari, with results logged.
+- Five custom events (`resume_download`, `project_click`, `contact_click`, `outbound_click`, `scroll_depth`) pushed to a dataLayer by one JavaScript file, built with GenAI (Claude), and sent to GA4 through Google Tag Manager.
+- QA of every event in Tag Assistant and GA4 DebugView, with each test and its result logged.
 - Key events for resume opens and contact clicks, an internal traffic flag, an Engaged visitors audience and a daily BigQuery export.
 - A two-page Looker Studio report with a tracking health table.
 
@@ -30,7 +32,12 @@ Portfolio scale, not client work: traffic is low, counts include my own test cli
 **A tag can succeed while a parameter is missing**
 After the key rename, the GTM tag still reported Succeeded and GA4 received the event, but without `link_location`. Tag Assistant showed the variable as undefined and DebugView showed the parameter missing.
 
-![GA4 DebugView on a contact_click: link_location is missing from the parameters](/assets/images/projects/tracking-break-debugview.png)
+Before: { event: 'contact_click', contact_method: 'linkedin', link_location: 'footer' }
+After:  { event: 'contact_click', contact_method: 'linkedin', link_loc: 'footer' }
+
+GTM tag status: Succeeded
+Tag Assistant: DLV - link_location = undefined
+DebugView: link_location absent from the event
 
 **Automatic and custom events overlapped**
 GA4 Enhanced Measurement counted clicks, file downloads and scrolls alongside the custom events, so the same interactions were measured twice under different event names. I switched the three automatic events off once the custom ones passed QA.
@@ -40,9 +47,9 @@ GA4 Enhanced Measurement counted clicks, file downloads and scrolls alongside th
 
 ## Recommendations
 
-1. **Test after every release.** Click one of each event with GTM Preview connected, confirm every variable has a value and every parameter reaches DebugView, then log the date and versions.
-2. **Audit overlapping events before adding new ones.** Check what Enhanced Measurement already collects and switch off the overlap once the replacement is tested.
-3. **Agree a UTM and naming standard before campaigns launch.** Lowercase source, medium and campaign (purpose and month), tag every link shared to the site and never tag links within it.
+1. **Test every release, not just the build.** With GTM Preview connected, trigger one of each event, then check that every variable has a value and every parameter arrives in DebugView. Log the date and versions.
+2. **Audit overlapping events before adding new ones.** Check what Enhanced Measurement already collects so the same interaction is not measured twice, and switch off the overlap once the custom event passes QA.
+3. **Document every event and KPI before building reports on them.** A name like `resume_download` implies a saved file, but it counts opens. A written specification of each event's trigger, parameters and role, plus a definition for each KPI, keeps reports from being misread.
 
 ## Tech Stack
 
