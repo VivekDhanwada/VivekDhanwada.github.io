@@ -21,12 +21,12 @@ Portfolio scale, not client work: traffic is low, counts include my own test cli
 
 ## What I Built
 
-- A baseline audit of the GA4 property (7 automatic events, no custom events) and a written measurement plan with four KPIs.
-- Five custom events (`resume_download`, `project_click`, `contact_click`, `outbound_click`, `scroll_depth`) pushed to a dataLayer by one JavaScript file, built with GenAI (Claude), and sent to GA4 through Google Tag Manager.
-- QA of every event in Tag Assistant and GA4 DebugView, with each test and its result logged.
-- Automated Playwright tests that check each event against the specification in Chromium and WebKit (the engine Safari uses), with the GA4 request intercepted so no test data is recorded.
-- Key events for resume opens and contact clicks, an internal traffic flag, an Engaged visitors audience and a daily BigQuery export.
-- A two-page Looker Studio report with a tracking health table.
+- **Baseline audit and measurement plan.** An audit of the GA4 property (7 automatic events, no custom events) and a written plan with four KPIs.
+- **Five custom events.** `resume_download`, `project_click`, `contact_click`, `outbound_click` and `scroll_depth`, pushed to a dataLayer by one JavaScript file, built with GenAI (Claude), and sent to GA4 through Google Tag Manager.
+- **Manual QA.** Every event checked in Tag Assistant, GA4 DebugView and the browser developer tools console, with each test and its result logged.
+- **Automated tests.** Playwright tests repeat the post-release check in code. Each test loads the live site, clicks a link, and checks the dataLayer push against the event specification and the outgoing GA4 request against the push. They run in Chromium and WebKit (the engine Safari uses), and the request is intercepted so no test data is recorded. After a release, one command (`npx playwright test`) runs all 18 tests in under a minute.
+- **Measurement setup.** Key events for resume opens and contact clicks, an internal traffic flag, an Engaged visitors audience and a daily BigQuery export.
+- **Looker Studio report.** A two-page report with a tracking health table.
 
 ## Key Findings
 
