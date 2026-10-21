@@ -31,7 +31,7 @@ Portfolio scale, not client work: traffic is low, counts include my own test cli
 ## Key Findings
 
 **A tag can succeed while a parameter is missing.**
-After the key rename, the GTM tag still reported Succeeded and GA4 received the event, but without `link_location`. Tag Assistant showed the variable as undefined and DebugView showed the parameter missing.
+After the key rename, the GTM tag still reported Succeeded and GA4 received the event, but without `link_location`. Tag Assistant showed the variable as undefined and DebugView showed the parameter missing. A SQL check on the exported data counted the same missing parameter.
 
 ```
 Before: { event: 'contact_click', contact_method: 'linkedin', link_location: 'footer' }
