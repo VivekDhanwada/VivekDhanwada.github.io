@@ -10,7 +10,7 @@
     <div class="navbar-nav ml-auto">
       {% assign pages = site.html_pages | sort: 'weight' %}
       {% for p in pages %}
-        {% unless p.path == 'index.html' or p.name == '404.html' or p.path contains 'pages/tags' %}
+        {% unless p.path == 'index.html' or p.name == '404.html' or p.path contains 'pages/tags' or p.title == nil or p.title == '' %}
           {% assign show_item = true %}
           {% if p.name == 'blog.html' and site.blog.size == 0 %}{% assign show_item = false %}{% endif %}
           {% unless show_item == false %}
