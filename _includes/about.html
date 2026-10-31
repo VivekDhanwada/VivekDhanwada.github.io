@@ -36,6 +36,7 @@
 {% if page.url == '/' %}
   <p class="text-center">
     {% include elements/button.html link="/about" text="Know More" %}
+    {% if site.blog.size > 0 %}{% include elements/button.html link="/blog/" text="Read the Blog" %}{% endif %}
   </p>
 {% endif %}
 

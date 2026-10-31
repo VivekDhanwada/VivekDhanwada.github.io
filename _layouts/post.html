@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+<a href="{{ '/blog/' | relative_url }}" class="back-button">← All posts</a>
+
+<h1><b>{{ page.title }}</b></h1>
+
+<p class="blog-post-meta text-muted">
+  {{ page.date | date: "%-d %B %Y" }} · {{ content | number_of_words | divided_by: 180 | plus: 1 }} min read{% if page.category %}<span class="badge badge-pill text-primary border border-primary">{{ page.category | replace: '-', ' ' }}</span>{% endif %}
+</p>
+
+<div class="blog-post-body">
+  {{ content }}
+</div>
+
+{% if page.project_url or page.github_url %}
+<hr>
+<p class="blog-post-closing">
+  {% if page.project_url and page.project_label %}Related project: <a href="{{ page.project_url | relative_url }}">{{ page.project_label }}</a>{% endif %}{% if page.github_url %}<br><a href="{{ page.github_url }}" target="_blank" rel="noopener noreferrer">View the code on GitHub →</a>{% endif %}
+</p>
+{% endif %}

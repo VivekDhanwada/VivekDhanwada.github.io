@@ -1,0 +1,22 @@
+{% assign sorted_posts = site.blog | sort: 'date' | reverse %}
+{% assign grouped = sorted_posts | group_by: 'category' %}
+
+{% for group in grouped %}
+  {% if grouped.size > 1 and group.name != '' %}
+    <h2 class="section-heading">{{ group.name | replace: '-', ' ' | capitalize }}</h2>
+  {% endif %}
+  <div class="row">
+    {% for post in group.items %}
+      <div class="col-lg-4 col-md-6 mb-4">
+        {% assign project_type = "local" %}
+        {% assign project_id = post.slug %}
+        {% assign project_img = nil %}
+        {% assign project_name = post.title %}
+        {% assign project_desc = post.description %}
+        {% assign project_tools = post.tags %}
+        {% assign project_url = post.url | relative_url %}
+        {% include projects/project-card.html %}
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}

@@ -1946,3 +1946,27 @@ strong, b { font-weight: 700; font-synthesis: weight; }
 
 /* Keep bold labels visible in Chrome */
 strong, b { font-weight: 700; font-synthesis: weight; }
+
+/* ==========================================================================
+   Blog
+   ========================================================================== */
+
+.blog-post-meta {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post-meta .badge {
+  margin-left: 0.5rem;
+}
+
+.blog-post-body p,
+.blog-post-body li {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.blog-post-closing {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
